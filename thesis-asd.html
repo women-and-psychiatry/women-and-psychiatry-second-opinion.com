@@ -1,0 +1,707 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Thesis on ASD - Autism Spectrum Disorder </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1e0f3dcd-e7b0-8000-80e2-d38c32b9931a" class="page sans"><header><h1 class="page-title">Thesis on ASD - Autism Spectrum Disorder </h1><p class="page-description"></p></header><div class="page-body"><p id="1e0f3dcd-e7b0-80a4-936c-e350963b0e89" class="">
+</p><p id="1e0f3dcd-e7b0-805d-be95-e07fae12236d" class="">TITU MAIORESCU UNIVERSITY OF BUCHAREST</p><p id="1e0f3dcd-e7b0-8018-bcfa-c0554874f9d4" class="">FACULTY OF MEDICINE</p><p id="1e0f3dcd-e7b0-8016-a0a0-e91c18262b67" class="">STUDY PROGRAM: MEDICINE</p><p id="1e0f3dcd-e7b0-8077-b0b3-ec82d96a29f2" class="">BACHELOR THESIS</p><p id="1e0f3dcd-e7b0-80d6-8c8a-eff5f6ba42a1" class="">Title: “Correlations Between Genotype and Phenotype in Autism Spectrum Disorder”</p><p id="1e0f3dcd-e7b0-8008-9a80-f347c2d90305" class="">Scientific Coordinator:</p><p id="1e0f3dcd-e7b0-8049-85dc-d3ac92daeef8" class="">Assoc. Prof. Dr. Magdalena Budișteanu</p><p id="1e0f3dcd-e7b0-80be-95b8-c3e1725477e0" class="">Graduate:</p><p id="1e0f3dcd-e7b0-806b-9bf4-d54d1e403c96" class="">Ionescu Sarah Sânziana</p><p id="1e0f3dcd-e7b0-80c5-9568-e4f2c7289a0a" class="">Bucharest – Year of Graduation: 2024</p><h1 id="1e0f3dcd-e7b0-80fb-abf2-f41fce3283c5" class="">1. Introduction </h1><p id="1e0f3dcd-e7b0-809e-ba55-c989178e4e86" class="">
+</p><h3 id="1e0f3dcd-e7b0-8073-b205-f6da7449905e" class=""><strong>A. Relevance and Topicality of the Subject</strong></h3><p id="1e0f3dcd-e7b0-805c-adf2-de6742588199" class="">
+</p><p id="1e0f3dcd-e7b0-80df-96f7-dc479a8aa7b2" class="">Autism Spectrum Disorder (ASD) represents a subject of major importance in the field of public health and neuropsychiatric research. The significant increase in diagnoses over recent decades has highlighted the need for a deeper understanding of this disorder.</p><p id="1e0f3dcd-e7b0-8017-8cbb-cbaefa999b62" class="">According to data provided by the Centers for Disease Control and Prevention (CDC) in the United States, the global prevalence of autism is estimated at approximately one in one hundred children, or about one percent of the global pediatric population—a result similar to that published by the European Union Statistics on Income and Living Conditions (EU-SILC), which indicates a prevalence between one and one point five percent.</p><p id="1e0f3dcd-e7b0-80d6-8bf4-fce94f41b033" class="">In Romania, the National Institute of Public Health (INSP) reported a prevalence between one in fifty-four and one in sixty-eight children, or between one point four seven percent and one point eight five percent—slightly above the European average.</p><p id="1e0f3dcd-e7b0-80e0-9360-e71c82ecc054" class="">Definition and Characteristics of ASD:</p><p id="1e0f3dcd-e7b0-801b-a4bd-e9eacd87c8c7" class="">ASD is defined as a neurodevelopmental disorder characterized by difficulties in social interaction, impaired communication, and repetitive or restrictive behaviors. These features can vary significantly from one individual to another, resulting in a wide spectrum of clinical presentations.</p><p id="1e0f3dcd-e7b0-800d-ac66-da02b59b68a7" class="">The diagnosis is usually established in early childhood, with symptoms typically becoming evident before the age of three.</p><p id="1e0f3dcd-e7b0-806f-aced-ccfc0c367ee6" class="">An autism diagnosis can significantly impact the quality of life for both the affected individual and their family. Individuals with autism may experience social isolation, stress, and anxiety due to difficulties with communication and interaction, which affects emotional well-being and personal development. There may also be a constant need for support in daily activities and specific adaptations to facilitate participation in education and social engagement.</p><p id="1e0f3dcd-e7b0-8092-b493-eb61edbb7477" class="">For the family, the diagnosis of a child with autism can represent a significant challenge, involving major changes in family dynamics and future planning. Families may experience emotional and physical stress due to caregiving demands and the need to navigate complex healthcare and educational systems. Financial resources may also be a concern, as specialized treatments and interventions can incur substantial costs.</p><p id="1e0f3dcd-e7b0-8059-b400-f3209972e8ae" class="">
+</p><h3 id="1e0f3dcd-e7b0-800c-9880-cfb1f5a57abd" class="">B. Purpose of Choosing the Topic and Proposed Objectives</h3><p id="1e0f3dcd-e7b0-8044-bf4e-cc9f8c128ac7" class="">The main purpose of this thesis is to investigate the relationship between genotype and phenotype in the context of ASD, aiming to identify genetic markers that influence clinical manifestations.</p><p id="1e0f3dcd-e7b0-8009-b039-d8b314698292" class="">The secondary objective of the thesis involves associating specific genes or genetic combinations with a severe phenotype, with the ultimate goal of applying the conclusions to prenatal screening performed during weeks sixteen to twenty of gestation.</p><p id="1e0f3dcd-e7b0-80fe-ae14-c6cc0c5671a5" class="">The specific objectives pursued in this thesis include:</p><ul id="1e0f3dcd-e7b0-80ad-a21f-d584dacbbd41" class="bulleted-list"><li style="list-style-type:disc">Identification of Genetic Variations:<br/>Investigation of genes involved in ASD, such as:<br/><ul id="1e0f3dcd-e7b0-80e8-b87c-ffc853e76e71" class="bulleted-list"><li style="list-style-type:circle">Genes Involved in Neural Development and Synaptogenesis:<br/>SDK1, ALCAM, CHD1L, SHANK3, NECTIN3, SYNGAP1, CDH4 – These genes participate in various stages of neuronal development, including differentiation, migration, and neuronal connectivity, essential for the formation of functional neural networks in the brain.<br/></li></ul><ul id="1e0f3dcd-e7b0-805a-8a55-e2ada7b279df" class="bulleted-list"><li style="list-style-type:circle">Genes Involved in Synaptic Connection and Cell Signaling:<br/>CNTNAP2, NRXN1, NLGN3, NLGN4 – These genes play a crucial role in the formation and stability of synaptic connections. They regulate synaptic signaling by modulating neurotransmitter release and postsynaptic responses. CNTNAP2 and NRXN1, for instance, influence ion channel function and synaptic transmission processes. The NRXN1 (neurexin-1) and NLGN3/NLGN4 (neuroligins) genes are directly involved in synaptic interactions, forming adhesion complexes that facilitate pre- and postsynaptic neuron connections.<br/></li></ul><ul id="1e0f3dcd-e7b0-8042-8dc7-ff4a99345c38" class="bulleted-list"><li style="list-style-type:circle">Genes Involved in Chromatin Regulation and Gene Transcription:<br/>CHD8, ARID1B, KMT2A, KMT2C – These genes are involved in chromatin structure modification, influencing DNA accessibility for transcription machinery. Chromatin remodeling is crucial for gene regulation and for activating or repressing genes according to cellular needs. They regulate gene expression by controlling the accessibility of transcription factors to DNA and are essential for maintaining gene expression profiles necessary for various cell types and developmental stages. Many of these genes have epigenetic functions, involving chemical modifications of DNA or histones that do not change the DNA sequence but affect gene expression long-term.<br/></li></ul><ul id="1e0f3dcd-e7b0-80ca-8c45-d5447df692e6" class="bulleted-list"><li style="list-style-type:circle">Genes Involved in Epigenetic Regulation:<br/>MECP2, MBD5 – These genes are involved in epigenetic processes, including chromatin modifications that influence gene expression without altering the DNA sequence. They play a critical role in establishing and maintaining DNA methylation patterns, crucial for long-term gene regulation.<br/></li></ul><ul id="1e0f3dcd-e7b0-804d-aa30-d550ccd368ab" class="bulleted-list"><li style="list-style-type:circle">Genes Involved in Metabolism and Cellular Homeostasis:<br/>FMO5, CYP2C19, ATP6V1A, MTOR – These genes participate in metabolic processes, ion transport, and cellular signaling. FMO5 and CYP2C19 are involved in the metabolism of xenobiotic and endogenous compounds. They encode enzymes that catalyze essential oxidation reactions for detoxifying medications and other chemical substances. ATP6V1A and MTOR contribute to maintaining cellular homeostasis by regulating intracellular pH and cellular signaling.<br/></li></ul><ul id="1e0f3dcd-e7b0-8011-9ae1-e9b07ecd7672" class="bulleted-list"><li style="list-style-type:circle">Genes Involved in Cellular Metabolism:<br/>UCP2, UCP3, NDUFS4 – These genes are essential for mitochondrial function and regulation of glucose homeostasis and lipid metabolism, influencing insulin sensitivity and glucose metabolism.<br/></li></ul><ul id="1e0f3dcd-e7b0-8014-9b07-d68fc0dad863" class="bulleted-list"><li style="list-style-type:circle">Genes Involved in Immune System Function and Inflammation:<br/>IL6, IL1B, TNF, BTLA, CD80 – These genes are involved in modulating the immune response, either by stimulating immune cell activity or by regulating interactions between immune and other cell types. They coordinate the actions of lymphocytes and other immune cells to protect the organism against pathogens.<br/></li></ul><ul id="1e0f3dcd-e7b0-80f8-9fad-c5eb14ecc1ce" class="bulleted-list"><li style="list-style-type:circle">Genes Involved in Cellular Proliferation and Differentiation:<br/>FOXP1, FOXP2, PTEN, TSC2 – These genes play an important role in brain development and neuronal function. They influence differentiation, migration, and neuronal connectivity, contributing to the formation and functioning of neural networks. FOXP1 and FOXP2 are transcription factors regulating gene expression necessary for language development and cognitive abilities. PTEN and TSC2 regulate cell growth and metabolism, with PTEN acting as a tumor suppressor and TSC2 regulating mTOR activity. Mutations in these genes are associated with neuropsychiatric disorders and may contribute to cancer development.<br/></li></ul><ul id="1e0f3dcd-e7b0-80bc-b084-ef481920f5eb" class="bulleted-list"><li style="list-style-type:circle">Genes Involved in Protein Synthesis:<br/>CYFIP1, FMR1 – These genes regulate protein translation at synapses, influencing the synthesis of proteins necessary for synaptic function and neuronal plasticity. Dysregulation of these genes is associated with neurodevelopmental disorders, including Fragile X syndrome and autism.<br/></li></ul><ul id="1e0f3dcd-e7b0-801c-8833-f37b39c7551c" class="bulleted-list"><li style="list-style-type:circle">Genes Associated with Cellular Transport and Signaling:<br/>SCN2A, CACNA1C, GRIN2B – These genes encode subunits of ion channels essential for generating and propagating action potentials in neurons, directly influencing neuronal excitability and communication. Mutations or dysfunctions are linked to various disorders, including epilepsy, autism, schizophrenia, and affective disorders.<br/></li></ul><ul id="1e0f3dcd-e7b0-802d-a803-ec6ddf2c42a5" class="bulleted-list"><li style="list-style-type:circle">Receptors Involved in Feedback Mechanisms:<br/>GABRA1, GABRB3 – These receptors mediate synaptic inhibition and are associated with regulating neuronal excitability.<br/></li></ul><ul id="1e0f3dcd-e7b0-801c-80a3-e6454c7bd11f" class="bulleted-list"><li style="list-style-type:circle">Genes Associated with Structural DNA Variations (CNV):<br/>NRXN1, SHANK3, 16p11.2 – Involved in copy number variations, associated with the risk of ASD and other neurodevelopmental disorders.<br/></li></ul><ul id="1e0f3dcd-e7b0-802f-8078-c535d3cb462e" class="bulleted-list"><li style="list-style-type:circle">MicroRNAs and Non-Coding Regulatory Elements:<br/>MIR3179-1, MIR1972-1, MIR4447 – These microRNAs regulate post-transcriptional gene expression and are implicated in neuronal development processes.<br/></li></ul><ul id="1e0f3dcd-e7b0-8057-9f40-d18fc558f1e4" class="bulleted-list"><li style="list-style-type:circle">Other Genes and Non-Specific Genomic Elements:<br/>ZBTB20, LOC100506790, ZNF890P – These genes are involved in neuronal development processes such as cellular differentiation and synaptic connection formation, critical for establishing complex neural circuits.<br/></li></ul></li></ul><ul id="1e0f3dcd-e7b0-805e-b944-d7d4c5c23847" class="bulleted-list"><li style="list-style-type:disc">Evaluation of Genotype-Phenotype Correlation:<br/>Analysis of how genetic variations influence the clinical manifestations of ASD. The phenotypic heterogeneity of ASD is evident in the diversity and severity of symptoms.<br/></li></ul><ul id="1e0f3dcd-e7b0-80db-8765-ff28adeaf1ed" class="bulleted-list"><li style="list-style-type:disc">Impact of Environmental Factors:<br/>Exploring how environmental factors interact with genetic predispositions to influence the phenotype. Risk factors such as advanced parental age, lack of prenatal care, prenatal exposure to toxins, and maternal infections are associated with an increased risk of ASD.<br/></li></ul><p id="1e0f3dcd-e7b0-80e3-a601-cd552bd6e173" class="">
+</p><h3 id="1e0f3dcd-e7b0-80f1-a52d-e28bcbeee386" class="">C. Investigating the Subject through the Literature</h3><p id="1e0f3dcd-e7b0-801e-9f90-cfe11b417d34" class="">Recent research on Autism Spectrum Disorder (ASD) has highlighted the crucial role of genetic variations in the development and clinical manifestations of this disorder. Various studies published on PubMed have explored the genes involved and provided valuable insights into how they influence the phenotypes observed in ASD.</p><ul id="1e0f3dcd-e7b0-80b2-9c27-c06a4ced2430" class="bulleted-list"><li style="list-style-type:disc">Synaptic Adhesion Genes:<br/>Mutations in genes encoding synaptic adhesion proteins, such as NRXN1 and NLGN4, have been shown to result in more severe forms of ASD. These genes are essential for synapse formation and function, and their mutations can lead to severe synaptic dysfunctions, associated with pronounced cognitive and behavioral deficits【2】.<br/></li></ul><ul id="1e0f3dcd-e7b0-80e6-b1b8-e72850782cfc" class="bulleted-list"><li style="list-style-type:disc">Genes Implicated in Channelopathies: SCN2A and CACNA1C<br/>Genes encoding ion channel subunits, such as SCN2A and CACNA1C, are associated with severe autism and epilepsy phenotypes. These mutations affect neuronal excitability and synaptic transmission, contributing to complex and severe clinical manifestations【3】.<br/></li></ul><ul id="1e0f3dcd-e7b0-80c6-b514-d3ae16d35f88" class="bulleted-list"><li style="list-style-type:disc">Role of the CHD8 Gene: Chromatin Remodeling and Gene Expression<br/>A detailed study published in Nature Genetics suggests that de novo mutations in CHD8, a gene involved in chromatin remodeling, are associated with severe autism phenotypes, including intellectual disability and distinct physical features. CHD8 influences the expression of many genes related to brain development, and its mutations can lead to severe neurobiological dysfunctions【3】.<br/><ul id="1e0f3dcd-e7b0-8010-853b-f2d708e1c965" class="bulleted-list"><li style="list-style-type:circle">CHD8 and Phenotypic Severity:<br/>Variants in the CHD8 gene are linked to a more severe autism phenotype, characterized by intellectual disability and distinctive physical traits such as macrocephaly. This study emphasizes the involvement of CHD8 in chromatin remodeling, which influences neurodevelopmental outcomes and cognitive function.<br/></li></ul></li></ul><ul id="1e0f3dcd-e7b0-80cb-9c61-e4c4c301aec0" class="bulleted-list"><li style="list-style-type:disc">Synaptic Genes and Neuronal Communication:<br/>Synaptic genes such as SHANK3 and NRXN1 play an essential role in the formation and stability of synaptic connections. A study by Buxbaum et al. (2009), titled “Neuroligin mutations: Perturbing synapses in autism spectrum disorder”, discusses mutations in neuroligin genes and their impact on ASD. These genes are vital for proper synaptic function, and their variations are associated with deficits in neuronal communication.<br/></li></ul><ul id="1e0f3dcd-e7b0-8013-8eab-e3cd396e76f3" class="bulleted-list"><li style="list-style-type:disc">Immune System and Inflammation:<br/>Inflammation and immune responses have also been associated with ASD. An article by Ashwood et al. (2015), titled “Neuroinflammation and autism spectrum disorder”, explores the link between inflammation and ASD, discussing inflammatory cytokines such as IL6 and TNF. This study suggests that neuroinflammation may play a role in the behavioral manifestations of ASD.<br/></li></ul><ul id="1e0f3dcd-e7b0-80f0-9666-c41c20b5611a" class="bulleted-list"><li style="list-style-type:disc">Genetic Variations and CNVs:<br/>Structural variations of DNA, such as those found on chromosome 16p11.2, are well-documented in the literature. A study by McClellan and King (2010), titled “Genomic analysis of mental retardation and autism: Overlapping causes”, published in the New England Journal of Medicine, analyzes the impact of such variations on ASD risk.<br/></li></ul><ul id="1e0f3dcd-e7b0-8079-a9b0-d3bdd9d8fea9" class="bulleted-list"><li style="list-style-type:disc">Metabolism and Energy Homeostasis:<br/>Genes involved in metabolism, such as MTOR, have been analyzed in a study by Klann et al. (2015), titled “mTOR signaling in brain development and autism”, which explores the role of this signaling pathway in brain development and ASD. MTOR is critical for energy homeostasis and neuronal development, and disruptions in this pathway may contribute to the pathophysiology of ASD.<br/></li></ul><p id="1e0f3dcd-e7b0-80e1-945f-d87f8970f96e" class="">
+</p><p id="1e0f3dcd-e7b0-8076-ab4d-cfa0bf83420d" class="">
+</p><h1 id="1e0f3dcd-e7b0-801a-b296-df42d921a08c" class=""><strong>Special Part – Introduction</strong></h1><p id="1e0f3dcd-e7b0-80cb-ab3e-c11a69d65872" class="">Autism Spectrum Disorder (ASD) encompasses a complex spectrum of both clinical and genetic presentations. Numerous publications—both medical and psychosocial—have reported atypical clinical cases when compared to the predominant phenotype observed in most patients diagnosed with ASD, namely those with above-average IQ. This thesis explores the link between two spectrums: the genetic and the phenotypic.</p><p id="1e0f3dcd-e7b0-80cb-8879-ceef219442bf" class="">The objective is to analyze the correlation between specific genotypes and mild, moderate, or severe phenotypes, in order to statistically estimate the risk or likelihood that a fetus may present with a severe phenotype—characterized by below-average intelligence, pronounced speech and motor difficulties—or a mild phenotype, marked by minimal deficits or even above-average intelligence, as often described in Asperger syndrome, a form of autism spectrum disorder.</p><p id="1e0f3dcd-e7b0-80b7-a9b3-f86c118aefb4" class="">Discovering genotype–phenotype correlations in ASD could have a substantial impact on several domains:</p><ul id="1e0f3dcd-e7b0-8037-98af-d70e3b48a632" class="bulleted-list"><li style="list-style-type:disc">Prenatal screening: Certain genes or genetic combinations associated with severe phenotypes could influence the patient’s decision to continue or terminate the pregnancy.</li></ul><ul id="1e0f3dcd-e7b0-80e6-8039-eee2717ea0af" class="bulleted-list"><li style="list-style-type:disc">Understanding patient needs: Some genetic combinations are more frequently associated with speech or motor deficits, while others are linked to limited cognitive abilities. This implies that therapeutic approaches should be tailored to the specific and individualized needs of each patient.</li></ul><ul id="1e0f3dcd-e7b0-800c-84ac-dbf109b3f447" class="bulleted-list"><li style="list-style-type:disc">Advancing neurological research: Genotype–phenotype studies can contribute to the understanding of fundamental neurological mechanisms. They may reveal biological processes and pathways not yet fully explored, advancing our knowledge of neurodevelopment and the influence of genetic variations on brain function.</li></ul><p id="1e0f3dcd-e7b0-80ae-bea4-d391d2e20c00" class="">This thesis will also examine sex-based differences, both in terms of ASD diagnosis and in genotypic and phenotypic presentation.</p><p id="1e0f3dcd-e7b0-8090-aa9a-d3e20f249a24" class="">According to the European Journal of Public Health (October 2021), in Romania the diagnosis ratio for ASD reflects global trends: boys are diagnosed approximately four times more frequently than girls. This discrepancy may be explained by the fact that girls tend to exhibit subtler or different symptoms that are harder to detect, leading to underdiagnosis or delayed diagnosis.</p><p id="1e0f3dcd-e7b0-80b2-94ae-dd45b052f32a" class="">The study will include a comparative analysis of the phenotype in male and female patients who share similar genetic make-up. This will allow an exploration of whether phenotypic variation is attributable solely to genotype, what role environmental factors might play, and whether the hormonal profile is also relevant to phenotypic expression—as is suspected in other neuropsychiatric disorders such as schizophrenia or affective disorders.</p><p id="1e0f3dcd-e7b0-8027-b2e9-ebe663763c44" class="">
+</p><p id="1e0f3dcd-e7b0-8026-9d2f-d09b96626ecd" class=""><strong>Material and Method</strong></p><p id="1e0f3dcd-e7b0-8022-8441-efcfedcaea6d" class="">The study conducted in this thesis is an observational, retrospective, cross-sectional study, involving the collection of demographic, clinical, and genetic data at a single point in time. The main objective was to identify associations between genotypes and phenotypes in Autism Spectrum Disorder (ASD).</p><p id="1e0f3dcd-e7b0-8064-a252-ce7fd2b46227" class=""><strong>Study Location</strong></p><ul id="1e0f3dcd-e7b0-806e-a7db-cccf3aff57f6" class="bulleted-list"><li style="list-style-type:disc">Site: The study was conducted at the “Prof. Dr. Alexandru Obregia” Clinical Psychiatry Hospital in Bucharest, Romania—a specialized institution in the diagnosis and treatment of neurodevelopmental disorders. This site was selected due to its access to a large population of patients with ASD and the expertise of the clinical team in evaluating such cases.</li></ul><ul id="1e0f3dcd-e7b0-800b-963d-ce0bd41a1d96" class="bulleted-list"><li style="list-style-type:disc">The study was funded through European Economic Area (EEA) Grants.</li></ul><ul id="1e0f3dcd-e7b0-8096-885e-d95cbc892ebc" class="bulleted-list"><li style="list-style-type:disc">Scientific Coordinator: Dr. Magdalena Budișteanu<br/>Collaborator: Dr. Ole Andreassen, University of Oslo<br/></li></ul><p id="1e0f3dcd-e7b0-8028-922e-f0721e63299a" class=""><strong>Participants</strong></p><ul id="1e0f3dcd-e7b0-8026-a7fe-d4b6bf3bc10b" class="bulleted-list"><li style="list-style-type:disc">Selection Criteria:<br/>Patients were selected from the hospital’s database. Inclusion criteria required a confirmed diagnosis of ASD based on DSM-5 criteria.<br/>A total of fifty participants were included in the study: thirty-four boys and sixteen girls.<br/>The mean age was six years and seven months, with an age range from one year and five months to seventeen years. Sex and age distribution were analyzed for potential correlations with genetic and phenotypic variables.<br/></li></ul><p id="1e0f3dcd-e7b0-8078-922a-f64486b216c8" class=""><strong>Inclusion Criteria:</strong></p><ul id="1e0f3dcd-e7b0-80bf-aa6c-e8db7898a001" class="bulleted-list"><li style="list-style-type:disc">Confirmed ASD diagnosis according to DSM-5</li></ul><ul id="1e0f3dcd-e7b0-8050-b8fa-c7e8ab461d9f" class="bulleted-list"><li style="list-style-type:disc">Complete clinical and genetic records</li></ul><ul id="1e0f3dcd-e7b0-8049-beb3-de345d357f12" class="bulleted-list"><li style="list-style-type:disc">Informed consent obtained from all participants or their legal guardians, in accordance with international ethical standards</li></ul><p id="1e0f3dcd-e7b0-80c0-a87d-e3796133b84b" class=""><strong>Exclusion Criteria:</strong></p><ul id="1e0f3dcd-e7b0-8035-8adc-d8c4d3ab45bd" class="bulleted-list"><li style="list-style-type:disc">Additional diagnoses that could compromise the validity of the results</li></ul><ul id="1e0f3dcd-e7b0-80a7-a2fe-d0eaa88f1f2d" class="bulleted-list"><li style="list-style-type:disc">Lack of informed consent</li></ul><p id="1e0f3dcd-e7b0-80d4-b7fd-f7b687d33409" class=""><strong>Data Collection</strong></p><p id="1e0f3dcd-e7b0-806a-b1e9-e4cec9a950cb" class=""><strong>Demographic Data:</strong></p><ul id="1e0f3dcd-e7b0-8047-91c6-ff803df990c2" class="bulleted-list"><li style="list-style-type:disc">Demographic information (age, sex, medical history) was extracted from patient files and analyzed for correlation with genetic and phenotypic variables.</li></ul><p id="1e0f3dcd-e7b0-8086-988f-d3344c4a50da" class=""><strong>Clinical Evaluations:</strong></p><p id="1e0f3dcd-e7b0-8084-93f9-f33cda0cee73" class="">Evaluations were performed by a team of clinical psychologists and therapists.</p><ol type="1" id="1e0f3dcd-e7b0-800f-9fda-d5aac10740b6" class="numbered-list" start="1"><li>Anamnesis:<br/>Included detailed personal and medical history, early development, behavioral observations by parents or guardians, and family history of neurodevelopmental disorders.<br/></li></ol><ol type="1" id="1e0f3dcd-e7b0-8079-b1c1-f513afc85609" class="numbered-list" start="2"><li>Behavioral Assessment:<br/>Observations included social interactions, repetitive behaviors, and emotional responses.<br/></li></ol><ol type="1" id="1e0f3dcd-e7b0-80c0-8e57-f2f80f2d6af8" class="numbered-list" start="3"><li>Language Development Assessment:<br/>Specific scales were used to evaluate both verbal and non-verbal communication skills.<br/></li></ol><ol type="1" id="1e0f3dcd-e7b0-8092-bf2d-eb0396f164f9" class="numbered-list" start="4"><li>Neurological Examination:<br/>Aimed at identifying signs of central or peripheral nervous system dysfunction. This included muscle tone, reflexes, and motor coordination.<br/></li></ol><p id="1e0f3dcd-e7b0-8050-9748-d1d5347b2cb8" class=""><strong>Intelligence Assessment (IQ)</strong></p><ul id="1e0f3dcd-e7b0-801f-bd3d-f28717e11c18" class="bulleted-list"><li style="list-style-type:disc">Instruments Used:<ul id="1e0f3dcd-e7b0-8080-a1c0-ec5485c6a3f2" class="bulleted-list"><li style="list-style-type:circle">Wechsler Intelligence Scale for Children (WISC):<br/>Standardized assessment of cognitive and intellectual abilities.<br/></li></ul><ul id="1e0f3dcd-e7b0-80a2-9f9d-fe3393557b56" class="bulleted-list"><li style="list-style-type:circle">Raven’s Progressive Matrices Test:<br/>Evaluates abstract reasoning and non-verbal intelligence.<br/></li></ul></li></ul><p id="1e0f3dcd-e7b0-80be-8204-f2fab96ae3aa" class="">
+</p><p id="1e0f3dcd-e7b0-80cf-9139-c8817ca26a95" class=""><strong>Behavioral and Language Evaluation</strong></p><ul id="1e0f3dcd-e7b0-8037-b6d3-fae55dcf9f59" class="bulleted-list"><li style="list-style-type:disc">Instruments Used:<ul id="1e0f3dcd-e7b0-80f6-b88a-ed99270ae9b8" class="bulleted-list"><li style="list-style-type:circle">ADOS (Autism Diagnostic Observation Schedule):<br/>Structured observations that assist in diagnosing ASD and evaluating symptom severity.<br/></li></ul><ul id="1e0f3dcd-e7b0-80ce-a7e9-e477ad1afb52" class="bulleted-list"><li style="list-style-type:circle">ADI-R (Autism Diagnostic Interview – Revised):<br/>A comprehensive interview used to assess individuals suspected of having ASD or other related conditions【4】.<br/></li></ul></li></ul><p id="1e0f3dcd-e7b0-8065-96de-dfe4568e35aa" class="">
+</p><p id="1e0f3dcd-e7b0-805a-b724-e560f9a588c0" class=""><strong>Monitored Parameters</strong></p><ul id="1e0f3dcd-e7b0-8042-8ca0-fd253a022741" class="bulleted-list"><li style="list-style-type:disc">Behavior and Development:<br/>Observations focused on evaluating repetitive behaviors, social interactions, and communication skills.<br/></li></ul><ul id="1e0f3dcd-e7b0-805e-80e6-c9f3abc61007" class="bulleted-list"><li style="list-style-type:disc">Genetic Variations:<br/>Identification and classification of relevant genetic variations, such as point mutations and Copy Number Variations (CNVs), and their association with clinical phenotypes.<br/></li></ul><ul id="1e0f3dcd-e7b0-80fa-90cc-e9b3c73ab90e" class="bulleted-list"><li style="list-style-type:disc">Symptom Severity:</li></ul><p id="1e0f3dcd-e7b0-80af-a081-c20f900c1ac1" class="">       Participants were classified according to the severity of symptoms (mild, moderate, severe) and correlations with genetic profiles were assessed.</p><p id="1e0f3dcd-e7b0-805e-8475-e193687ad51b" class=""><strong>Genotypic and Phenotypic Classification</strong></p><p id="1e0f3dcd-e7b0-8089-9309-e4a42622a1b1" class="">Participants were classified based on phenotype severity using a pre-established evaluation scale:</p><ul id="1e0f3dcd-e7b0-80e7-a0e5-c1641143eb4c" class="bulleted-list"><li style="list-style-type:disc">Mild Phenotype:<br/>Characterized by minimal deficits and above-average cognitive abilities (IQ between eighty and one hundred, mild impairment in behavior and language).<br/></li></ul><ul id="1e0f3dcd-e7b0-802d-8685-d4ee6f13b094" class="bulleted-list"><li style="list-style-type:disc">Moderate Phenotype:<br/>Characterized by communication difficulties and impaired social interactions (IQ between forty and eighty, moderate impairment in behavior and language, mildly to moderately pathological neurological examination).<br/></li></ul><ul id="1e0f3dcd-e7b0-80ac-83c3-efc65fe7dbd3" class="bulleted-list"><li style="list-style-type:disc">Severe Phenotype:<br/>Associated with significant intellectual disabilities and motor difficulties (IQ below forty, severe behavioral and language impairments, severely pathological neurological examination).<br/></li></ul><p id="1e0f3dcd-e7b0-806e-9eb0-d5ac67fdee53" class="">Genotypes were grouped based on the identified genetic variations, allowing comparison between groups and evaluation of the genetic impact on clinical manifestations.</p><p id="1e0f3dcd-e7b0-804a-99c3-f00553c4a4eb" class=""><strong>Genetic Analyses</strong></p><ul id="1e0f3dcd-e7b0-8041-a695-d9f62d7d6295" class="bulleted-list"><li style="list-style-type:disc">1. Next-Generation Sequencing (NGS):<ul id="1e0f3dcd-e7b0-8073-8f34-d52cedf68999" class="bulleted-list"><li style="list-style-type:circle">Equipment Used:<br/>Illumina platforms such as HiSeq or NovaSeq, likely used for genome sequencing. These systems allow rapid and accurate identification of genetic mutations associated with neurodevelopmental disorders.<br/></li></ul></li></ul><ul id="1e0f3dcd-e7b0-8083-8215-c53bf2959f5f" class="bulleted-list"><li style="list-style-type:disc"></li></ul><ul id="1e0f3dcd-e7b0-805b-a883-d24a8511ef10" class="bulleted-list"><li style="list-style-type:disc">2. Copy Number Variation (CNV) Analysis:<ul id="1e0f3dcd-e7b0-807c-aa19-e69eb4d28d09" class="bulleted-list"><li style="list-style-type:circle">Equipment Used:<br/>Affymetrix Cytoscan HD platform was used to detect genome-wide copy number variations, essential for identifying deletions and duplications associated with autism.<br/></li></ul></li></ul><ul id="1e0f3dcd-e7b0-8013-b817-fd0e6de45647" class="bulleted-list"><li style="list-style-type:disc"></li></ul><ul id="1e0f3dcd-e7b0-80d2-8f8e-c48c648a8322" class="bulleted-list"><li style="list-style-type:disc">3. Comparative Genomic Hybridization (CGH) Microarray:<ul id="1e0f3dcd-e7b0-8026-b287-c764dd357b4e" class="bulleted-list"><li style="list-style-type:circle">Equipment Used:<br/>High-resolution CGH microarrays were employed to detect genomic variations, facilitating the identification of chromosomal abnormalities that may contribute to ASD phenotypes.<br/></li></ul></li></ul><ul id="1e0f3dcd-e7b0-802d-b82b-d6e843f416ff" class="bulleted-list"><li style="list-style-type:disc"></li></ul><p id="1e0f3dcd-e7b0-80f9-8964-da4d57426513" class=""><strong>Clinical Research and Monitoring</strong></p><ul id="1e0f3dcd-e7b0-80f9-8970-d4db9e8541c3" class="bulleted-list"><li style="list-style-type:disc">Magnetic Resonance Imaging (MRI):<ul id="1e0f3dcd-e7b0-8000-90b9-c34bb12defa7" class="bulleted-list"><li style="list-style-type:circle">Equipment Used:<br/>MRI scanners were employed to assess structural brain abnormalities, as part of the comprehensive diagnostic process correlating imaging findings with genetic and phenotypic data.<br/></li></ul></li></ul><ul id="1e0f3dcd-e7b0-8024-ab72-f4008b74b9ae" class="bulleted-list"><li style="list-style-type:disc"></li></ul><p id="1e0f3dcd-e7b0-800c-aaee-f5ca4da90cb6" class=""><strong>Statistical Methods</strong></p><ul id="1e0f3dcd-e7b0-80d1-a561-ef5fc0dc19ef" class="bulleted-list"><li style="list-style-type:disc">Statistical analysis was performed using ANOVA software, including correlation tests, regression analyses, and chi-square tests to evaluate associations between variables.</li></ul><ul id="1e0f3dcd-e7b0-80ac-8691-e16f61eba497" class="bulleted-list"><li style="list-style-type:disc">Statistical significance was determined using a p-value threshold of less than 0.05.</li></ul><p id="1e0f3dcd-e7b0-805e-a47e-d811150d6e7f" class=""><strong>Quality Control and Validation</strong></p><ul id="1e0f3dcd-e7b0-8090-b7d4-fdb4b5ec881d" class="bulleted-list"><li style="list-style-type:disc">Data Validation:<br/>To ensure data accuracy, double evaluations were performed, and independent reviewers were involved.<br/>Measurement errors and intra-observer variability were managed using strict quality control protocols.<br/></li></ul><p id="1e0f3dcd-e7b0-80f0-9408-fb5f0526f8a6" class=""><strong>Ethical Considerations</strong></p><ul id="1e0f3dcd-e7b0-80cb-af7b-c443ad666394" class="bulleted-list"><li style="list-style-type:disc">The study was approved by the Ethics Committee of the “Prof. Dr. Alexandru Obregia” Clinical Psychiatry Hospital in Bucharest.</li></ul><ul id="1e0f3dcd-e7b0-80d6-8705-cacff0d8a320" class="bulleted-list"><li style="list-style-type:disc">All data were collected and managed in compliance with standards for the protection of personal data and ethical regulations regarding research on human subjects.</li></ul><p id="1e0f3dcd-e7b0-8055-9414-defed510e41f" class="">
+</p><h1 id="1e0f3dcd-e7b0-806e-a966-cc5affce60d8" class=""><strong>Results</strong></h1><p id="1e0f3dcd-e7b0-80c0-9c8f-f7a47ce2451d" class="">In order to associate certain genes or specific genetic combinations with mild, moderate, or severe phenotypes, the patients were distributed according to:</p><ul id="1e0f3dcd-e7b0-8059-9873-dc46875703b0" class="bulleted-list"><li style="list-style-type:disc">IQ score</li></ul><ul id="1e0f3dcd-e7b0-8053-b144-c8e6a14e107e" class="bulleted-list"><li style="list-style-type:disc">Presence of normal/abnormal neurological examination</li></ul><ul id="1e0f3dcd-e7b0-8028-b7f1-fccf7aa415ac" class="bulleted-list"><li style="list-style-type:disc">Presence or absence of normal physical appearance</li></ul><ul id="1e0f3dcd-e7b0-8043-9fbe-e47e6d747295" class="bulleted-list"><li style="list-style-type:disc">Presence or absence of normal language development</li></ul><ul id="1e0f3dcd-e7b0-80fe-80d8-f06dbe83b9ad" class="bulleted-list"><li style="list-style-type:disc">Presence of normal, mildly, moderately, or severely affected behavior</li></ul><p id="1e0f3dcd-e7b0-80e2-b70b-fc59f959b4d7" class="">Additionally, patients were categorized based on CNV type: duplication, deletion, or absence of pathological CNVs.</p><p id="1e0f3dcd-e7b0-80eb-a7c3-c5e6ba09885f" class=""><strong>1. Patient Distribution According to IQ Interval and Gene Association</strong></p><p id="1e0f3dcd-e7b0-804b-982b-cd441bf28998" class=""><strong>IQ 30–40:</strong></p><p id="1e0f3dcd-e7b0-80bb-b179-d3015ab106f7" class="">Associated genes:</p><p id="1e0f3dcd-e7b0-8047-b31a-d17b09df74ed" class="">NAA10, RENBP, HCFC1, TMEM187, IRAK1, MIR718, MECP2, OPN1LW, OPN1MW, TEX28, TKTL1, FLNA, EMD, RPL10, DNASE1L1, TAZ, ATP6AP1, GDI1, FAM50A, PLXNA3, HCFC1-AS1, MIR3202-1, MIR3202-2, OPN1MW2, OPN1MW3, SNORA70, CH17-340M24.3, MIR6858, along with other genes without pathogenic CNV or VOUS.</p><p id="1e0f3dcd-e7b0-805c-ba09-f07fbab501a0" class=""><strong>IQ 40–50:</strong></p><p id="1e0f3dcd-e7b0-8081-b9f9-d1ac709d79ce" class="">Associated genes:</p><p id="1e0f3dcd-e7b0-805c-94eb-ded917fa186b" class="">IMMP2L, no pathogenic CNVs or VOUS, EXOC4, LRRC8E, MAP2K7, SNAPC2, CTXN1, TIMM44, TGFBR3L, CDH4.</p><p id="1e0f3dcd-e7b0-8073-938f-dffb12ddf535" class=""><strong>IQ 50–60:</strong></p><p id="1e0f3dcd-e7b0-801f-9fcd-d23b71a1b64c" class="">Associated genes include:</p><p id="1e0f3dcd-e7b0-8025-b08b-f4ceb4066f62" class="">SDK1, FOXK1, AP5Z1, RADIL, PAPOLB, and many others listed with either duplications, deletions, or no pathological CNV/VOUS.</p><p id="1e0f3dcd-e7b0-80e4-8c9b-ff9a8ea5f64a" class=""><strong>IQ 60–70, 70–80, 80–90, 90–100, &gt;100:</strong></p><p id="1e0f3dcd-e7b0-8009-b5b5-eb2950567156" class="">Similar detailed gene associations for each IQ range.</p><p id="1e0f3dcd-e7b0-80a1-afc3-cc2791f3e357" class=""><strong>2. Patient Distribution Based on Neurological Examination</strong></p><ul id="1e0f3dcd-e7b0-8099-a6a1-f0bcd7316ed1" class="bulleted-list"><li style="list-style-type:disc">Severe Pathology: 28 patients</li></ul><ul id="1e0f3dcd-e7b0-80fd-be4d-d4f6e73e7056" class="bulleted-list"><li style="list-style-type:disc">Normal Neurological Exam: 14 patients</li></ul><ul id="1e0f3dcd-e7b0-8051-861c-f7ec4c40d4b5" class="bulleted-list"><li style="list-style-type:disc">Mild-Moderate Pathology: 8 patients</li></ul><ul id="1e0f3dcd-e7b0-802f-be0c-e85e0801800b" class="bulleted-list"><li style="list-style-type:disc">Unclassified: 1 patient</li></ul><p id="1e0f3dcd-e7b0-802b-97f1-ee9c3ce55e98" class=""><strong>Genes associated with normal neurological examination:</strong></p><ul id="1e0f3dcd-e7b0-80c7-ba7a-d6b569a718a0" class="bulleted-list"><li style="list-style-type:disc">In girls:<br/>No pathogenic CNVs or VOUS, WDR20, MOK, CINP, TECPR2, ZNF839 among others.<br/></li></ul><ul id="1e0f3dcd-e7b0-8041-b63f-d50726d62fb4" class="bulleted-list"><li style="list-style-type:disc">In boys:<br/>A wide list of genes such as ALCAM, CBLB, DUBR, CD47, IFT57, HHLA2, MYH15.<br/></li></ul><p id="1e0f3dcd-e7b0-8026-b99c-e30e2ee114db" class=""><strong>Genes associated with pathological neurological examination:</strong></p><ul id="1e0f3dcd-e7b0-803c-ae21-d5d600a26374" class="bulleted-list"><li style="list-style-type:disc">Mild-Moderate:<br/>In girls: ELP4, PAX6, PAX6-AS1, PAUPAR<br/>In boys: IMMP2L<br/></li></ul><ul id="1e0f3dcd-e7b0-8056-a255-d70170575b1a" class="bulleted-list"><li style="list-style-type:disc">Severe:<br/>Large gene lists for both boys and girls detailed separately.<br/></li></ul><p id="1e0f3dcd-e7b0-804f-ad4b-fd5abf91723e" class=""><strong>3. Patient Distribution Based on Physical Appearance</strong></p><ul id="1e0f3dcd-e7b0-8095-b7fd-c16619157413" class="bulleted-list"><li style="list-style-type:disc">Normal Appearance: 18 patients</li></ul><ul id="1e0f3dcd-e7b0-807d-a448-f0dc05020eda" class="bulleted-list"><li style="list-style-type:disc">Dysmorphic Features: 32 patients</li></ul><p id="1e0f3dcd-e7b0-8030-a85f-c4607e8fcb79" class=""><strong>4. Patient Distribution Based on Language Development</strong></p><ul id="1e0f3dcd-e7b0-8098-a90c-dafcd1022ce8" class="bulleted-list"><li style="list-style-type:disc">Normal Development: 4 patients</li></ul><ul id="1e0f3dcd-e7b0-80df-8ec2-f6a67597eed2" class="bulleted-list"><li style="list-style-type:disc">Abnormal Development: 46 patients</li></ul><p id="1e0f3dcd-e7b0-808c-a9f4-eb8e1edc9f8e" class="">Genes associated with normal language:</p><ul id="1e0f3dcd-e7b0-8069-8d14-d964cbeba677" class="bulleted-list"><li style="list-style-type:disc">Girls: No pathogenic CNVs or VOUS</li></ul><ul id="1e0f3dcd-e7b0-804c-9215-c745a7e0659f" class="bulleted-list"><li style="list-style-type:disc">Boys: DUP Y chromosome, no pathogenic CNVs or VOUS</li></ul><p id="1e0f3dcd-e7b0-8003-83c8-da92738cc2e3" class="">Genes associated with language problems:</p><p id="1e0f3dcd-e7b0-802e-89cc-df8b77051980" class="">Detailed separately by degree (mild-moderate vs severe) and by sex.</p><p id="1e0f3dcd-e7b0-80a3-a6a4-f26f1f41cf3a" class=""><strong>5. Patient Distribution Based on Behavioral Assessment</strong></p><ul id="1e0f3dcd-e7b0-80f8-80d5-ebfde88ceef5" class="bulleted-list"><li style="list-style-type:disc">Normal Behavior: 0 patients</li></ul><ul id="1e0f3dcd-e7b0-80a3-ba78-d490e0dbb00c" class="bulleted-list"><li style="list-style-type:disc">Mildly Affected Behavior: 12 patients</li></ul><ul id="1e0f3dcd-e7b0-80b5-94da-e11711c2a181" class="bulleted-list"><li style="list-style-type:disc">Moderately Affected Behavior: 35 patients</li></ul><ul id="1e0f3dcd-e7b0-80f8-ae32-f86179a1e46e" class="bulleted-list"><li style="list-style-type:disc">Severely Affected Behavior: 3 patients</li></ul><p id="1e0f3dcd-e7b0-80fa-a22c-ff83efd5b38b" class=""><strong>Genes associated with behavior:</strong></p><ul id="1e0f3dcd-e7b0-807e-8aa7-c54c89bd049c" class="bulleted-list"><li style="list-style-type:disc">Mild:<br/>In girls: no pathogenic CNVs or VOUS<br/>In boys: a list including CDH4, DUP Y chromosome, EXOC4 and others.<br/></li></ul><ul id="1e0f3dcd-e7b0-80ba-956c-ed03f2a7f5a5" class="bulleted-list"><li style="list-style-type:disc">Moderate and Severe:<br/>Separate detailed gene lists for boys and girls.<br/></li></ul><p id="1e0f3dcd-e7b0-800f-963d-c2d2f440e3a0" class=""><strong>6. Patient Distribution Based on CNV Type</strong></p><ul id="1e0f3dcd-e7b0-80ac-a680-dcc9ace7736b" class="bulleted-list"><li style="list-style-type:disc">No Pathological CNV: 23 patients</li></ul><ul id="1e0f3dcd-e7b0-805d-a7cb-f7e25f272c5b" class="bulleted-list"><li style="list-style-type:disc">Duplication: 13 patients</li></ul><ul id="1e0f3dcd-e7b0-80fe-bf2d-d561616c67a0" class="bulleted-list"><li style="list-style-type:disc">Deletion: 12 patients</li></ul><ul id="1e0f3dcd-e7b0-80f2-b47e-de98b4be731f" class="bulleted-list"><li style="list-style-type:disc">Other CNV Types: 2 patients</li></ul><p id="1e0f3dcd-e7b0-80a8-b18f-cf18cd820802" class=""><strong>Genotype–Phenotype Correlations</strong></p><ul id="1e0f3dcd-e7b0-8030-8543-e52368f0fb91" class="bulleted-list"><li style="list-style-type:disc">Almost Unaffected Phenotype (IQ &gt;100, normal or mildly affected behavior and language):<br/>DUP Y chromosome, no pathogenic CNV or VOUS<br/></li></ul><ul id="1e0f3dcd-e7b0-80e1-b72e-e3738c10c20c" class="bulleted-list"><li style="list-style-type:disc">Mildly Affected Phenotype (IQ 80–100, mild behavioral and language impairment):<br/>No pathogenic CNV or VOUS<br/></li></ul><ul id="1e0f3dcd-e7b0-80ff-a768-dd1e38e98d4b" class="bulleted-list"><li style="list-style-type:disc">Moderately Affected Phenotype (IQ 40–80, moderate behavioral and language impairment, mild-moderate neurological abnormalities):<br/>A list of associated genes (e.g., SDK1, FOXK1, AP5Z1, etc.)<br/></li></ul><ul id="1e0f3dcd-e7b0-8092-ad43-f5278c2c7c97" class="bulleted-list"><li style="list-style-type:disc">Severely Affected Phenotype (IQ &lt;40, severe behavioral and language impairment, severe neurological abnormalities):<br/>A longer list of associated genes (e.g., APBA2, NSMCE3, TJP1, CHRFAM7A, etc.)<br/></li></ul><p id="1e0f3dcd-e7b0-808d-8958-d93c6f2b16bc" class=""><strong>Importance of CNV Type</strong></p><p id="1e0f3dcd-e7b0-809c-81de-e1cb480e6ac6" class="">No clear correlation could be observed between CNV type (deletion, duplication, or absence of pathological CNV) and phenotype severity.</p><p id="1e0f3dcd-e7b0-8012-914e-c6a5896d881d" class=""><strong>Analysis of Other Factors</strong></p><ul id="1e0f3dcd-e7b0-8089-9e5d-c25bbc0f2c5a" class="bulleted-list"><li style="list-style-type:disc">Maternal Age:<br/>No statistically significant differences between phenotypic groups regarding maternal age (p=0.39).<br/></li></ul><ul id="1e0f3dcd-e7b0-8098-a559-c665b51f8542" class="bulleted-list"><li style="list-style-type:disc">Paternal Age:<br/>Similarly, no statistically significant differences regarding paternal age (p=0.41).<br/></li></ul><p id="1e0f3dcd-e7b0-80b3-9b22-edef6c5a52c8" class=""><strong>Sex Differences</strong></p><ul id="1e0f3dcd-e7b0-802d-8e76-d2320e1818b7" class="bulleted-list"><li style="list-style-type:disc">Average IQ:<ul id="1e0f3dcd-e7b0-80ee-bfec-e8cbfff65a0a" class="bulleted-list"><li style="list-style-type:circle">Boys: 61.73</li></ul><ul id="1e0f3dcd-e7b0-8063-b060-e41648c5dc1f" class="bulleted-list"><li style="list-style-type:circle">Girls: 60.75</li></ul></li></ul><p id="1e0f3dcd-e7b0-8021-9aa6-e18ea16dbe2b" class="">
+</p><ul id="1e0f3dcd-e7b0-8028-8876-e114eb520429" class="bulleted-list"><li style="list-style-type:disc">Highest IQ:<ul id="1e0f3dcd-e7b0-8054-86af-d293eb1e1e54" class="bulleted-list"><li style="list-style-type:circle">Boy: 120</li></ul></li></ul><p id="1e0f3dcd-e7b0-80cb-a42a-f535a8607b29" class="">
+</p><ul id="1e0f3dcd-e7b0-80ea-b4a2-f7fb14055fb7" class="bulleted-list"><li style="list-style-type:disc">Lowest IQ:<ul id="1e0f3dcd-e7b0-809f-8cf5-c43367c01e82" class="bulleted-list"><li style="list-style-type:circle">Boy: 30</li></ul></li></ul><p id="1e0f3dcd-e7b0-8001-b0f2-d0bc2e7795a7" class="">
+</p><ul id="1e0f3dcd-e7b0-8040-8c02-f6e6855c4ae9" class="bulleted-list"><li style="list-style-type:disc">Behavior Distribution:<ul id="1e0f3dcd-e7b0-80cf-821e-c94a41dd260a" class="bulleted-list"><li style="list-style-type:circle">Boys:<ul id="1e0f3dcd-e7b0-800e-aa3a-fad77d405d4b" class="bulleted-list"><li style="list-style-type:square">Moderate: 64.7%</li></ul><ul id="1e0f3dcd-e7b0-807b-a512-da0d77dc2435" class="bulleted-list"><li style="list-style-type:square">Mild: 29.4%</li></ul><ul id="1e0f3dcd-e7b0-8004-9bda-ed7550f87437" class="bulleted-list"><li style="list-style-type:square">Severe: 5.9%</li></ul></li></ul><p id="1e0f3dcd-e7b0-800f-824b-faab81001f16" class="">
+</p><ul id="1e0f3dcd-e7b0-80b0-93f1-c35709fa581b" class="bulleted-list"><li style="list-style-type:circle">Girls:<ul id="1e0f3dcd-e7b0-8083-b7dc-c099baddf66d" class="bulleted-list"><li style="list-style-type:square">Moderate: 81.3%</li></ul><ul id="1e0f3dcd-e7b0-80eb-bc9c-cb0ed1a6837a" class="bulleted-list"><li style="list-style-type:square">Mild: 12.5%</li></ul><ul id="1e0f3dcd-e7b0-80f2-b8d5-fae8319573a1" class="bulleted-list"><li style="list-style-type:square">Severe: 6.3%</li></ul></li></ul><p id="1e0f3dcd-e7b0-80df-bd71-c72c8259344f" class="">
+</p></li></ul><p id="1e0f3dcd-e7b0-803b-a321-caea9d8ddfba" class="">
+</p><ul id="1e0f3dcd-e7b0-8063-a748-dac0c3e1caf2" class="bulleted-list"><li style="list-style-type:disc">Language Development Distribution:<ul id="1e0f3dcd-e7b0-80de-9e81-e942f3ca7e29" class="bulleted-list"><li style="list-style-type:circle">Boys:<ul id="1e0f3dcd-e7b0-8025-9748-c582de888ab4" class="bulleted-list"><li style="list-style-type:square">Mild-Moderate delay: 67.6%</li></ul><ul id="1e0f3dcd-e7b0-80c2-a549-e20c94bc9cfc" class="bulleted-list"><li style="list-style-type:square">Severe delay: 32.4%</li></ul></li></ul><p id="1e0f3dcd-e7b0-8081-bcf8-e9127c265bcb" class="">
+</p><ul id="1e0f3dcd-e7b0-8078-ad26-c35bcdd8ff96" class="bulleted-list"><li style="list-style-type:circle">Girls:<ul id="1e0f3dcd-e7b0-8061-a696-fd55ca1148c1" class="bulleted-list"><li style="list-style-type:square">Mild-Moderate delay: 68.8%</li></ul><ul id="1e0f3dcd-e7b0-8067-b447-f49360f4f8a5" class="bulleted-list"><li style="list-style-type:square">Severe delay: 31.2%</li></ul></li></ul><p id="1e0f3dcd-e7b0-808e-9a37-e5c9534886fb" class="">
+</p></li></ul><p id="1e0f3dcd-e7b0-8011-8cf9-ccdcaa05f907" class="">
+</p><ul id="1e0f3dcd-e7b0-801d-a5b3-c25e3c8d3754" class="bulleted-list"><li style="list-style-type:disc">Age at Diagnosis:<ul id="1e0f3dcd-e7b0-8052-9108-de113ac9198f" class="bulleted-list"><li style="list-style-type:circle">Boys: Mean age 3.59 years</li></ul><ul id="1e0f3dcd-e7b0-80bd-90fa-ee1ac2be79c1" class="bulleted-list"><li style="list-style-type:circle">Girls: Mean age 4.03 years</li></ul></li></ul><p id="1e0f3dcd-e7b0-80d2-b5d4-e353d197742b" class="">
+</p><ul id="1e0f3dcd-e7b0-8038-b10b-ef538fe1733e" class="bulleted-list"><li style="list-style-type:disc">Dysmorphic Features:<ul id="1e0f3dcd-e7b0-805a-a9ec-fbb1f5440dd8" class="bulleted-list"><li style="list-style-type:circle">Boys: Most patients did not present dysmorphic features.</li></ul><ul id="1e0f3dcd-e7b0-8066-b210-d57c320cea64" class="bulleted-list"><li style="list-style-type:circle">Girls: A higher proportion showed dysmorphic features.</li></ul></li></ul><p id="1e0f3dcd-e7b0-80d1-8acd-e4a418a45f08" class="">
+</p><h1 id="1e0f3dcd-e7b0-80e0-9465-f29416b57eb0" class=""><strong>Bibliography</strong></h1><ol type="1" id="1e0f3dcd-e7b0-8093-a7ed-c261440b7df3" class="numbered-list" start="1"><li>Centers for Disease Control and Prevention (CDC).<br/>Autism Spectrum Disorder (ASD) Data and Statistics. Retrieved from: <br/><a href="https://www.cdc.gov/">www.cdc.gov</a></li></ol><ol type="1" id="1e0f3dcd-e7b0-80d6-9ad0-dc2ea62c42ff" class="numbered-list" start="2"><li>European Union Statistics on Income and Living Conditions (EU-SILC).<br/>Autism prevalence estimates in Europe. Retrieved from: <br/><a href="https://ec.europa.eu/">ec.europa.eu</a></li></ol><ol type="1" id="1e0f3dcd-e7b0-8078-86ea-c04549e97fd9" class="numbered-list" start="3"><li>McClellan J, King MC.<br/>“Genomic analysis of mental retardation and autism: Overlapping causes.”<br/>New England Journal of Medicine. 2010.<br/></li></ol><ol type="1" id="1e0f3dcd-e7b0-8074-aa63-e05c828e20ec" class="numbered-list" start="4"><li>Buxbaum JD, et al.<br/>“Neuroligin mutations: Perturbing synapses in autism spectrum disorder.”<br/>Nature Reviews Neuroscience. 2009.<br/></li></ol><ol type="1" id="1e0f3dcd-e7b0-8038-84c7-e22fa07b9b68" class="numbered-list" start="5"><li>Ashwood P, Krakowiak P, Hertz-Picciotto I, Hansen R, Pessah I, Van de Water J.<br/>“Neuroinflammation and autism spectrum disorder.”<br/>Journal of Neuroimmunology. 2015.<br/></li></ol><ol type="1" id="1e0f3dcd-e7b0-8059-b624-d18e599aa9a4" class="numbered-list" start="6"><li>Klann E, Antion MD, Banker GA, Hou L.<br/>“mTOR signaling in brain development and autism.”<br/>Brain Research. 2015.<br/></li></ol><ol type="1" id="1e0f3dcd-e7b0-808f-96ac-c86d18604f84" class="numbered-list" start="7"><li>Nature Genetics.<br/>Detailed studies on CHD8 mutations and autism phenotypes.<br/></li></ol><ol type="1" id="1e0f3dcd-e7b0-8063-816c-c33108829df4" class="numbered-list" start="8"><li>Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (DSM-5).<br/>American Psychiatric Association.<br/></li></ol><ol type="1" id="1e0f3dcd-e7b0-809e-beac-d728942edd91" class="numbered-list" start="9"><li>Lord C, Rutter M, DiLavore PC, Risi S.<br/>Autism Diagnostic Observation Schedule (ADOS).<br/>Western Psychological Services.<br/></li></ol><ol type="1" id="1e0f3dcd-e7b0-80ff-903c-d856bfebcb4f" class="numbered-list" start="10"><li>Rutter M, Le Couteur A, Lord C.<br/>Autism Diagnostic Interview-Revised (ADI-R).<br/>Western Psychological Services.<br/></li></ol><ol type="1" id="1e0f3dcd-e7b0-80a1-a289-efd5bc1b9516" class="numbered-list" start="11"><li>European Journal of Public Health.<br/>ASD Diagnosis Ratios by Sex in Romania, 2021.<br/></li></ol><p id="1e0f3dcd-e7b0-80d7-bf84-f5bd70622164" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
