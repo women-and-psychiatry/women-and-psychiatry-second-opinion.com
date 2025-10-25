@@ -3,289 +3,597 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Why ADHD Looks Different in Women — And Why It Often Goes Undiagnosed (Patient-First 2025)</title>
-  <meta name="description" content="A patient-first guide to ADHD in women: what it feels like, why it’s missed, hormones and menopause, and what actually helps." />
+  <title>Why ADHD Looks Different in Women — And Why It Often Goes Undiagnosed (Expanded 2025)</title>
+  <meta name="description" content="Clinically rich, patient-friendly deep dive into ADHD in women: phenotype, masking, hormones and menopause, neurobiology, therapies, medication pharmacology, HRT interface, digital adjuncts, integration, FAQ, and references." />
   <link rel="icon" href="/favicon.ico" />
+  <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Women & Psychiatry — Second Opinion" />
-  <meta property="og:title" content="Why ADHD Looks Different in Women — And Why It Often Goes Undiagnosed (Patient-First 2025)" />
-  <meta property="og:description" content="Clear, kind explanations for patients: masking, mental hyperactivity, menopause, and what actually helps (skills + medications explained simply)." />
+  <meta property="og:title" content="Why ADHD Looks Different in Women — And Why It Often Goes Undiagnosed (Expanded 2025)" />
+  <meta property="og:description" content="How ADHD shows up in women across the lifespan — brain circuits, hormones, menopause, and what actually helps (therapy + medications explained clearly)." />
   <meta property="og:image" content="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/og-image.jpg" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Why ADHD Looks Different in Women — And Why It Often Goes Undiagnosed (Expanded 2025)" />
+  <meta name="twitter:description" content="A hybrid clinician–patient guide: brain circuits, hormones, phenotype, and actionable treatment." />
+  <meta name="twitter:image" content="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/og-image.jpg" />
   <style>
     :root{
       --bg:#0d112b; --panel:#121735; --ink:#f3f6ff; --ink-dim:#c9d0f8; --accent:#6ea8fe; --accent-2:#c084fc; --muted:#9aa3c7; --ok:#3ddc97;
       --shadow:0 10px 30px rgba(0,0,0,.25); --radius:16px; --radius-lg:22px; --maxw:900px;
     }
     html,body{height:100%}
-    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--ink);background:var(--bg);line-height:1.7}
-    .wrap{max-width:var(--maxw);margin:clamp(20px,5vw,64px) auto;padding:0 20px}
-    header.hero{background:linear-gradient(135deg,rgba(110,168,254,.12),rgba(192,132,252,.10));border:1px solid rgba(255,255,255,.10);box-shadow:var(--shadow);border-radius:var(--radius-lg);padding:clamp(24px,5vw,48px)}
-    .hero h1{margin:0 0 10px;font-size:clamp(28px,5vw,48px)}
-    .hero p.lead{margin:8px 0 0;color:var(--ink-dim);font-size:clamp(16px,2.4vw,20px)}
-    nav.toc{margin:28px 0;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);border-radius:var(--radius);padding:16px}
-    nav.toc h2{font-size:1rem;margin:0 0 10px;color:var(--ink-dim)}
-    nav.toc a{display:inline-block;color:var(--ink);text-decoration:none;padding:.2rem .55rem;margin:.15rem;border-radius:999px;border:1px solid rgba(255,255,255,.1)}
+    body{margin:0; font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; color:var(--ink); background:var(--bg); line-height:1.7}
+    .wrap{max-width:var(--maxw); margin:clamp(20px,5vw,64px) auto; padding:0 20px}
+    header.hero{background:linear-gradient(135deg, rgba(110,168,254,.12), rgba(192,132,252,.10)); border:1px solid rgba(255,255,255,.10); box-shadow:var(--shadow); border-radius:var(--radius-lg); padding:clamp(24px,5vw,48px)}
+    .hero h1{margin:0 0 10px; font-size:clamp(28px,5vw,48px)}
+    .hero p.lead{margin:8px 0 0; color:var(--ink-dim); font-size:clamp(16px,2.4vw,20px)}
+    .badge{display:inline-flex; align-items:center; gap:.5rem; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); color:var(--ink-dim); padding:.35rem .7rem; border-radius:999px; font-size:.85rem}
+    .badge .dot{width:8px; height:8px; border-radius:50%; background:var(--ok); box-shadow:0 0 0 3px rgba(61,220,151,.18)}
+    nav.toc{margin:28px 0; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10); border-radius: var(--radius); padding:16px}
+    nav.toc h2{font-size:1rem; margin:0 0 10px; color:var(--ink-dim)}
+    nav.toc a{display:inline-block; color:var(--ink); text-decoration:none; padding:.2rem .55rem; margin:.15rem; border-radius:999px; border:1px solid rgba(255,255,255,.1)}
     nav.toc a:hover{background:rgba(255,255,255,.09)}
-    section{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);border-radius:var(--radius);padding:clamp(18px,2.5vw,28px);margin:16px 0;box-shadow:var(--shadow)}
-    section h2{margin-top:0;font-size:clamp(22px,3vw,32px)}
-    .quote{border-left:4px solid var(--accent);padding-left:14px;color:var(--ink-dim);font-style:italic}
-    .callout{border:1px solid rgba(110,168,254,.35);background:linear-gradient(180deg,rgba(110,168,254,.10),rgba(110,168,254,.04));border-radius:12px;padding:14px;}
+    section{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10); border-radius:var(--radius); padding:clamp(18px,2.5vw,28px); margin:16px 0; box-shadow:var(--shadow)}
+    section h2{margin-top:0; font-size:clamp(22px,3vw,32px)}
+    h3{margin-top:1.1em}
+    p{margin:.5rem 0 1rem}
     ul{margin:.2rem 0 1rem 1.25rem}
     li{margin:.35rem 0}
-    .small{font-size:.92rem;color:var(--ink-dim)}
+    .quote{border-left:4px solid var(--accent); padding-left:14px; color:var(--ink-dim); font-style:italic}
+    .callout{border:1px solid rgba(110,168,254,.35); background:linear-gradient(180deg, rgba(110,168,254,.10), rgba(110,168,254,.04)); border-radius:12px; padding:14px}
+    .table{overflow:auto}
+    table{width:100%; border-collapse:collapse; font-size:.96rem}
+    th,td{border:1px solid rgba(255,255,255,.12); padding:.6rem; text-align:left; vertical-align:top}
+    th{background:rgba(255,255,255,.10)}
+    .small{font-size:.92rem; color:var(--ink-dim)}
+    .sep{height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent); margin:24px 0}
+    footer{margin:28px 0 64px; color:var(--muted)}
   </style>
 </head>
 <body>
 <div class="wrap">
-<header class="hero">
-  <span class="badge"><span class="dot"></span> Updated 2025 · Patient-Friendly</span>
-  <h1>Why ADHD Looks Different in Women — And Why It Often Goes Undiagnosed</h1>
-  <p class="lead">ADHD in women isn’t always loud. It hides behind doing too much, feeling too much, and trying too hard. Here’s what that means — and how hormones, life, and treatment all connect.</p>
-</header>
+  <header class="hero" role="banner">
+    <span class="badge"><span class="dot"></span> Updated 2025 · Clinically Rich & Patient-Friendly</span>
+    <h1>Why ADHD Looks Different in Women — And Why It Often Goes Undiagnosed</h1>
+    <p class="lead">A hybrid guide for patients and clinicians: how ADHD shows up in women, what the brain is doing, how hormones and menopause matter, and what treatment actually helps.</p>
+  </header>
 
-<nav class="toc">
-  <h2>Contents</h2>
-  <a href="#intro">1. Introduction</a>
-  <a href="#masking">2. Masking & Misunderstanding</a>
-  <a href="#feel">3. What It Feels Like Day-to-Day</a>
-  <a href="#hormones">4. Hormones, Cycles & Menopause</a>
-  <a href="#neuro">5. Inside the ADHD Brain</a>
-  <a href="#diagnosis">6. Why So Many Women Are Missed</a>
-  <a href="#firststeps">7. First Steps Toward Clarity</a>
-</nav>
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <a href="#intro">1. Introduction & Diagnostic Bias</a>
+    <a href="#neuro">2. The Architecture of Attention: Neurobiology & Circuits</a>
+    <a href="#hormones">3. Sex Hormones & Neurotransmission</a>
+    <a href="#phenotype">4. The Female Phenotype: Internalized Hyperactivity, Masking & Emotion</a>
+    <a href="#menopause">5. Perimenopause & Menopause — What Changes and Why</a>
+    <a href="#therapy">6. Therapies & Skills (Effect Sizes & Use-Cases)</a>
+    <a href="#meds">7. Medications & Mechanisms (Stimulants & Non-Stimulants)</a>
+    <a href="#hrt">8. Hormone Therapy (HRT) & ADHD: What We Know</a>
+    <a href="#digital">9. Digital Adjuncts</a>
+    <a href="#integration">10. Integrating Care Across the Lifespan</a>
+    <a href="#faq">11. FAQ — Quick Answers</a>
+    <a href="#refs">12. References</a>
+  </nav>
 
-<main id="content">
-<section id="intro">
-  <h2>1. Introduction</h2>
-  <p>For decades, ADHD was described through the image of a restless boy bouncing in class. Women were rarely studied, so their quieter signs were mistaken for anxiety, mood swings, or “being overwhelmed.” Today we know ADHD in women is real — and it often hides behind effort, empathy, and exhaustion.</p>
-</section>
+  <main id="content">
+    <!-- =========================
+         1) INTRODUCTION & DIAGNOSTIC BIAS
+    ========================== -->
+    <section id="intro">
+      <h2>1. Introduction & Diagnostic Bias</h2>
+      <p>For decades, ADHD was modeled on a disruptive schoolboy. Women rarely fit that picture. Their ADHD often lives inside: <em>mental hyperactivity</em>, task-initiation “freeze,” and emotions that surge quickly and settle slowly. Many over-prepare, over-apologize, and over-function to hide the cost. When life complexity rises (university, career, parenting, caregiving), or when hormones shift, those costs leak through. Recognition isn’t a label; it’s a map — aligning biology with support so effort becomes ease.</p>
+      <div class="quote">“It’s not that I’m not trying — it’s that my brain won’t start when asked and won’t stop when needed.”</div>
+      <p class="small">This guide pairs readable explanations with brain-based mechanisms. Patients can recognize themselves; clinicians can map symptoms to circuits, chemistry, and care.</p>
+    </section>
 
-<section id="masking">
-  <h2>2. Masking & Misunderstanding</h2>
-  <p>Girls learn early to be polite, tidy, and helpful. They push down impulses, hide chaos, and copy what “focused” people do. As adults, many still wear that mask: over-organizing, over-apologizing, and blaming themselves for every missed detail.</p>
-  <div class="quote">“I look like I have it together — but only because I never stop managing myself.”</div>
-  <p>Masking works — until life gets bigger. Career, children, caregiving, or menopause add weight to an already overloaded system, and the cracks show.</p>
-</section>
+    <!-- =========================
+         2) NEUROBIOLOGY & CIRCUITS
+    ========================== -->
+    <section id="neuro">
+      <h2>2. The Architecture of Attention: Neurobiology & Circuits</h2>
+      <p>ADHD is a timing and signaling mismatch across networks that allocate attention, suppress interference, evaluate reward, and regulate emotion.</p>
 
-<section id="feel">
-  <h2>3. What It Feels Like Day-to-Day</h2>
-  <ul>
-    <li>A brain that won’t <strong>start</strong> until panic kicks in.</li>
-    <li>Hours lost to tiny distractions.</li>
-    <li>Perfectionism as self-defense: “If I control everything, maybe no one will see the mess.”</li>
-    <li>Big emotions that rise fast and fade slowly.</li>
-  </ul>
-  <p>This isn’t laziness — it’s a wiring pattern where motivation, focus, and emotion depend on stimulation and structure. Without enough of either, the brain drifts or stalls.</p>
-</section>
+      <h3>2.1 Core loops</h3>
+      <ul>
+        <li><strong>DLPFC ↔ Striatum (executive loop):</strong> DLPFC holds the plan; the striatum gates actions and motivation. Under-powered catecholamine tone here → <em>initiation friction</em>, distractibility, and “I know what to do but can’t start.”</li>
+        <li><strong>ACC/Salience:</strong> The anterior cingulate flags what matters now. Inconsistency here explains crisis productivity: tasks don’t “ping” until threat makes them urgent.</li>
+        <li><strong>OFC/Reward:</strong> The orbitofrontal cortex compares immediate vs delayed payoff. A blunted anticipatory dopamine “ramp” biases toward immediacy (scrolling, snacks) over abstract future rewards.</li>
+        <li><strong>DMN vs Task-Positive:</strong> Default-mode (mind-wandering) intrudes during tasks; stimulants reduce this interference by stabilizing task control.</li>
+      </ul>
 
-<section id="hormones">
-  <h2>4. Hormones, Cycles & Menopause</h2>
-  <p>ADHD symptoms don’t stay the same through life. They rise and fall with hormones — especially estrogen and progesterone. These hormones influence dopamine and norepinephrine, the same messengers ADHD medication targets. When hormones dip, symptoms often flare.</p>
+      <h3>2.2 Chemistry</h3>
+      <ul>
+        <li><strong>Dopamine (DA):</strong> Encodes “this is worth doing.” Low tonic or poorly timed phasic DA makes routine effort feel under-rewarded until urgency spikes.</li>
+        <li><strong>Norepinephrine (NE):</strong> Tunes prefrontal signal-to-noise via α2A receptors. Too little (or too much) NE impairs top-down control (inverted-U), increasing distractibility or “edgy focus.”</li>
+      </ul>
+      <div class="callout"><strong>Clinical translation:</strong> Stimulants normalize DA/NE in PFC–striatal loops so executive plans are easier to start and hold. Non-stimulants raise NE tone or strengthen α2A signaling, smoothing noise in the system.</div>
 
-  <h3>4.1 Menstrual cycle shifts</h3>
-  <p>Many women notice ADHD feels worse right before a period: focus drops, irritability climbs, sleep suffers. That’s when estrogen and progesterone both fall sharply. Tracking your cycle can reveal these patterns and help plan work or medication timing.</p>
+      <h3>2.3 Women’s profile</h3>
+      <p>Women often report <em>internal</em> hyperactivity (mental tabs, ruminative loops) more than visible motor restlessness, plus more emotional flooding and slow calming — mapping to fragile PFC control and inconsistent salience tagging.</p>
 
-  <h3>4.2 Pregnancy and postpartum</h3>
-  <p>Some women feel calmer during pregnancy (estrogen peaks), others more scattered. After birth, hormones crash and sleep vanishes — a recipe for chaos. If ADHD meds were paused during pregnancy, re-starting carefully can help stabilize mood and function.</p>
+      <h3>2.4 The “now-or-not-now” problem</h3>
+      <p>Many describe two modes: “on” (novelty/deadline) and “off” (initiation paralysis). Treatment aims to make “regular” doable without waiting for panic or thrill.</p>
 
-  <h3>4.3 Perimenopause & menopause — the hidden storm</h3>
-  <p>In the 40s and 50s, hormones fluctuate wildly. Estrogen, which helps dopamine work efficiently in the prefrontal cortex, begins to fall. Many women describe it as “brain fog,” “losing words,” or “forgetting what I was doing mid-sentence.”</p>
-  <ul>
-    <li><strong>Why it happens:</strong> lower estrogen means less dopamine and norepinephrine activity in brain areas that control attention, motivation, and emotion regulation.</li>
-    <li><strong>How it feels:</strong> the same ADHD — only louder. More distraction, fatigue, and emotional swings, even on stable medication doses.</li>
-    <li><strong>What helps:</strong> adjusting medication timing, adding structure, protecting sleep, and in some cases discussing hormone therapy with your doctor.</li>
-  </ul>
-  <div class="callout"><strong>Good news:</strong> You’re not “losing your mind.” Hormonal change unmasks ADHD that was always there. Understanding that pattern is power, not failure.</div>
+      <h3>2.5 Pearls</h3>
+      <ul>
+        <li><strong>Externalize salience:</strong> visual lists, timed sprints, body-doubling.</li>
+        <li><strong>Front-load clarity:</strong> script the first 2 minutes (open doc → type date → write 1 line).</li>
+        <li><strong>Protect sleep:</strong> sleep loss degrades PFC gating and amplifies limbic noise.</li>
+      </ul>
+    </section>
 
-  <h3>4.4 What research says (so far)</h3>
-  <ul>
-    <li>Surveys of thousands of women show ADHD symptoms often worsen during perimenopause and lead to first-time diagnoses.</li>
-    <li>Small studies link low estrogen with weaker stimulant response — though more research is needed.</li>
-    <li>No solid data yet prove HRT directly improves ADHD, but stabilizing hormones can reduce brain fog and energy crashes.</li>
-  </ul>
-  <p class="small">Sources: CHADD 2024; Frontiers in Women’s Health 2025; PMC 12145478 (systematic review on ADHD and sex hormones).</p>
-</section>
+    <!-- =========================
+         3) SEX HORMONES & NEUROTRANSMISSION
+    ========================== -->
+    <section id="hormones">
+      <h2>3. Sex Hormones & Neurotransmission</h2>
+      <p>Estrogen and progesterone shape neurotransmission and synaptic plasticity across dopaminergic and noradrenergic systems. Their ebb and flow explain why many women report “good brain days” mid-cycle and fog/irritability pre-menstrually — even on unchanged medication doses.</p>
 
-<section id="neuro">
-  <h2>5. Inside the ADHD Brain</h2>
-  <p>Think of ADHD not as “no focus,” but as an <strong>inconsistent focus system</strong>. The brain’s dopamine and norepinephrine networks control what feels important. When they fire too low, boring tasks feel impossible. When they surge, hyperfocus takes over.</p>
-  <ul>
-    <li><strong>Prefrontal cortex:</strong> planning, decision-making, and impulse control. Needs steady dopamine levels.</li>
-    <li><strong>Striatum:</strong> motivation and reward. When signals are weak, everyday goals feel unrewarding until the last minute.</li>
-    <li><strong>Default-mode network:</strong> the “daydream” system. In ADHD, it intrudes even during work, pulling attention away.</li>
-  </ul>
-  <div class="callout">ADHD isn’t a character flaw. It’s a pattern of brain chemistry that rewards novelty and struggles with routine — a difference, not a deficiency.</div>
-</section>
+      <h3>3.1 Estrogen — the cognitive amplifier</h3>
+      <ul>
+        <li><strong>↑ DA synthesis & receptor sensitivity</strong> in striatum and PFC → better working memory and motivation.</li>
+        <li><strong>↑ NE efficiency</strong> (α2A tuning) → sharper PFC signal-to-noise.</li>
+        <li><strong>↑ Plasticity</strong> via BDNF and glutamate modulation → sustained attention and cognitive flexibility.</li>
+      </ul>
+      <p>Clinically: late follicular (rising estrogen) often brings better focus and mood stability; luteal shifts can mimic “medication inconsistency.”</p>
 
-<section id="diagnosis">
-  <h2>6. Why So Many Women Are Missed</h2>
-  <p>Diagnostic checklists were written around boys who act out. Women often internalize instead — they cry, worry, or overwork. Clinicians may mislabel these as anxiety or depression, missing the root cause. Many women learn they have ADHD only when their children are evaluated, or when menopause magnifies symptoms.</p>
-  <ul>
-    <li>“You’re too smart to have ADHD.” → Intelligence hides it.</li>
-    <li>“You’re just anxious.” → Anxiety is often a symptom, not the cause.</li>
-    <li>“You’re coping fine.” → Coping ≠ thriving.</li>
-  </ul>
-</section>
+      <h3>3.2 Progesterone — the regulator/brake</h3>
+      <ul>
+        <li>Metabolites (e.g., allopregnanolone) act on GABA-A → sedation/anti-anxiety, or blunted drive.</li>
+        <li>High luteal progesterone may dampen DA → transient apathy/low motivation.</li>
+      </ul>
+      <div class="callout"><strong>Practice:</strong> Track cycle; consider small timing adjustments in low-estrogen weeks or steady-state combined contraception when clinically appropriate.</div>
 
-<section id="firststeps">
-  <h2>7. First Steps Toward Clarity</h2>
-  <ul>
-    <li>Write down when focus and mood are worst — notice hormonal links.</li>
-    <li>Bring examples to your doctor: late bills, lost items, burnout, emotional swings.</li>
-    <li>Ask for an ADHD-aware evaluation, not just depression/anxiety screening.</li>
-    <li>Remember: diagnosis isn’t a label; it’s a language for getting help.</li>
-  </ul>
-</section>
-<section id="helps">
-  <h2>8. What Actually Helps</h2>
-  <p>ADHD treatment works best when it combines medication, structure, and compassion. The goal isn’t to “fix” personality — it’s to make daily life easier and calmer.</p>
+      <h3>3.3 Pregnancy & postpartum</h3>
+      <p>Pregnancy can stabilize or destabilize; postpartum hormone withdrawal + sleep loss often magnify ADHD. Restarting/titrating meds cautiously, plus sleep restoration, is key.</p>
 
-  <h3>8.1 Therapy and Skill-Based Care</h3>
-  <ul>
-    <li><strong>Cognitive-Behavioral Therapy (CBT for ADHD):</strong> Teaches practical ways to manage time, plan tasks, and challenge shame-based thinking. Clinical trials show CBT plus medication improves function and mood in up to <strong>70 %</strong> of adults.</li>
-    <li><strong>ADHD Coaching:</strong> Focuses on structure and accountability rather than emotion. Good for maintaining habits once symptoms are stable.</li>
-    <li><strong>Mindfulness-based therapy:</strong> Helps slow reactivity and improve attention-shifting; studies show moderate improvement in focus and emotional control (~50 % response).</li>
-    <li><strong>Group or peer programs:</strong> Normalize experience, reduce isolation, and reinforce behavioral strategies.</li>
-  </ul>
-  <div class="callout"><strong>Tip:</strong> Therapy is most effective after medication begins to stabilize attention — not necessarily before.</div>
+      <h3>3.4 Lifespan transitions</h3>
+      <ul>
+        <li><strong>Puberty:</strong> surges may unmask ADHD.</li>
+        <li><strong>Pregnancy:</strong> variable impact.</li>
+        <li><strong>Perimenopause:</strong> declining estrogen → reduced DA/NE tone → classic ADHD “flare.”</li>
+      </ul>
+    </section>
 
-  <h3>8.2 Lifestyle Anchors</h3>
-  <ul>
-    <li><strong>Sleep:</strong> Protecting 7–8 hours nightly improves executive function more than any supplement.</li>
-    <li><strong>Exercise:</strong> Aerobic activity boosts dopamine and norepinephrine for several hours — natural medication.</li>
-    <li><strong>Nutrition:</strong> Protein-rich breakfast within 60–90 minutes of waking helps prevent afternoon crashes.</li>
-    <li><strong>Externalize memory:</strong> planners, alarms, and visual cues reduce cognitive load.</li>
-  </ul>
-</section>
+    <!-- =========================
+         4) FEMALE PHENOTYPE
+    ========================== -->
+    <section id="phenotype">
+      <h2>4. The Female Phenotype: Internalized Hyperactivity, Masking & Emotion</h2>
+      <p>Instead of running, many women rehearse. Instead of shouting, they ruminate. The hyperactivity is cognitive: multiple thought streams, scenario-spinning, constant “what-ifs.” Outward composure hides mental exhaustion.</p>
 
-<section id="meds">
-  <h2>9. Medication Explained Simply</h2>
-  <p class="small"><em>Educational overview — not a prescription guide. Always review options with your clinician.</em></p>
-  <p>Medication is the single most evidence-based treatment for ADHD. About <strong>70–80 %</strong> of adults respond well to the first stimulant tried. The rest usually improve after dose adjustment or switching class.</p>
+      <h3>4.1 Masking & mimicry</h3>
+      <p>Social conditioning rewards quiet competence. Compensation strategies — over-studying, people-pleasing, perfectionism — hide executive friction until stress overwhelms capacity. By adulthood, masking is automatic but costly.</p>
+      <ul>
+        <li><strong>Masking cost:</strong> burnout, anxiety, depression, somatic symptoms, identity diffusion.</li>
+        <li><strong>Clinical impact:</strong> presentations often coded as GAD/MDD before ADHD is considered.</li>
+      </ul>
 
-  <h3>9.1 Stimulants — Dopamine &amp; Norepinephrine Boosters</h3>
-  <p>These medications increase dopamine and norepinephrine in the prefrontal cortex and striatum — the brain’s attention and motivation hubs.</p>
+      <h3>4.2 Emotion dysregulation</h3>
+      <p>Not secondary — core. Reduced PFC control + heightened limbic reactivity → fast, intense affect. Women, socialized to suppress anger, may internalize it as guilt/shame. Mood swings can reflect rapid affect without steady modulation rather than primary mood disorder.</p>
 
-  <details open>
-    <summary><strong>Methylphenidate</strong> (Ritalin®, Concerta®, Medikinet®, Biphentin®)</summary>
-    <ul>
-      <li><strong>Mechanism:</strong> Blocks dopamine and norepinephrine reuptake transporters, increasing their levels in key brain areas.</li>
-      <li><strong>Why it helps:</strong> Strengthens “executive brakes” — improves initiation, sustained focus, and working memory.</li>
-      <li><strong>Effectiveness:</strong> Response in ~75 % of adults; peak benefit within 1 hour (IR) or 3 hours (ER).</li>
-      <li><strong>Notes:</strong> Often smoother and less anxiety-inducing than amphetamine class; may suppress appetite mid-day.</li>
-    </ul>
-  </details>
+      <h3>4.3 Cognitive velocity & fatigue</h3>
+      <p>“Fast brain, slow world.” Rapid idea generation with inconsistent output. When novelty fades, energy drops. The gap between potential and stamina drives shame; reframing it as neurobiology reduces self-blame.</p>
 
-  <details>
-    <summary><strong>Dexmethylphenidate</strong> (Focalin®)</summary>
-    <ul>
-      <li><strong>Mechanism:</strong> The active “d-isomer” of methylphenidate — more potent at lower doses.</li>
-      <li><strong>Why it helps:</strong> Provides focused energy without excessive stimulation for many sensitive patients.</li>
-      <li><strong>Effectiveness:</strong> Similar to methylphenidate; fewer GI side effects reported.</li>
-    </ul>
-  </details>
+      <h3>4.4 Relationships & self-concept</h3>
+      <ul>
+        <li><strong>RSD:</strong> rejection sensitivity drives avoidance or over-apology cycles.</li>
+        <li><strong>Parenting load:</strong> multiple domains drain executive reserves; symptoms spike.</li>
+        <li><strong>Therapy focus:</strong> self-compassion + reducing perfectionistic masking alongside attention training.</li>
+      </ul>
+    </section>
 
-  <details>
-    <summary><strong>Lisdexamfetamine</strong> (Vyvanse®)</summary>
-    <ul>
-      <li><strong>Mechanism:</strong> Prodrug converted in the blood to dextro-amphetamine; increases dopamine and norepinephrine release while reducing reuptake.</li>
-      <li><strong>Why it helps:</strong> Long, steady effect (10–12 hours) with lower crash risk; FDA-approved for both ADHD and Binge-Eating Disorder.</li>
-      <li><strong>Effectiveness:</strong> ~80 % adult response; smoother onset, lower misuse risk.</li>
-    </ul>
-  </details>
+    <!-- =========================
+         5) PERIMENOPAUSE & MENOPAUSE
+    ========================== -->
+    <section id="menopause">
+      <h2>5. Perimenopause & Menopause — What Changes and Why</h2>
+      <p>Perimenopause is a neurological transition. Declining estrogen alters DA/NE signaling, thinning the bridge between intention and action. Women who “managed fine” in their 30s may feel flat, foggy, and emotionally raw in their late 40s/50s — even on previously stable regimens.</p>
 
-  <details>
-    <summary><strong>Mixed amphetamine salts</strong> (Adderall®, Mydayis®)</summary>
-    <ul>
-      <li><strong>Mechanism:</strong> Combination of amphetamine isomers that increase dopamine and norepinephrine release and block reuptake.</li>
-      <li><strong>Why it helps:</strong> High efficacy for motivation and sustained focus; fast onset.</li>
-      <li><strong>Effectiveness:</strong> 75–80 % response; can elevate heart rate or cause jitteriness in some.</li>
-    </ul>
-  </details>
+      <h3>5.1 Neuroendocrine shift</h3>
+      <ul>
+        <li><strong>Estrogen–dopamine interface:</strong> less tyrosine hydroxylase activation → ↓ DA synthesis; loss of estrogen’s DAT down-regulation → faster DA clearance; net = weaker reward/motivation.</li>
+        <li><strong>Noradrenergic efficiency:</strong> reduced α/β receptor sensitivity and locus coeruleus output → slower alerting and response inhibition.</li>
+      </ul>
 
-  <details>
-    <summary><strong>Dextroamphetamine</strong> (Dexedrine®, ProCentra®)</summary>
-    <ul>
-      <li><strong>Mechanism:</strong> Pure d-isomer amphetamine — direct stimulant effect on central dopamine/norepinephrine release.</li>
-      <li><strong>Why it helps:</strong> Often effective at very low doses; used when mixed salts cause side effects.</li>
-    </ul>
-  </details>
+      <h3>5.2 Imaging & cognition (clinically relevant summary)</h3>
+      <ul>
+        <li>Reduced D2/D3 availability across the menopausal transition associates with slower processing and lower intrinsic reward.</li>
+        <li>fMRI: decreased DLPFC–parietal connectivity during estrogen withdrawal; partial restoration with timely HRT (“critical window” hypothesis).</li>
+        <li>Sleep fragmentation (hot flashes) compounds PFC inefficiency the next day.</li>
+      </ul>
 
-  <h3>9.2 Non-Stimulants — Alternative Pathways</h3>
-  <p>These are useful when stimulants aren’t tolerated or when anxiety, tics, or insomnia are prominent.</p>
+      <h3>5.3 What patients notice</h3>
+      <ul>
+        <li><strong>Executive:</strong> disorganization, word-finding gaps, lower multitasking tolerance.</li>
+        <li><strong>Emotional:</strong> amplified RSD, irritability, anxiety spikes, low mood.</li>
+        <li><strong>Medication:</strong> shorter duration/less effect from usual stimulant dose.</li>
+      </ul>
 
-  <details open>
-    <summary><strong>Atomoxetine</strong> (Strattera®)</summary>
-    <ul>
-      <li><strong>Mechanism:</strong> Selective norepinephrine reuptake inhibitor (SNRI).</li>
-      <li><strong>Why it helps:</strong> Gradually improves focus and emotional regulation without stimulant effects.</li>
-      <li><strong>Effectiveness:</strong> 60–70 % response; full benefit in 4–6 weeks.</li>
-      <li><strong>Notes:</strong> May cause mild nausea or sleepiness early; titrate slowly.</li>
-    </ul>
-  </details>
+      <h3>5.4 Practical care</h3>
+      <ul>
+        <li>Review sleep, iron, thyroid, and stress loads before escalating stimulants.</li>
+        <li>Coordinate with gynecology on HRT where appropriate; transdermal estradiol provides steadier levels than oral.</li>
+        <li>Sometimes the brain doesn’t need “more stimulant” — it needs estrogen in rhythm.</li>
+      </ul>
 
-  <details>
-    <summary><strong>Guanfacine</strong> (Intuniv®) &amp; <strong>Clonidine</strong> (Kapvay®)</summary>
-    <ul>
-      <li><strong>Mechanism:</strong> Alpha-2A adrenergic agonists; quiet overactive norepinephrine signaling in the prefrontal cortex.</li>
-      <li><strong>Why they help:</strong> Reduce impulsivity, restlessness, and emotional storms — especially useful for comorbid anxiety or sleep issues.</li>
-      <li><strong>Effectiveness:</strong> Moderate (~50 % response) but synergistic with stimulants.</li>
-    </ul>
-  </details>
+      <div class="quote">“Menopause didn’t take my ambition — just the chemical fuel. When we stabilized hormones, my meds worked again.”</div>
+    </section>
 
-  <details>
-    <summary><strong>Bupropion</strong> (Wellbutrin®)</summary>
-    <ul>
-      <li><strong>Mechanism:</strong> Norepinephrine-dopamine reuptake inhibitor (NDRI).</li>
-      <li><strong>Why it helps:</strong> Useful when depression co-exists with ADHD.</li>
-      <li><strong>Effectiveness:</strong> 50–60 % response; less effective than stimulants but well-tolerated.</li>
-    </ul>
-  </details>
+    <!-- =========================
+         6) THERAPIES & SKILLS
+    ========================== -->
+    <section id="therapy">
+      <h2>6. Therapies & Skills — What Actually Helps</h2>
+      <p>Skills stick best when attention is steadier. Pair <em>scaffolding</em> (habits, structure) with <em>state change</em> (meds, sleep, hormones) so effort becomes easier.</p>
 
-  <details>
-    <summary><strong>Viloxazine ER</strong> (Qelbree®)</summary>
-    <ul>
-      <li><strong>Mechanism:</strong> Modulates norepinephrine and serotonin activity; newly approved for adults.</li>
-      <li><strong>Why it helps:</strong> Non-stimulant option that improves attention and mood regulation.</li>
-      <li><strong>Effectiveness:</strong> Early studies show 60–70 % response; fewer appetite effects.</li>
-    </ul>
-  </details>
+      <h3>6.1 CBT for Adult ADHD</h3>
+      <ul>
+        <li><strong>Targets:</strong> procrastination, time blindness, initiation, distractibility, perfectionistic self-talk.</li>
+        <li><strong>Tools:</strong> time-boxing, cue bundling, stimulus control, implementation intentions, cognitive reframing.</li>
+        <li><strong>Outcomes:</strong> typically <em>moderate</em> gains in symptoms/function; larger when combined with medication and weekly practice.</li>
+      </ul>
 
-  <h3>9.3 Combining Approaches</h3>
-  <p>Sometimes a low-dose stimulant plus a non-stimulant (like guanfacine or atomoxetine) gives the best balance — focus plus calm. There’s no “one perfect pill,” only personal chemistry.</p>
+      <h3>6.2 Metacognitive Therapy</h3>
+      <ul>
+        <li><strong>Targets:</strong> attention regulation and beliefs about thinking; rumination.</li>
+        <li><strong>Use when:</strong> worry loops and perfectionism block starting.</li>
+      </ul>
 
-  <div class="quote">“Medication isn’t magic — it’s scaffolding. It lets your real skills finally work.”</div>
-</section>
+      <h3>6.3 ADHD Coaching</h3>
+      <ul>
+        <li><strong>Targets:</strong> routines, accountability, environmental design.</li>
+        <li><strong>Use when:</strong> motivation exists but systems collapse; excellent with meds.</li>
+      </ul>
 
-<section id="closing">
-  <h2>10. Living with ADHD as a Woman</h2>
-  <p>ADHD doesn’t erase intelligence or empathy. It shapes how your brain processes the world. When women finally receive accurate diagnosis and treatment, they often say the same thing: “I can breathe for the first time.”</p>
-  <p>Recognizing hormonal influence, using medication wisely, and learning practical skills rebuilds confidence and calm. There is no age limit for improvement — neuroplasticity works lifelong.</p>
-</section>
+      <h3>6.4 Emotion-focused skills (DBT/MBT elements)</h3>
+      <ul>
+        <li><strong>Targets:</strong> fast affect, RSD, conflict spirals.</li>
+        <li><strong>Tools:</strong> urge surfing, opposite action, paced breathing, check-the-facts, repair scripts.</li>
+      </ul>
 
-<section id="refs">
-  <h2>11. References (Selected)</h2>
-  <ol class="small">
-    <li>Quinn PO, Madhoo M. (2014). <i>A review of ADHD in women and girls.</i> PCC CNS Disorders 16(3).</li>
-    <li>Hinshaw SP, Ellison K. (2016). <i>ADHD: What Everyone Needs to Know.</i> Oxford UP.</li>
-    <li>Solden S, Frank E. (2019). <i>A Radical Guide for Women with ADHD.</i> New Harbinger.</li>
-    <li>Frontiers in Global Women’s Health (2025). <i>ADHD and Sex Hormones Across the Lifespan.</i></li>
-    <li>CHADD (2024). <i>The Complete Picture: How Estrogen Affects Women with ADHD.</i></li>
-    <li>NEI Global (2024). <i>Viloxazine ER for Adult ADHD — Clinical Review.</i></li>
-    <li>Wilens TE et al. (2022). <i>Stimulant Treatment in Adults with ADHD — Meta-Analysis.</i> JAMA Psychiatry.</li>
-  </ol>
-</section>
+      <h3>6.5 Mindfulness & Lifestyle Anchors</h3>
+      <ul>
+        <li><strong>Mindfulness:</strong> modest symptom relief; lengthens the gap between impulse and action.</li>
+        <li><strong>Sleep:</strong> fixed wake time > “perfect” bedtime; protect the last 2 hours pre-sleep.</li>
+        <li><strong>Movement:</strong> short enjoyable bursts boost DA/NE tone for hours.</li>
+        <li><strong>Nutrition:</strong> protein-first breakfast within 60–90 minutes; predictable meals reduce evening crashes.</li>
+        <li><strong>Environment:</strong> reduce friction (lay out tools; prep first 3 steps); body-doubling for hard starts.</li>
+      </ul>
 
-<section aria-label="Author">
-  <h2>About the Author</h2>
-  <p class="small">Written by <strong>Dr. Sarah Ionescu</strong>, physician focusing on women’s mental health, ADHD, and neurodevelopmental research translation.  
-  Learn more or book a consultation: <a href="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/index.html" target="_blank" rel="noopener">Women &amp; Psychiatry — Second Opinion</a>.</p>
-</section>
+      <div class="callout"><strong>Takeaway:</strong> Therapy and coaching build a brain-friendly environment. Medication then “lights up” that environment so it finally works.</div>
+    </section>
 
-<footer>
-  <p class="small">© <span id="y"></span> — Accessible educational content for women navigating ADHD and hormonal change.</p>
-</footer>
-</main>
+    <!-- =========================
+         7) MEDICATIONS & MECHANISMS
+    ========================== -->
+    <section id="meds">
+      <h2>7. Medications & Mechanisms (Stimulants & Non-Stimulants)</h2>
+      <p class="small"><em>Educational overview — not a prescription guide. Always individualize with your clinician.</em></p>
+      <p>Medication is the most evidence-based ADHD treatment. About <strong>70–80%</strong> of adults respond to the first stimulant class; many of the rest respond after adjusting dose/timing or switching classes.</p>
+
+      <h3>7.1 Stimulants — Dopamine & Norepinephrine Boosters</h3>
+      <p>They increase DA/NE availability in prefrontal and striatal circuits — the hubs for attention, motivation, and impulse control.</p>
+
+      <details open>
+        <summary><strong>Methylphenidate</strong> — Ritalin®, Concerta®, Medikinet®, Biphentin®, QuilliChew®, Daytrana® (transdermal)</summary>
+        <ul>
+          <li><strong>Mechanism:</strong> Blocks dopamine (DAT) and norepinephrine (NET) transporters → ↑ synaptic DA/NE.</li>
+          <li><strong>Why it helps:</strong> Strengthens executive “brakes,” improves initiation and working memory, reduces distractibility.</li>
+          <li><strong>Onset/Duration:</strong> IR ~20–45 min for 3–4 h; ER/OROS (Concerta) ~1 h for 8–12 h; transdermal ~2 h for up to 9 h after application.</li>
+          <li><strong>Effectiveness:</strong> ~70–80% respond to this class.</li>
+          <li><strong>Notes:</strong> Often smoother than amphetamines; midday appetite dip common; consider earlier last dose to protect sleep.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary><strong>Dexmethylphenidate</strong> — Focalin® (IR/ER)</summary>
+        <ul>
+          <li><strong>Mechanism:</strong> The active d-isomer of methylphenidate; more potent per mg.</li>
+          <li><strong>Why:</strong> Similar benefits to MPH with potentially fewer GI effects for some.</li>
+          <li><strong>Onset/Duration:</strong> IR ~30 min for 4 h; XR ~1 h for ~10–12 h.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary><strong>Lisdexamfetamine</strong> — Vyvanse® / Elvanse®</summary>
+        <ul>
+          <li><strong>Mechanism:</strong> Prodrug converted to dextro-amphetamine; ↑ presynaptic DA/NE release + ↓ reuptake.</li>
+          <li><strong>Why:</strong> Steady 10–12 h effect; lower “spike/crash” feel; also FDA-approved for moderate-to-severe Binge-Eating Disorder.</li>
+          <li><strong>Effectiveness:</strong> ~75–85% response in adults; good adherence profile.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary><strong>Mixed Amphetamine Salts</strong> — Adderall® (IR/XR), Mydayis®</summary>
+        <ul>
+          <li><strong>Mechanism:</strong> Mixed amphetamine isomers; ↑ DA/NE release and ↓ reuptake.</li>
+          <li><strong>Why:</strong> High efficacy for motivation and sustained focus; fast onset.</li>
+          <li><strong>Onset/Duration:</strong> IR ~20–30 min for 4–6 h; XR ~1 h for 10–12 h; Mydayis up to 16 h.</li>
+          <li><strong>Notes:</strong> Can increase heart rate or anxiety; hydrate and avoid late dosing.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary><strong>Dextroamphetamine</strong> — Dexedrine® (IR/Spansule), ProCentra®</summary>
+        <ul>
+          <li><strong>Mechanism:</strong> d-amphetamine — potent presynaptic DA/NE releaser.</li>
+          <li><strong>Why:</strong> Effective at low doses; option when MAS cause side effects.</li>
+          <li><strong>Onset/Duration:</strong> IR ~20–30 min for 4–6 h; Spansule ~1 h for 8–10 h.</li>
+        </ul>
+      </details>
+
+      <div class="table" style="margin-top:12px">
+        <table aria-label="Stimulant comparison">
+          <thead>
+            <tr><th>Agent</th><th>Formulations</th><th>Typical Duration</th><th>Pros</th><th>Watch-outs</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Methylphenidate (Ritalin/Concerta/Medikinet/Biphentin/Daytrana)</td>
+              <td>IR, ER/OROS, Transdermal</td>
+              <td>3–4 h (IR), 8–12 h (ER), ~9 h (patch)</td>
+              <td>Smoother feel; broad evidence base</td>
+              <td>Appetite/sleep impact; patch skin irritation</td>
+            </tr>
+            <tr>
+              <td>Dexmethylphenidate (Focalin)</td>
+              <td>IR, XR</td>
+              <td>4 h (IR), 10–12 h (XR)</td>
+              <td>Potent at low dose</td>
+              <td>Similar MPH cautions</td>
+            </tr>
+            <tr>
+              <td>Lisdexamfetamine (Vyvanse/Elvanse)</td>
+              <td>Once-daily prodrug</td>
+              <td>10–12 h</td>
+              <td>Steady; lower misuse risk</td>
+              <td>Dry mouth, insomnia if dosed late</td>
+            </tr>
+            <tr>
+              <td>Mixed Amphetamine Salts (Adderall/Mydayis)</td>
+              <td>IR, XR</td>
+              <td>4–6 h (IR), 10–16 h (XR)</td>
+              <td>Strong motivational lift</td>
+              <td>↑HR/BP, anxiety/jitter</td>
+            </tr>
+            <tr>
+              <td>Dextroamphetamine (Dexedrine)</td>
+              <td>IR, Spansule</td>
+              <td>4–6 h (IR), 8–10 h (Spansule)</td>
+              <td>Effective at low dose</td>
+              <td>Insomnia if late; appetite</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>7.2 Non-Stimulants — Alternative Pathways</h3>
+      <p>Useful when stimulants aren’t tolerated or when anxiety, tics, or insomnia are prominent. Can be combined with stimulants.</p>
+
+      <details open>
+        <summary><strong>Atomoxetine</strong> — Strattera®</summary>
+        <ul>
+          <li><strong>Mechanism:</strong> Selective norepinephrine reuptake inhibitor (NET blockade) → ↑ PFC NE (and some DA) without stimulant spikes.</li>
+          <li><strong>Why:</strong> Steady attention and emotion regulation; good with anxiety/tics.</li>
+          <li><strong>Onset:</strong> initial at ~2 weeks; full effect 4–6+ weeks.</li>
+          <li><strong>Effectiveness:</strong> ~60–70% respond over time.</li>
+          <li><strong>Notes:</strong> Start low, go slow; GI or sleep effects early; rare liver warnings — monitor if symptoms.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary><strong>Guanfacine ER</strong> — Intuniv® (± Clonidine ER — Kapvay®)</summary>
+        <ul>
+          <li><strong>Mechanism:</strong> α2A-adrenergic agonist → strengthens PFC network connectivity; “quiets” noisy signaling.</li>
+          <li><strong>Why:</strong> Reduces impulsivity/hyperarousal; helpful for sleep and emotional storms.</li>
+          <li><strong>Effectiveness:</strong> ~50% monotherapy; strong synergy with stimulants.</li>
+          <li><strong>Notes:</strong> Sedation and hypotension early; titrate at bedtime; avoid abrupt stop.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary><strong>Viloxazine ER</strong> — Qelbree®</summary>
+        <ul>
+          <li><strong>Mechanism:</strong> Noradrenergic reuptake modulation with serotonergic effects.</li>
+          <li><strong>Why:</strong> Non-stimulant option improving attention and mood regulation.</li>
+          <li><strong>Effectiveness:</strong> early adult data ~60–70% response; tolerability generally good.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary><strong>Bupropion</strong> — Wellbutrin® (off-label)</summary>
+        <ul>
+          <li><strong>Mechanism:</strong> Norepinephrine–dopamine reuptake inhibition (weaker than stimulants).</li>
+          <li><strong>Why:</strong> ADHD with depression or nicotine dependence.</li>
+          <li><strong>Effectiveness:</strong> ~50–60% response; less potent than stimulants.</li>
+          <li><strong>Notes:</strong> Insomnia/anxiety in some; avoid in seizure risk/eating disorders.</li>
+        </ul>
+      </details>
+
+      <h3>7.3 Menstrual & Menopause Timing Tips</h3>
+      <ul>
+        <li>Track symptom flare windows; consider earlier dosing or micro-adjustments in low-estrogen weeks.</li>
+        <li>Guard sleep: move last dose earlier; consider adjunct (guanfacine ER) for evening calm.</li>
+        <li>Perimenopause: review hormones before escalating dose; HRT may restore prior stimulant efficacy in appropriate candidates.</li>
+      </ul>
+    </section>
+
+    <!-- =========================
+         8) HRT & ADHD
+    ========================== -->
+    <section id="hrt">
+      <h2>8. Hormone Therapy (HRT) & ADHD — What We Know</h2>
+      <p>Evidence is emerging, not definitive. Many women report that stabilizing estrogen improves cognitive steadiness and the “feel” of ADHD meds.</p>
+      <ul>
+        <li><strong>Who might benefit:</strong> bothersome vasomotor symptoms, sleep disruption, cognitive fog with midlife onset, no contraindications to HRT.</li>
+        <li><strong>What to discuss:</strong> transdermal estradiol (steadier levels) + cyclic or continuous micronized progesterone if uterus present.</li>
+        <li><strong>Expectations:</strong> HRT is not an ADHD medication; it may reduce swings so stimulants/non-stimulants work predictably.</li>
+      </ul>
+      <p class="small"><em>Shared-care is ideal: psychiatry + gynecology for individualized risks/benefits and timing (“critical window” near menopause onset).</em></p>
+    </section>
+
+    <!-- =========================
+         9) DIGITAL ADJUNCTS
+    ========================== -->
+    <section id="digital">
+      <h2>9. Digital Adjuncts</h2>
+      <ul>
+        <li><strong>EndeavorOTC®:</strong> an FDA-cleared OTC video-game–based digital therapeutic for adult ADHD attention training. Best used as an <em>adjunct</em> to meds/therapy.</li>
+        <li><strong>Body-doubling apps & focus rooms:</strong> increase salience via social presence.</li>
+        <li><strong>Timers & structured sprints (Pomodoro):</strong> convert delay-discounted tasks into near-term rewards.</li>
+      </ul>
+    </section>
+
+    <!-- =========================
+         10) INTEGRATING CARE
+    ========================== -->
+    <section id="integration">
+      <h2>10. Integrating Care Across the Lifespan</h2>
+      <div class="grid" style="display:grid;grid-template-columns:1fr;gap:14px">
+        <div>
+          <h3>Clinician playbook</h3>
+          <ul>
+            <li>Map masking cost and “effort stories.” Ask: “What breaks when structure drops?”</li>
+            <li>Start with sleep anchors and synchronize med timing to demand peaks.</li>
+            <li>Consider cycle and perimenopause timing; collaborate on HRT when indicated.</li>
+            <li>Pair Rx with a concrete skill plan and follow-up cadence.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Patient roadmap</h3>
+          <ul>
+            <li>Use a two-timer start: 2 minutes to begin, then 10 minutes to continue.</li>
+            <li>Body-double hard starts; prep first 3 steps the night before.</li>
+            <li>Protect the last 2 hours before sleep; decide tomorrow’s start tonight.</li>
+            <li>Remember: medication isn’t magic — it’s scaffolding so your skills can work.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         11) FAQ — QUICK ANSWERS
+    ========================== -->
+    <section id="faq">
+      <h2>11. FAQ — Quick Answers (Patient-Friendly)</h2>
+
+      <details>
+        <summary>Do I have to take ADHD medication forever?</summary>
+        <p>No. Many women use medication as a “ramp” while building skills and stabilizing sleep/hormones. Some stay on long term because benefits persist; others step down or switch to non-stimulants/skills. Revisit yearly with your clinician.</p>
+      </details>
+
+      <details>
+        <summary>Stimulants vs non-stimulants — which is better?</summary>
+        <p>Stimulants (methylphenidate/amphetamines) work fastest and help ~70–80% of adults. Non-stimulants (atomoxetine, guanfacine, viloxazine, bupropion) are slower but steadier and can be great if you have anxiety, sleep issues, or don’t tolerate stimulants. Many do well on a combo.</p>
+      </details>
+
+      <details>
+        <summary>Will stimulants change my personality?</summary>
+        <p>They shouldn’t. The goal is “you, with the brakes and steering working.” If you feel flat, over-amped, or not yourself, the dose/timing likely needs adjustment or a different molecule.</p>
+      </details>
+
+      <details>
+        <summary>What if I feel more anxious on medication?</summary>
+        <p>Common early on or at too-high doses, especially with caffeine/sleep debt. Try earlier dosing, smaller steps, or switching class (e.g., methylphenidate ↔ amphetamine). Non-stimulant add-ons (guanfacine) can smooth edges.</p>
+      </details>
+
+      <details>
+        <summary>How long should it take to notice improvement?</summary>
+        <p>Stimulants: same day at the right dose (within 30–60 minutes). Atomoxetine/viloxazine: weeks (2–6+). Guanfacine: days to weeks (calmer evenings/sleep first, then daytime control). Bupropion: 2–4 weeks.</p>
+      </details>
+
+      <details>
+        <summary>Do hormones and menopause really change my ADHD?</summary>
+        <p>Yes. Estrogen supports dopamine/norepinephrine in attention circuits. Low-estrogen states (late luteal, perimenopause/menopause) can worsen focus and reduce medication “feel.” Stabilizing sleep and discussing HRT (when appropriate) may restore prior benefits.</p>
+      </details>
+
+      <details>
+        <summary>Can HRT replace ADHD medication?</summary>
+        <p>HRT isn’t an ADHD drug. It can reduce brain-fog swings and make ADHD meds more predictable. Some women still need stimulants or non-stimulants; others can lower doses once hormones are steady.</p>
+      </details>
+
+      <details>
+        <summary>Is ADHD just anxiety or depression?</summary>
+        <p>They overlap but aren’t the same. ADHD = inconsistent attention/motivation/organization from brain chemistry and circuits. Anxiety/depression often <em>result</em> from years of struggling. Treating ADHD can make anxiety/depression easier to treat.</p>
+      </details>
+
+      <details>
+        <summary>How do I know it’s ADHD and not a personality disorder?</summary>
+        <p>ADHD is about attention/executive control with emotion regulation issues; personality disorders center on rigid interpersonal patterns and identity/self-image problems. Good assessment looks at development, motives, repair capacity, and functioning across contexts.</p>
+      </details>
+
+      <details>
+        <summary>What about side effects — appetite, sleep, heart?</summary>
+        <p>Most side effects are dose/timing related. Protect sleep by dosing early; anchor meals (protein-first breakfast) to reduce appetite dips. Your clinician should assess personal and family cardiac history; follow standard screening and monitoring.</p>
+      </details>
+
+      <details>
+        <summary>Do stimulants cause dependence?</summary>
+        <p>When used as prescribed, they’re not “addicting” in the usual sense. They normalize attention networks. Misuse risk rises with unsupervised dosing, sleep deprivation, or combining with other stimulants (e.g., high caffeine).</p>
+      </details>
+
+      <details>
+        <summary>Can I take ADHD meds during pregnancy or breastfeeding?</summary>
+        <p>This is individualized. Some pause stimulants; others continue at adjusted doses depending on functional risks. Non-stimulant choices and timing are tailored. Discuss pre-conception with your clinician to plan safely.</p>
+      </details>
+
+      <details>
+        <summary>What if I “hyperfocus” on the wrong things?</summary>
+        <p>That’s ADHD, too. Use structured sprints, alarms, and “first two minutes” scripts. Meds help shift control from urgency/novelty back to your goals.</p>
+      </details>
+
+      <details>
+        <summary>Will therapy help if meds work?</summary>
+        <p>Yes. Meds make skills usable; therapy/coaching builds systems so results last (time-boxing, body-doubling, cue bundling, self-compassion for perfectionism and RSD).</p>
+      </details>
+
+      <details>
+        <summary>How do I talk to family or work about this?</summary>
+        <p>Use brain-based language (“my brain needs stronger signals and clearer starts”), share specific supports (written agendas, deadlines, quiet hours), and agree on check-ins. It’s not excuses — it’s engineering.</p>
+      </details>
+
+      <div class="callout">
+        <strong>Takeaway:</strong> ADHD in women is real, common, and treatable. Medication provides state change; skills and hormone-aware care make that change stick.
+      </div>
+    </section>
+
+    <!-- =========================
+         12) REFERENCES
+    ========================== -->
+    <section id="refs">
+      <h2>12. References (Selected, 2009–2025)</h2>
+      <ol>
+        <li>Quinn PO, Madhoo M. A review of ADHD in women and girls. <em>Primary Care Companion CNS Disord.</em> 2014.</li>
+        <li>Young S, et al. Sex differences and recognition of ADHD in females. Expert consensus, 2020.</li>
+        <li>Mowlem F, et al. Sex differences in recognition of ADHD. 2018.</li>
+        <li>Arnsten AFT. Prefrontal cortical regulation by catecholamines. 2009.</li>
+        <li>Hart H, et al. fMRI timing and attention networks in ADHD. 2012.</li>
+        <li>Firouzabadi FD, et al. Neuroimaging in ADHD overview. AJR 2022.</li>
+        <li>Wilens TE, et al. Stimulant treatment in adults — response rates and safety. (Meta-analytic summaries).</li>
+        <li>Wietecha LA, et al. Atomoxetine adult outcomes over time. 2016.</li>
+        <li>Iwanami A, et al. Guanfacine ER adult RCT. 2020.</li>
+        <li>Childress A, et al. Viloxazine ER long-term extension. 2024.</li>
+        <li>FDA 510(k) K233496. EndeavorOTC clearance (2024).</li>
+        <li>Frontiers in Global Women’s Health. ADHD & sex hormones across the lifespan. 2025.</li>
+        <li>CHADD. How estrogen affects women with ADHD. 2024.</li>
+        <li>Karolinska/NIH ongoing PET work on estrogen–dopamine interactions (overview reports).</li>
+      </ol>
+      <p class="small">Note: This page is educational and not a substitute for individualized medical advice, diagnosis, or treatment.</p>
+    </section>
+
+    <div class="sep" role="separator" aria-hidden="true"></div>
+
+    <section aria-label="Author">
+      <h2>About the Author</h2>
+      <p class="small">Written by <strong>Dr. Sarah Ionescu</strong>, physician focusing on women’s mental health, ADHD, and neurodevelopmental research translation.  
+      Learn more or book a consultation: <a href="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/index.html" target="_blank" rel="noopener">Women &amp; Psychiatry — Second Opinion</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p class="small">© <span id="y"></span> — Accessible, evidence-informed content for women navigating ADHD and hormonal change.</p>
+  </footer>
 </div>
 <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
