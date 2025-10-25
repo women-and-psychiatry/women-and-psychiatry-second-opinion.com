@@ -1,87 +1,406 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Not Love — But Trauma – Women & Psychiatry</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fefefe;
-            max-width: 900px;
-            margin: auto;
-            padding: 2em;
-            line-height: 1.7;
-            color: #222;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 1em;
-        }
-        h2 {
-            font-weight: bold;
-            font-size: 1.2em;
-            margin-top: 2em;
-        }
-        p, ul {
-            margin-top: 1em;
-        }
-        footer {
-            margin-top: 3em;
-            text-align: center;
-            font-size: 0.9em;
-            color: #555;
-            border-top: 1px solid #ccc;
-            padding-top: 1em;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Not Love — But Trauma: Understanding the Emotional Hook of Abuse (Expanded 2025)</title>
+  <meta name="description" content="A clinically precise, patient-friendly guide to trauma bonding: neurobiology, coercive control, assessment, treatment, safety planning, and recovery. Includes therapy techniques and practical tools." />
+  <link rel="icon" href="/favicon.ico" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Women & Psychiatry — Second Opinion" />
+  <meta property="og:title" content="Not Love — But Trauma: Understanding the Emotional Hook of Abuse (Expanded 2025)" />
+  <meta property="og:description" content="Why leaving feels impossible, what your nervous system is doing, and the steps that actually help — with compassion, clarity, and clinical depth." />
+  <meta property="og:image" content="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/og-image.jpg" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Not Love — But Trauma: Understanding the Emotional Hook of Abuse (Expanded 2025)" />
+  <meta name="twitter:description" content="Neurobiology + practical care for survivors of coercive control and trauma bonding. Non-judgmental and evidence-aligned." />
+  <meta name="twitter:image" content="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/og-image.jpg" />
+  <style>
+    :root{
+      --bg:#0d112b; --panel:#121735; --ink:#f3f6ff; --ink-dim:#c9d0f8; --accent:#6ea8fe; --accent-2:#c084fc; --muted:#9aa3c7; --ok:#3ddc97;
+      --shadow:0 10px 30px rgba(0,0,0,.25); --radius:16px; --radius-lg:22px; --maxw:900px;
+    }
+    html,body{height:100%}
+    body{margin:0; font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; color:var(--ink); background:var(--bg); line-height:1.7}
+    .wrap{max-width:var(--maxw); margin:clamp(20px,5vw,64px) auto; padding:0 20px}
+    header.hero{background:linear-gradient(135deg, rgba(110,168,254,.12), rgba(192,132,252,.10)); border:1px solid rgba(255,255,255,.10); box-shadow:var(--shadow); border-radius:var(--radius-lg); padding:clamp(24px,5vw,48px)}
+    .hero h1{margin:0 0 10px; font-size:clamp(28px,5vw,48px)}
+    .hero p.lead{margin:8px 0 0; color:var(--ink-dim); font-size:clamp(16px,2.4vw,20px)}
+    .badge{display:inline-flex; align-items:center; gap:.5rem; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); color:var(--ink-dim); padding:.35rem .7rem; border-radius:999px; font-size:.85rem}
+    .badge .dot{width:8px; height:8px; border-radius:50%; background:var(--ok); box-shadow:0 0 0 3px rgba(61,220,151,.18)}
+    nav.toc{margin:28px 0; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10); border-radius: var(--radius); padding:16px}
+    nav.toc h2{font-size:1rem; margin:0 0 10px; color:var(--ink-dim)}
+    nav.toc a{display:inline-block; color:var(--ink); text-decoration:none; padding:.2rem .55rem; margin:.15rem; border-radius:999px; border:1px solid rgba(255,255,255,.1)}
+    nav.toc a:hover{background:rgba(255,255,255,.09)}
+    section{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10); border-radius:var(--radius); padding:clamp(18px,2.5vw,28px); margin:16px 0; box-shadow:var(--shadow)}
+    section h2{margin-top:0; font-size:clamp(22px,3vw,32px)}
+    h3{margin-top:1.1em}
+    p{margin:.5rem 0 1rem}
+    ul{margin:.2rem 0 1rem 1.25rem}
+    li{margin:.35rem 0}
+    .quote{border-left:4px solid var(--accent); padding-left:14px; color:var(--ink-dim); font-style:italic}
+    .callout{border:1px solid rgba(110,168,254,.35); background:linear-gradient(180deg, rgba(110,168,254,.10), rgba(110,168,254,.04)); border-radius:12px; padding:14px}
+    .table{overflow:auto}
+    table{width:100%; border-collapse:collapse; font-size:.96rem}
+    th,td{border:1px solid rgba(255,255,255,.12); padding:.6rem; text-align:left; vertical-align:top}
+    th{background:rgba(255,255,255,.10)}
+    .small{font-size:.92rem; color:var(--ink-dim)}
+    .sep{height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent); margin:24px 0}
+    footer{margin:28px 0 64px; color:var(--muted)}
+    .pill{display:inline-block; padding:.25rem .6rem; border-radius:999px; border:1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.06); font-size:.78rem; color:var(--ink-dim)}
+  </style>
 </head>
 <body>
+<div class="wrap">
+  <header class="hero" role="banner">
+    <span class="badge"><span class="dot"></span> Updated 2025 · Clinical & Compassionate</span>
     <h1>Not Love — But Trauma: Understanding the Emotional Hook of Abuse</h1>
+    <p class="lead">Why leaving can feel impossible, what your nervous system is doing, and the steps that truly help — without shame, without blame.</p>
+  </header>
 
-    <h2>1. Introduction: A Misunderstood Attachment</h2>
-    <p>Trauma bonding is frequently misinterpreted as an emotional weakness or a sign of codependency. In reality, it is a neuroadaptive survival mechanism formed under conditions of chronic psychological stress, particularly in abusive or coercive relationships. The emotional attachment experienced by victims is not rooted in affection or relational safety, but in a cycle of reward and punishment that manipulates basic attachment pathways.</p>
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <a href="#intro">1. Introduction: A Misunderstood Attachment</a>
+    <a href="#neuro">2. The Neurobiology of Trauma Bonding</a>
+    <a href="#cycle">3. The Cycle: Idealization → Devaluation → Control</a>
+    <a href="#coercion">4. Coercive Control Tactics (DARVO, Gaslighting, Intermittent Reinforcement)</a>
+    <a href="#psych">5. Psychological Entrapment: Dissonance, Identity, Fawn</a>
+    <a href="#not">6. What Trauma Bonding Is — and Is Not</a>
+    <a href="#assessment">7. Clinical Assessment & Red Flags</a>
+    <a href="#treatment">8. Treatment Roadmap: Stabilize, Process, Rebuild</a>
+    <a href="#therapy">9. Therapy Techniques (How They Work, What They Target)</a>
+    <a href="#pharm">10. Adjuvant Pharmacology (Adults)</a>
+    <a href="#safety">11. Safety Planning: While In, Leaving, and After</a>
+    <a href="#recovery">12. Recovery & Relapse Prevention</a>
+    <a href="#faq">13. FAQ — Quick Answers</a>
+    <a href="#refs">14. References (Selected)</a>
+  </nav>
 
-    <p>If you've ever wondered, "Why can't I leave when I know this is hurting me?" — you're not alone. Trauma bonding traps even highly self-aware individuals. It's not about being naive or lacking strength; it's about how our brain learns to associate pain with love and silence with safety.</p>
+  <main id="content">
+    <!-- 1 -->
+    <section id="intro">
+      <h2>1. Introduction: A Misunderstood Attachment</h2>
+      <p><strong>Trauma bonding</strong> is not weakness. It is the brain’s short-term survival adaptation to chronic, unpredictable stress — especially within <em>coercive control</em>. The bond forms through alternating harm and relief. Your system learns that tiny doses of kindness signal safety, so it clings to them. That’s conditioning, not consent.</p>
+      <div class="quote">If you’ve asked, “Why can’t I leave when I know this is hurting me?” — you’re not broken. Your brain is doing exactly what it was taught to do to stay alive.</div>
+      <p class="small">This article is educational, non-judgmental, and practical. If you are in immediate danger, prioritize safety and local resources.</p>
+    </section>
 
-    <h2>2. The Neurobiology of Trauma Bonding</h2>
-    <p>At the core of trauma bonding is a neurological loop that blends fear, hope, and reward. Intermittent reinforcement — the unpredictable cycle of abuse followed by affection — triggers a potent dopaminergic response. Dopamine, which mediates reward and anticipation, is heightened not by consistency, but by uncertainty. Oxytocin, often called the "bonding hormone," can be paradoxically released even during abusive interactions, particularly when brief reconciliations follow conflict.</p>
+    <!-- 2 -->
+    <section id="neuro">
+      <h2>2. The Neurobiology of Trauma Bonding</h2>
+      <h3>2.1 Intermittent reinforcement & dopamine</h3>
+      <p>The most addictive reinforcement schedule is **intermittent**: affection or relief arrives unpredictably after neglect, criticism, or fear. Uncertainty spikes <strong>dopamine</strong> — not steady love, but **maybe-love** — which amplifies craving for the next “good moment.”</p>
+      <h3>2.2 Oxytocin, cortisol, and paradoxical bonding</h3>
+      <ul>
+        <li><strong>Oxytocin</strong> — increases during reconciliation, soothing touch, and even during apologies. It lowers stress temporarily and strengthens attachment to the source — even if that source is unsafe.</li>
+        <li><strong>HPA axis (cortisol)</strong> — chronic unpredictability keeps systems on alert. Relief after fear feels euphoric (a “drop”), which the brain mislabels as safety.</li>
+      </ul>
+      <h3>2.3 Memory & learning: why the small kindness feels huge</h3>
+      <p>Under chronic threat, the brain prioritizes **salient exceptions** (“they were tender today”) over base rates (“most days are cold or cruel”). That’s not denial; it’s survival learning. The system preserves any path to relief.</p>
+      <div class="callout"><strong>Clinical translation:</strong> The survivor is not “choosing pain.” They are neurologically trained to chase intermittent signals of relief. Treatment must decondition the loop, not shame the person.</div>
+    </section>
 
-    <p>You may have noticed that the smallest kind gesture from your partner after a period of neglect feels disproportionately powerful — like a flood of relief. That is neurochemistry, not weakness. Your nervous system is clinging to the tiniest signal of safety, even if it’s embedded in chaos.</p>
+    <!-- 3 -->
+    <section id="cycle">
+      <h2>3. The Cycle: Idealization → Devaluation → Control</h2>
+      <ul>
+        <li><strong>Idealization (“love-bombing”):</strong> intense focus, mirroring, rapid commitment, “I’ve never felt this before.”</li>
+        <li><strong>Devaluation:</strong> criticism, shifting rules, hot–cold dynamics, jealousy tests, withholding.</li>
+        <li><strong>Control:</strong> isolation, financial monitoring, threats, humiliation, sexual pressure, or weaponized silence.</li>
+        <li><strong>“Repair”:</strong> apology, gifts, tenderness — just enough to reset hope and rebind the attachment.</li>
+      </ul>
+      <p>Over time, you chase the early version of them — the idealized mirage. That hope is the hook.</p>
+    </section>
 
-    <h2>3. The Cycle: Idealization, Devaluation, Control</h2>
-    <p>Most trauma bonds begin with a phase of intense idealization. The abuser appears attentive, validating, and uniquely attuned — sometimes even "rescuer-like." Once the victim is emotionally invested, the dynamic subtly shifts into control, criticism, and emotional inconsistency. Punishment is rarely physical alone; it often includes withholding affection, gaslighting, or shifting blame. What follows is a strategic moment of affection or apology — enough to reactivate the original dopamine pathway.</p>
+    <!-- 4 -->
+    <section id="coercion">
+      <h2>4. Coercive Control Tactics (DARVO, Gaslighting, Intermittent Reinforcement)</h2>
+      <div class="table" style="margin-top:10px">
+        <table aria-label="Coercive control tactics">
+          <thead><tr><th>Tactic</th><th>What It Looks Like</th><th>Effect on the Brain</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Gaslighting</strong></td>
+              <td>“That never happened.” “You’re too sensitive.”</td>
+              <td>Confuses memory & interoception; you outsource reality-testing to them.</td>
+            </tr>
+            <tr>
+              <td><strong>DARVO</strong> (Deny–Attack–Reverse Victim/Offender)</td>
+              <td>They deny, attack you, then claim you’re the abuser.</td>
+              <td>Triggers shame & defensive repair; you over-explain and over-apologize.</td>
+            </tr>
+            <tr>
+              <td><strong>Intermittent rewards</strong></td>
+              <td>Cold weeks → sudden kindness/apology.</td>
+              <td>Dopamine spike on uncertainty; deepens attachment.</td>
+            </tr>
+            <tr>
+              <td><strong>Isolation</strong></td>
+              <td>Undermines friends/family, monitors time, “it’s us vs them.”</td>
+              <td>Removes alternate reality-checks; increases dependency.</td>
+            </tr>
+            <tr>
+              <td><strong>Financial control</strong></td>
+              <td>Access to money limited; forced “permission.”</td>
+              <td>Induces learned helplessness; practical barriers to leaving.</td>
+            </tr>
+            <tr>
+              <td><strong>Sexual coercion</strong></td>
+              <td>Pressure, guilt, threats, or “tests of loyalty.”</td>
+              <td>Pairs threat with intimacy; scrambles attachment signals.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small">Note: consensual BDSM/kink uses <em>informed, revocable consent</em>, clear limits, and aftercare. Coercive control violates consent and targets autonomy.</p>
+    </section>
 
-    <p>If you've been through this, you might feel like you're chasing the version of them that once existed. You keep hoping the "good part" will return — and sometimes it does, briefly, just long enough to keep you hooked. That hope is precisely what keeps the trauma bond alive.</p>
+    <!-- 5 -->
+    <section id="psych">
+      <h2>5. Psychological Entrapment: Dissonance, Identity, Fawn</h2>
+      <h3>5.1 Cognitive dissonance</h3>
+      <p>“They love me” vs “They hurt me.” To reduce dissonance, the mind minimizes harm and inflates rare kindness. This is adaptive under threat, but costly for self-trust.</p>
+      <h3>5.2 Identity collapse & fawn response</h3>
+      <p>When appeasement is the safest option, **fawn** becomes default: you pre-empt their moods, apologize for normal needs, and shrink to survive. Over time, preferences go offline; you live in their weather.</p>
+      <h3>5.3 Why smart, strong people get trapped</h3>
+      <p>Trauma bonds select for <em>responsible, attuned, conscientious</em> partners — the kind who try harder when something is wrong. That’s not naivety; it’s integrity misused against you.</p>
+    </section>
 
-    <h2>4. Psychological Entrapment: Cognitive Dissonance and Identity Collapse</h2>
-    <p>Victims of trauma bonding often experience intense cognitive dissonance: how can someone who once seemed so loving also inflict harm? This conflict leads to psychological minimization, where the victim reinterprets abuse as justified or deserved. In long-term bonds, personal boundaries erode, and the individual’s sense of self becomes organized around the abuser’s moods, needs, and evaluations.</p>
+    <!-- 6 -->
+    <section id="not">
+      <h2>6. What Trauma Bonding Is — and Is Not</h2>
+      <ul>
+        <li><strong>Not codependency alone:</strong> codependency is behavior; trauma bonding is conditioning + threat physiology.</li>
+        <li><strong>Not “intense love gone wrong”:</strong> the bond is rooted in fear, scarcity, and uncertainty — not security.</li>
+        <li><strong>Not mutual toxicity:</strong> coercive control is asymmetrical; the target adapts to survive.</li>
+      </ul>
+      <div class="callout"><strong>Clinically:</strong> Expect C-PTSD features — shame, hypervigilance, somatic symptoms, phobic avoidance of conflict, and dissociative moments during confrontations.</div>
+    </section>
 
-    <p>Many describe feeling like they’ve "lost themselves" in the relationship. That’s not poetic — it’s neurologically accurate. Your brain has had to rewrite its sense of safety and identity around someone unpredictable. What you feel isn’t dependency — it’s survival conditioning.</p>
+    <!-- 7 -->
+    <section id="assessment">
+      <h2>7. Clinical Assessment & Red Flags</h2>
+      <h3>7.1 Questions that reveal pattern (for clinicians & self-audit)</h3>
+      <ul>
+        <li>How predictable are their reactions? What are your “walking on eggshells” rules?</li>
+        <li>After conflict, who repairs — and how quickly? Is apology conditional on your silence?</li>
+        <li>Do finances, time, or social ties require permission? Who holds the passwords?</li>
+        <li>How do you feel <em>in your body</em> before/after seeing them? (stomach, breath, headache)</li>
+        <li>What happens when you set a small boundary?</li>
+      </ul>
+      <h3>7.2 Red vs green flags</h3>
+      <div class="table">
+        <table aria-label="Red vs green flags">
+          <thead><tr><th>Red Flags (leave/plan)</th><th>Green Flags (repair/learn)</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Threats, stalking, tracking, isolation, weaponized secrets</td>
+              <td>Transparent devices/finances, welcomes outside support</td>
+            </tr>
+            <tr>
+              <td>Coerced sex, reproductive coercion, unsafe rage</td>
+              <td>Respects “no,” timing, and contraception choices</td>
+            </tr>
+            <tr>
+              <td>Gaslighting + DARVO after harm</td>
+              <td>Accountability + behavioral change with timelines</td>
+            </tr>
+            <tr>
+              <td>Financial control or sabotage</td>
+              <td>Shared budget, opt-out rights, backup funds</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    <h2>5. What Trauma Bonding Is Not</h2>
-    <p>Clinically, it is essential to differentiate trauma bonding from other constructs. It is <strong>not</strong> merely codependency, though both may coexist. Codependency describes a behavioral pattern driven by low self-worth and enmeshment; trauma bonding is driven by fear, inconsistency, and survival-mode learning. It is also <strong>not</strong> simply a "toxic relationship," which may involve mutual dysfunction but lacks the neurological entrapment present in trauma bonds. Nor is it “intense love gone wrong” — trauma bonds are rooted not in love, but in dysregulated attachment formed under emotional duress.</p>
+    <!-- 8 -->
+    <section id="treatment">
+      <h2>8. Treatment Roadmap: Stabilize, Process, Rebuild</h2>
+      <p>Treatment is phased and safety-first. You don’t have to do it alone.</p>
+      <ol>
+        <li><strong>Stabilize the nervous system</strong> — sleep, nutrition, daily anchors; reduce contact with abuser (or make it structured/third-party). Teach body-based downshifts.</li>
+        <li><strong>Psychoeducation</strong> — name the cycle; normalize the hook; externalize shame.</li>
+        <li><strong>Safety planning</strong> — devices, finances, documents, codewords, exit rehearsals.</li>
+        <li><strong>Processing trauma</strong> — when safe enough: trauma-focused therapies that titrate exposure.</li>
+        <li><strong>Rebuild self & life</strong> — boundaries, values-led goals, social reconnection, joy without crisis.</li>
+      </ol>
+      <div class="callout"><strong>Therapeutic stance:</strong> Firm on facts, soft on shame. We replace “why didn’t you leave?” with “what made leaving impossible then, and what could make it possible now?”</div>
+    </section>
 
-    <h2>6. Clinical Implications and Intervention</h2>
-    <p>From a psychiatric perspective, addressing trauma bonding requires more than relational advice. Patients may present with symptoms resembling complex PTSD: emotional dysregulation, shame, hypervigilance, and identity confusion. Treatment involves stabilizing the nervous system, validating the trauma dynamic, and gradually rebuilding a secure internal base. Psychoeducation is vital — many victims remain unaware that their attachment has a name, let alone a neurobiological explanation.</p>
+    <!-- 9 -->
+    <section id="therapy">
+      <h2>9. Therapy Techniques (How They Work, What They Target)</h2>
+      <div class="table" style="margin-top:10px">
+        <table aria-label="Therapy matrix">
+          <thead>
+            <tr><th>Approach</th><th>Targets</th><th>How It Helps</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>TF-CBT</strong> (Trauma-Focused CBT)</td>
+              <td>Stuck beliefs (“it was my fault”), avoidance, triggers</td>
+              <td>Psychoeducation + graded exposure + cognitive restructuring; replaces self-blame with accurate threat appraisal.</td>
+            </tr>
+            <tr>
+              <td><strong>CPT</strong> (Cognitive Processing Therapy)</td>
+              <td>Guilt, shame, “stuck points”</td>
+              <td>Challenges distortions about safety, trust, control, esteem, intimacy; strong evidence for interpersonal trauma.</td>
+            </tr>
+            <tr>
+              <td><strong>EMDR</strong> (adapted)</td>
+              <td>Intrusions, body memories, loops of fear/relief</td>
+              <td>Dual-attention + careful target selection; titrated for ongoing contact or complex trauma.</td>
+            </tr>
+            <tr>
+              <td><strong>STAIR/Skills-First</strong></td>
+              <td>Emotion regulation, interpersonal effectiveness</td>
+              <td>Builds skills before trauma processing; reduces relapse into unsafe dynamics.</td>
+            </tr>
+            <tr>
+              <td><strong>DBT modules</strong></td>
+              <td>Distress tolerance, urges to contact, self-harm risk</td>
+              <td>STOP/PROs–CONs, urge surfing, crisis plans, radical acceptance; decreases impulsive re-engagement.</td>
+            </tr>
+            <tr>
+              <td><strong>ACT</strong></td>
+              <td>Values, identity re-ownership</td>
+              <td>Defuses inner critics; moves behavior toward chosen values instead of fear-avoidance.</td>
+            </tr>
+            <tr>
+              <td><strong>Sensorimotor / Somatic</strong></td>
+              <td>Hyperarousal, dissociation</td>
+              <td>Grounding, orienting, pendulation; re-trains interoception and vagal tone.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <p>Recovery isn't linear. You might grieve the version of that person you wanted them to be. You might still miss them after the break. That doesn’t mean the abuse wasn’t real — it means your nervous system needs time to rewire. In therapy, we hold that contradiction with compassion, not shame.</p>
+      <h3>9.1 Skills you can start now</h3>
+      <ul>
+        <li><strong>Threat ↔ Safety toggles:</strong> 5–5–5 breath, long exhales, feet on ground, cold water to face/hands, orient to 5 sights/4 sounds/3 touches.</li>
+        <li><strong>Reality anchor:</strong> write a “cycle card” (harm → apology → hope → repeat). Read it when nostalgia hits.</li>
+        <li><strong>Contact boundaries:</strong> use written-only, third-party, or “two-topic” rules; no late-night decisions.</li>
+        <li><strong>After-contact plan:</strong> snack, warmth, slow walk, brief journal, call a safe person.</li>
+      </ul>
+      <div class="callout"><strong>Clinical pearl:</strong> “Missing them” after leaving is physiology (dopamine/oxytocin) + grief. It does not mean it was safe.</div>
+    </section>
 
-    <h2>7. Supporting Recovery: Rebuilding Safety and Self</h2>
-    <p>Healing from trauma bonding begins not with forgetting, but with recognizing — naming what happened as abuse, not confusion. It is common to revisit the same emotions repeatedly: guilt, grief, longing, fear, and even fleeting hope. These are not signs that you failed to move on. They are signs that your nervous system is trying to update its definition of safety and attachment.</p>
+    <!-- 10 -->
+    <section id="pharm">
+      <h2>10. Adjuvant Pharmacology (Adults)</h2>
+      <p class="small"><em>Educational, not medical advice. Individualize with your clinician. Medication does not “cure” a trauma bond; it can reduce symptoms that block therapy and safety.</em></p>
+      <ul>
+        <li><strong>Sleep & hyperarousal:</strong> melatonin (timed), trazodone or mirtazapine at night if needed; avoid heavy alcohol/benzodiazepines as primary strategy due to dependence and rebound anxiety.</li>
+        <li><strong>Anxiety & depression:</strong> SSRIs/SNRIs (start low, go slow); buspirone as adjunct for GAD; consider prazosin for trauma nightmares; hydroxyzine PRN for acute spikes.</li>
+        <li><strong>Panic / somatic surges:</strong> propranolol situationally (if medically safe) for tachycardia/tremor; learning breath/grounding remains first-line.</li>
+      </ul>
+      <div class="callout"><strong>Medication rule:</strong> If the environment remains unsafe, meds help you cope — they don’t make the situation safe. Pair with a safety plan.</div>
+    </section>
 
-    <p>Working with a trauma-informed therapist can provide the emotional scaffolding necessary to separate your identity from the trauma cycle. This process often includes learning how to sit with uncomfortable emotions without acting on them immediately. For those with a trauma history, neutrality can feel threatening, and safety may be misinterpreted as boredom or lack of passion. These are distortions, not truths — distortions born in chaos that can be reshaped in consistency.</p>
+    <!-- 11 -->
+    <section id="safety">
+      <h2>11. Safety Planning: While In, Leaving, and After</h2>
+      <h3>11.1 While still in</h3>
+      <ul>
+        <li>Use a <strong>codeword</strong> with trusted people for “call me now” or “send help.”</li>
+        <li><strong>Devices:</strong> change passwords, disable shared IDs, check for trackers on phone/car.</li>
+        <li><strong>Documents & cash:</strong> copies of ID, bank cards, meds list; a small “go-bag” at a friend’s.</li>
+        <li><strong>Journal safely:</strong> use innocuous titles; consider paper stored offsite.</li>
+      </ul>
+      <h3>11.2 Leaving</h3>
+      <ul>
+        <li>Choose <strong>time & support</strong> (not at night, not alone). Inform one trusted person of the plan.</li>
+        <li>Pre-arrange <strong>housing/transport</strong>; move important items in advance when possible.</li>
+        <li>Switch to <strong>written-only contact</strong>; keep all messages; do not argue — state logistics only.</li>
+      </ul>
+      <h3>11.3 After leaving (post-separation abuse risk)</h3>
+      <ul>
+        <li>Expect <strong>extinction bursts</strong>: love-bombing → rage → smear campaigns. Do not negotiate your safety.</li>
+        <li>Update <strong>legal protections</strong> if applicable; document violations (screenshots, dates, times).</li>
+        <li>Strengthen <strong>community ties</strong>: friends, family, support groups, therapist.</li>
+      </ul>
+      <div class="callout"><strong>Red alert:</strong> If threats escalate (to you, children, pets), prioritize law enforcement and local advocacy services. Keep a record; save evidence off-device.</div>
+    </section>
 
-    <h2>8. Self-Compassion and Long-Term Resilience</h2>
-    <p>One of the most painful realizations for many survivors is that they confused emotional intensity with intimacy. But love is not proven through pain tolerance. Real connection does not require you to disappear to keep someone else present. Understanding this on a cognitive level is one thing; believing it in your body is another — and that takes time.</p>
+    <!-- 12 -->
+    <section id="recovery">
+      <h2>12. Recovery & Relapse Prevention</h2>
+      <h3>12.1 The first 90 days</h3>
+      <ul>
+        <li>Strict **no-contact** or **structured contact** only (if co-parenting). Remove reminders and shared playlists/photos from daily view.</li>
+        <li>Daily anchors: wake time, protein breakfast, sunlight, movement, 10-minute tidy, set bedtime.</li>
+        <li>Build **micro-joy**: small, sensory-safe activities (warm shower, tea ritual, short walks, music you choose).</li>
+      </ul>
+      <h3>12.2 When urges hit</h3>
+      <ul>
+        <li>Read your **cycle card**. Text a safe person before you text them. Wait 24 hours.</li>
+        <li>Run **PROs vs CONs** written — not in your head. The brain edits to favor hope.</li>
+      </ul>
+      <h3>12.3 Reclaiming identity</h3>
+      <ul>
+        <li>Values worksheet: 3 words for this year; 2 behaviors per word you can do weekly.</li>
+        <li>Body trust: practice “micro-no’s” (decline small requests) to re-teach boundaries safely.</li>
+      </ul>
+      <div class="callout"><strong>Milestone:</strong> When quiet feels safe — not boring — your nervous system is healing.</div>
+    </section>
 
-    <p>Resilience after trauma bonding is not just about “moving on.” It’s about reclaiming authorship over your internal narrative. This may involve redefining what safety means to you, learning to trust your own boundaries again, and allowing gentleness to coexist with strength. Many survivors report that once the trauma bond is named and addressed, they begin to feel more clarity, less confusion, and even moments of unexpected peace. These are the early signs of a nervous system slowly coming out of hyperarousal.</p>
+    <!-- 13 -->
+    <section id="faq">
+      <h2>13. FAQ — Quick Answers</h2>
+      <details>
+        <summary>Why do I miss them if it was abuse?</summary>
+        <p>Because your brain linked them with rare relief. Missing = neurochemistry + grief. It doesn’t invalidate the harm.</p>
+      </details>
+      <details>
+        <summary>Can couples therapy fix this?</summary>
+        <p>Not when there is active coercive control or fear. Individual safety and stabilization come first. Couples work is only considered later, if ever, with clear safeguards.</p>
+      </details>
+      <details>
+        <summary>Is trauma bonding the same as codependency?</summary>
+        <p>No. Codependency is behavior from low self-worth; trauma bonding is conditioning under threat. They can overlap but are distinct.</p>
+      </details>
+      <details>
+        <summary>How long does healing take?</summary>
+        <p>Variable. Many feel notable relief in 8–12 weeks with safety + skills; deeper trust and identity work can take months. Nonlinear is normal.</p>
+      </details>
+      <details>
+        <summary>What if I have to co-parent?</summary>
+        <p>Use parallel parenting: written-only, structure, apps that log messages, clear boundaries, documented schedules. Protect your peace; courts value documentation.</p>
+      </details>
+    </section>
 
-    <p>You do not have to rush into forgiveness or understanding. You do not have to justify why it was hard to leave. What matters is that you survived — and that healing, though nonlinear, is possible and already underway.</p>
+    <!-- 14 -->
+    <section id="refs">
+      <h2>14. References (Selected)</h2>
+      <ol>
+        <li>van der Kolk B. <em>The Body Keeps the Score</em> — neurobiology of trauma and somatic memory.</li>
+        <li>Herman JL. <em>Trauma and Recovery</em> — phases of stabilization, remembrance, and reconnection.</li>
+        <li>Freyd JJ. Betrayal trauma, DARVO, and institutional betrayal — mechanisms relevant to coercive control.</li>
+        <li>Yudofsky SC, Hales RE (eds.). <em>Textbook of Psychiatry</em> — C-PTSD and intimate partner violence chapters.</li>
+        <li>Monson CM, Resick PA. Cognitive Processing Therapy for interpersonal trauma.</li>
+        <li>Shapiro F. EMDR therapy — evidence base for PTSD and complex presentations (with adaptations).</li>
+        <li>Stark E. <em>Coercive Control</em> — the legal and clinical framework.</li>
+        <li>Linehan MM. <em>DBT Skills Training</em> — distress tolerance and emotion regulation modules.</li>
+      </ol>
+      <p class="small">Educational resource — not a substitute for individualized medical or legal advice.</p>
+    </section>
 
-    <footer>
-        Written by Dr. Sarah Ionescu<br>
-        Women & Psychiatry – Second Opinions with Clinical Depth
-    </footer>
+    <div class="sep" role="separator" aria-hidden="true"></div>
+
+    <section aria-label="Author">
+      <h2>About the Author & Care</h2>
+      <p class="small">Written by <strong>Dr. Sarah Ionescu</strong>, psychiatry resident focusing on trauma, women’s mental health, and coercive control recovery.  
+      I offer confidential second-opinion consultations and therapy sessions (skills-first, trauma-informed, autonomy-respecting). To inquire or book: <a href="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/index.html" target="_blank" rel="noopener">Women &amp; Psychiatry — Second Opinion</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p class="small">© <span id="y"></span> — Evidence-informed, non-judgmental education for survivors and clinicians.</p>
+  </footer>
+</div>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
