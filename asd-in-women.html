@@ -1,64 +1,468 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Autism in Women – What Doctors Still Miss</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Autism in Women — What Doctors Still Miss (Expanded 2025) — Part 1</title>
+  <meta name="description" content="Clinically precise, patient-inclusive guide to autism in women: phenotype, masking, neurobiology (DMN/salience/cerebellum), genetics/epigenetics (female protective effect), neuroendocrinology (estrogen/oxytocin/vasopressin). Part 1 of 2." />
+  <link rel="icon" href="/favicon.ico" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Women & Psychiatry — Second Opinion" />
+  <meta property="og:title" content="Autism in Women — What Doctors Still Miss (Expanded 2025) — Part 1" />
+  <meta property="og:description" content="Why many autistic women are still missed; the female phenotype; brain networks; genetics & hormones. Part 1 (of 2)." />
+  <meta property="og:image" content="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/og-image.jpg" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Autism in Women — What Doctors Still Miss (Expanded 2025) — Part 1" />
+  <meta name="twitter:description" content="Phenotype, masking, neurobiology, genetics, hormones — rigorous and humane. Part 1 of 2." />
+  <meta name="twitter:image" content="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/og-image.jpg" />
   <style>
-    body { font-family: Arial, sans-serif; background-color: #fefefe; margin: 0; padding: 2rem; max-width: 900px; margin: auto; line-height: 1.7; color: #333; }
-    h1, h2 { color: #4a4a8a; }
-    footer { margin-top: 4rem; text-align: right; font-style: italic; }
+    :root{
+      --bg:#0d112b; --panel:#121735; --ink:#f3f6ff; --ink-dim:#c9d0f8;
+      --accent:#6ea8fe; --accent-2:#c084fc; --muted:#9aa3c7; --ok:#3ddc97;
+      --shadow:0 10px 30px rgba(0,0,0,.25);
+      --radius:16px; --radius-lg:22px; --maxw:900px;
+    }
+    html,body{height:100%}
+    body{margin:0; font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; color:var(--ink); background:var(--bg); line-height:1.7}
+    .wrap{max-width:var(--maxw); margin:clamp(20px,5vw,64px) auto; padding:0 20px}
+    header.hero{background:linear-gradient(135deg, rgba(110,168,254,.12), rgba(192,132,252,.10));
+      border:1px solid rgba(255,255,255,.10); box-shadow:var(--shadow);
+      border-radius:var(--radius-lg); padding:clamp(24px,5vw,48px)}
+    .hero h1{margin:0 0 10px; font-size:clamp(28px,5vw,48px)}
+    .hero p.lead{margin:8px 0 0; color:var(--ink-dim); font-size:clamp(16px,2.4vw,20px)}
+    .badge{display:inline-flex; align-items:center; gap:.5rem;
+      background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12);
+      color:var(--ink-dim); padding:.35rem .7rem; border-radius:999px; font-size:.85rem}
+    .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px rgba(61,220,151,.18)}
+    nav.toc{margin:28px 0; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10);
+      border-radius:var(--radius); padding:16px}
+    nav.toc h2{font-size:1rem; margin:0 0 10px; color:var(--ink-dim)}
+    nav.toc a{display:inline-block; color:var(--ink); text-decoration:none;
+      padding:.2rem .55rem; margin:.15rem; border-radius:999px; border:1px solid rgba(255,255,255,.1)}
+    nav.toc a:hover{background:rgba(255,255,255,.09)}
+    section{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10);
+      border-radius:var(--radius); padding:clamp(18px,2.5vw,28px); margin:16px 0; box-shadow:var(--shadow)}
+    section h2{margin-top:0; font-size:clamp(22px,3vw,32px)}
+    h3{margin-top:1.1em}
+    p{margin:.5rem 0 1rem}
+    ul{margin:.2rem 0 1rem 1.25rem}
+    li{margin:.35rem 0}
+    .quote{border-left:4px solid var(--accent); padding-left:14px; color:var(--ink-dim); font-style:italic}
+    .callout{border:1px solid rgba(110,168,254,.35); background:linear-gradient(180deg, rgba(110,168,254,.10), rgba(110,168,254,.04)); border-radius:12px; padding:14px}
+    .table{overflow:auto}
+    table{width:100%; border-collapse:collapse; font-size:.96rem}
+    th,td{border:1px solid rgba(255,255,255,.12); padding:.6rem; text-align:left; vertical-align:top}
+    th{background:rgba(255,255,255,.10)}
+    .small{font-size:.92rem; color:var(--ink-dim)}
+    .sep{height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent); margin:24px 0}
+    footer{margin:28px 0 64px; color:var(--muted)}
   </style>
 </head>
 <body>
-  <h1>Autism in Women – What Doctors Still Miss</h1>
+<div class="wrap">
+  <header class="hero" role="banner">
+    <span class="badge"><span class="dot"></span> Updated 2025 · Clinic-precise & Patient-inclusive</span>
+    <h1>Autism in Women — What Doctors Still Miss</h1>
+    <p class="lead">The female autistic phenotype: masking, burnout, neurobiology, genetics, hormones, and why we still miss it. Part 1 of 2 (Part 2 adds differential diagnosis, interventions, pharmacology & FAQ).</p>
+  </header>
 
-  <p>Autism doesn’t always look the way clinicians expect it to. The classic model — a socially withdrawn boy with repetitive interests and little eye contact — has dominated both public perception and diagnostic tools for decades. But many women on the spectrum don’t fit this mold. And because of that, they are missed.</p>
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <a href="#intro">1. Why Women Get Missed</a>
+    <a href="#phenotype">2. The Female Phenotype: Masking & Burnout</a>
+    <a href="#neuro">3. Neurobiology & Circuits (DMN/Salience/Social/Cerebellum)</a>
+    <a href="#sensory">4. Sensory Processing & Predictive Coding</a>
+    <a href="#genetics">5. Genetics & Epigenetics (Female Protective Effect)</a>
+    <a href="#hormones">6. Neuroendocrinology (Estrogen, Oxytocin, Vasopressin)</a>
+    <!-- Part 2 anchors (will be appended below) -->
+    <a href="#dx">7. Differential Diagnosis & Comorbidity</a>
+    <a href="#assessment">8. Assessment: History, Measures & Pitfalls</a>
+    <a href="#interventions">9. Interventions that Help (and What to Avoid)</a>
+    <a href="#pharm">10. Adjuvant Pharmacology (Adults)</a>
+    <a href="#faq">11. FAQ — Quick Answers</a>
+    <a href="#refs">12. References</a>
+  </nav>
 
-  <h2>The Cost of Camouflage: Masking and Emotional Exhaustion</h2>
-  <p>From a young age, girls are encouraged — even biologically primed — to notice social cues. Historically, this skill may have helped women interpret the needs of infants or detect subtle threats. Social behavior, empathy, and emotional mirroring are more strongly reinforced in girls, both genetically and culturally.</p>
+  <main id="content">
+    <!-- =========================
+         1) WHY WOMEN GET MISSED
+    ========================== -->
+    <section id="intro">
+      <h2>1. Why Women Get Missed</h2>
+      <p>Diagnostic instruments and clinical archetypes were normed predominantly on boys. Many autistic women present with <em>competent performance</em> in brief encounters: eye contact is rehearsed, small talk is scripted, and stimming is suppressed. Clinicians overvalue “what is seen now” and undervalue the <strong>cost ledger</strong> — recovery time, shutdowns after social days, and long-term exhaustion.</p>
+      <ul>
+        <li><strong>Tool bias:</strong> ADOS-2 sensitivity drops in high-masking profiles; pragmatic language differences can be subtle in structured clinics.</li>
+        <li><strong>Context bias:</strong> girls receive prosocial tutoring; imitation can outpace intuition, masking core processing differences.</li>
+        <li><strong>Attribution bias:</strong> burnout is misread as depression; blunt truthfulness as personality; sensory refusal as defiance.</li>
+      </ul>
+      <div class="quote">“She seems fine in session” is not evidence against autism — it’s often evidence of masking.</div>
+    </section>
 
-  <p>For autistic girls and women, this means that social difficulties are rarely obvious. Instead of being isolated, many are quietly exhausted from the ongoing effort to “act normal.” They make eye contact — but it’s forced, rehearsed. They mimic tone, gesture, posture — but it drains them. This is called <strong>masking</strong>, and it is both a survival strategy and a source of profound internal distress.</p>
+    <!-- =========================
+         2) FEMALE PHENOTYPE
+    ========================== -->
+    <section id="phenotype">
+      <h2>2. The Female Phenotype: Masking & Burnout</h2>
+      <h3>2.1 Masking (Camouflaging)</h3>
+      <p>Masking is a <em>learned compensation</em>: scripted eye contact, memorized conversational slots, mirroring gestures, suppressing self-stimulatory behaviors, and hyper-monitoring others. Short-term gains: fewer conflicts and “passes” as neurotypical. Long-term costs: fatigue, depersonalization, alexithymia, and post-event shutdowns.</p>
+      <ul>
+        <li><strong>Social scripting:</strong> pre-built phrases, borrowed humor; great in interviews, brittle in improvisation.</li>
+        <li><strong>Relational over-functioning:</strong> gifts, apologies, logistical labor to prevent ruptures.</li>
+        <li><strong>Interest camouflage:</strong> deep dives into “acceptable” domains (literature, ethics, plants, linguistics) still function as <em>regulatory, rule-based systems</em>.</li>
+      </ul>
 
-  <h2>Eye Contact and the Illusion of Neurotypicality</h2>
-  <p>One of the most common myths about autism is that autistic people don’t make eye contact. While this may be true for some, many autistic women do make eye contact — intentionally.</p>
+      <h3>2.2 Burnout</h3>
+      <p>Burnout is not “lost motivation.” It is a neurobiological crash after chronic energy-overdraft in misfitting environments. Symptoms: reduced function, shutdowns, poorer sensory tolerance, loss of skills (e.g., cooking variety). Recovery is slower than expected if supports are not adjusted.</p>
 
-  <p>For them, it’s not a natural reflex but an active cognitive task. They learn when to look, how long, and when to look away. It is a constant performance. And like any performance, it has a cost: mental fatigue, stress, and a lack of presence in the actual interaction.</p>
+      <h3>2.3 Alexithymia & Interoception</h3>
+      <p>Many women report difficulty labeling internal states and body signals. Without interoceptive cues, prevention fails and crises seem to “come out of nowhere.” Training a shared lexicon for internal states decreases frequency/intensity of meltdowns.</p>
 
-  <h2>Special Interests, But Not Recognized</h2>
-  <p>Like autistic boys, girls on the spectrum often have intense special interests — but theirs are less likely to be noticed. While a boy obsessed with trains may be flagged as atypical, a girl obsessed with ancient mythologies, types of leaves, or patterns in human behavior may be seen as “just curious” or “deep.”</p>
+      <div class="callout"><strong>Clinical translation:</strong> “Apparently fine + privately exhausted” is typical. Ask about recovery windows, not just in-session behavior.</div>
+    </section>
 
-  <p>These interests can be just as consuming, detailed, and rule-based. And yet, because they may appear more socially acceptable, they often go unrecognized as part of the autistic phenotype.</p>
+    <!-- =========================
+         3) NEUROBIOLOGY
+    ========================== -->
+    <section id="neuro">
+      <h2>3. Neurobiology & Circuits (DMN, Salience, Social, Cerebellum)</h2>
+      <h3>3.1 Network-level differences</h3>
+      <ul>
+        <li><strong>Default Mode Network (DMN):</strong> atypical coherence and switching; internal narrative may dominate or be difficult to access, affecting social prediction.</li>
+        <li><strong>Salience network (ACC–insula):</strong> altered salience tagging; noisy environments overwhelm; weak tagging in low-context tasks reduces engagement.</li>
+        <li><strong>Task-Positive/Executive (DLPFC–parietal):</strong> increased cognitive cost for social inference; masking recruits executive control → metabolic strain.</li>
+        <li><strong>Social brain (mPFC, TPJ, STS, amygdala):</strong> timing/connectivity differences affect mentalizing and rapid intention-reading more than “empathy” per se.</li>
+        <li><strong>Cerebellum (social cerebellum):</strong> predictive timing and error correction in sequences (speech prosody, turn-taking, gesture timing); subtle dyspraxia adds social friction.</li>
+      </ul>
 
-  <p>Interestingly, many autistic girls and women notice patterns in objects — faces, tiles, symmetry — but struggle with recognizing emotional expressions on human faces. This can lead to confusion in social situations and difficulty navigating friendships, even if they appear socially competent on the surface.</p>
+      <h3>3.2 Predictive processing frame</h3>
+      <p>Autism can be conceptualized as altered precision weighting of prediction errors. Increased precision on sensory errors → difficulty tolerating uncertainty and change; repetitive behavior minimizes surprise and energy expenditure.</p>
 
-  <h2>Genetic Patterns and Diagnostic Blind Spots</h2>
-  <p>In boys diagnosed with autism, genetic testing more frequently reveals identifiable pathogenic variants — including <strong>copy number variants (CNVs)</strong>, <strong>single nucleotide variants (SNVs)</strong>, and deletions or duplications on chromosomes such as <em>16p11.2</em> or <em>22q11.2</em>. These structural anomalies can disrupt key neurodevelopmental pathways involved in synaptic function and brain connectivity.</p>
+      <h3>3.3 Microcircuitry & glia (clinically relevant)</h3>
+      <ul>
+        <li><strong>Synaptic balance (E/I):</strong> GABA–glutamate balance differences reported; contributes to sensory hyper-/hypo-reactivity and timing issues.</li>
+        <li><strong>Microglia & pruning:</strong> evidence suggests atypical synaptic pruning windows — aligns with uneven skills profile.</li>
+      </ul>
 
-  <p>In girls, however, the picture is more complex.</p>
+      <div class="callout"><strong>Pearl:</strong> Masking “works” because top-down control can override social intuition briefly — at a high energetic cost. The crash is physiology, not attitude.</div>
+    </section>
 
-  <p>Studies have shown that many autistic girls do <strong>not</strong> exhibit the same pathogenic variants seen in boys, or their genetic findings fall under <strong>VOUS</strong> — <em>Variants of Uncertain Significance</em>. These are changes in the genome that may or may not have clinical relevance, and are often dismissed or overlooked.</p>
+    <!-- =========================
+         4) SENSORY & PREDICTIVE CODING
+    ========================== -->
+    <section id="sensory">
+      <h2>4. Sensory Processing & Predictive Coding</h2>
+      <p>Women often describe tactile/auditory hypersensitivity in crowded, fluorescent-lit, perfumed spaces. Others report hyposensitivity needing strong input (deep pressure, movement). Both profiles fit a predictive coding model: the brain strives to minimize surprise by seeking controllable input or avoiding chaotic input.</p>
+      <ul>
+        <li><strong>Hyper-reactivity:</strong> sound (fans, beeps), light (flicker), touch (tags, seams); leads to irritability and shutdowns.</li>
+        <li><strong>Hyposensitivity:</strong> seeks deep pressure, tight clothing, rhythmic movement; can be mislabeled “attention seeking.”</li>
+        <li><strong>Interoception:</strong> atypical hunger/thirst/fatigue detection → late correction, mood swings.</li>
+      </ul>
+      <div class="callout"><strong>Practice:</strong> Map triggers; pre-plan exits; offer sensory aids (noise reduction, warm light, weighted items). Function first; cosmetics never.</div>
+    </section>
 
-  <p>This discrepancy doesn't mean their autism is less severe or invalid. In fact, many researchers now believe that <strong>females require a higher cumulative mutational burden</strong> — sometimes called a <em>“female protective effect”</em> — to reach the same clinical threshold for autism as males. In other words, autistic girls might carry fewer or subtler mutations, but still experience substantial neurodevelopmental challenges due to compounding epigenetic, environmental, and polygenic factors.</p>
+    <!-- =========================
+         5) GENETICS & EPIGENETICS
+    ========================== -->
+    <section id="genetics">
+      <h2>5. Genetics & Epigenetics (Female Protective Effect)</h2>
+      <p>Pathogenic CNVs/SNVs (e.g., 16p11.2, 22q11.2, SHANK3, CHD8) are more frequently detected in autistic boys. Many autistic women have fewer obvious rare variants but equal impairment, suggesting a <strong>female protective effect</strong> — a higher threshold of mutational/biological burden to express the phenotype. Polygenic risk + epigenetic modulation + environment co-produce outcomes.</p>
+      <ul>
+        <li><strong>Scaffolding & synapse genes:</strong> SHANK3, NRXN, NLGN families — tiny effect sizes individually, meaningful in aggregate.</li>
+        <li><strong>Chromatin & transcription:</strong> CHD8, ADNP, MECP2-related modulation — developmentally timed effects on brain growth and connectivity.</li>
+        <li><strong>Oxytocin/vasopressin axis:</strong> OXTR/AVPR polymorphisms variably associated with social processing; effects are modest and context-dependent.</li>
+        <li><strong>Epigenetics:</strong> methylation patterns interact with stress, inflammation, hormones — plausibly shaping camouflaging propensity and sensory thresholds.</li>
+      </ul>
+      <div class="callout"><strong>Counseling:</strong> “No hit on panel” ≠ “not autistic.” Genetic tests inform risks/coordination (e.g., epilepsy, syndromic flags), not identity or validity.</div>
+    </section>
 
-  <p>This also explains why standard diagnostic tools, which rely heavily on observable behaviors (often male-typical), frequently fail to identify autistic women. The absence of a “clear” genetic marker reinforces the false assumption that their presentation is milder — when in reality, it’s simply different.</p>
+    <!-- =========================
+         6) NEUROENDOCRINOLOGY
+    ========================== -->
+    <section id="hormones">
+      <h2>6. Neuroendocrinology (Estrogen, Oxytocin, Vasopressin)</h2>
+      <h3>6.1 Estrogen</h3>
+      <ul>
+        <li><strong>Synaptic plasticity:</strong> estradiol enhances glutamatergic plasticity and modulates catecholamines in PFC/hippocampus; cognitive steadiness often peaks mid-cycle.</li>
+        <li><strong>Clinical impact:</strong> late luteal/perimenopause → lower tolerance to sensory noise, faster fatigue, more shutdowns. Tracking and adjusting demands/supports across the cycle improves stability.</li>
+      </ul>
 
-  <p>We must move away from the binary of “visible gene = real autism.”<br>
-  <strong>Clinical reality is not always visible in a karyotype.</strong></p>
+      <h3>6.2 Oxytocin & Vasopressin</h3>
+      <ul>
+        <li><strong>Oxytocin:</strong> involved in bonding and stress buffering; trials show mixed results — context, expectations, and baseline traits matter; not a “social cure.”</li>
+        <li><strong>Vasopressin:</strong> modulates social vigilance; evidence in humans is preliminary and heterogeneous.</li>
+      </ul>
 
-  <h2>Conclusion: Recognizing the Unseen</h2>
-  <p>Autistic women don’t look like the textbook case. They function — until they don’t. They smile — but collapse alone. They succeed — but pay a hidden price.</p>
+      <h3>6.3 Stress Hormone Interface</h3>
+      <ul>
+        <li><strong>HPA axis:</strong> unpredictable social/sensory stress elevates cortisol; chronic activation worsens interoceptive confusion and sleep.</li>
+        <li><strong>Clinical pearl:</strong> sleep and predictable routines are hormone therapies by other means — they stabilize networks more than many drugs.</li>
+      </ul>
 
-  <p>As clinicians, we must update our lens. Masking is not success. Eye contact is not instinct. And burnout is not personality. We owe these women recognition, accuracy, and compassion.</p>
+      <div class="callout"><strong>Bottom line:</strong> Hormonal state shifts the “noise floor.” Many women aren’t “less capable” premenstrual/perimenopausal; they are <em>more expensively wired</em> that week. Adjust the environment, not self-worth.</div>
+    </section>
 
-  <h2>References</h2>
-  <ul>
-    <li>Halladay, A. K. et al. (2015). Sex and gender differences in autism spectrum disorder: summarizing evidence gaps and identifying emerging areas of priority. <em>Molecular Autism</em>, 6(36).</li>
-    <li>Jacquemont, S. et al. (2014). A higher mutational burden in females supports a “female protective model” in neurodevelopmental disorders. <em>American Journal of Human Genetics</em>, 94(3), 415–425.</li>
-    <li>Gould, J., & Ashton-Smith, J. (2011). Missed diagnosis or misdiagnosis? Girls and women on the autism spectrum. <em>Good Autism Practice</em>, 12(1), 34–41.</li>
-    <li>Lai, M. C. et al. (2015). Sex/gender differences and autism: setting the scene for future research. <em>Journal of the American Academy of Child and Adolescent Psychiatry</em>, 54(1), 11–24.</li>
-  </ul>
+        <!-- =========================
+         7) DIFFERENTIAL DIAGNOSIS & COMORBIDITY
+    ========================== -->
+    <section id="dx">
+      <h2>7. Differential Diagnosis & Comorbidity</h2>
+      <p>La femei, tabloul ASD este adesea “curat în cabinet” și încărcat acasă. Diferentialul corect cere separarea **mecanismelor** (diferențe de procesare și predicție socială) de **rezultate** (anxietate, depresie, evitări). Co-ocurența este regula, nu excepția.</p>
 
-  <footer>Written by Dr. Sarah Ionescu</footer>
+      <div class="table" style="margin-top:10px">
+        <table aria-label="Extended differential">
+          <thead>
+            <tr><th>Diagnoză</th><th>Ce se suprapune</th><th>Cum diferențiezi (ce întrebi/observi)</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>ADHD</strong></td>
+              <td>Inatenție, procrastinare, disorganizare, căutare de stimulare</td>
+              <td>ADHD: social intuition intact; entuziasm/novelty-driven. ASD: cost de inferență socială, literalitate, nevoia de predictibilitate; multe femei le au pe ambele.</td>
+            </tr>
+            <tr>
+              <td><strong>Social Anxiety (SAD)</strong></td>
+              <td>Disconfort social, evitare contact vizual</td>
+              <td>SAD: frica de evaluare negativă; când anxietatea scade, socialul e fluent. ASD: cost de procesare și când frica e scăzută; istoric de masking și epuizare.</td>
+            </tr>
+            <tr>
+              <td><strong>PTSD/C-PTSD</strong></td>
+              <td>Hipervigilență, shutdowns, evitări</td>
+              <td>PTSD: traiectorie legată de evenimente; flashback-uri declanșate. ASD: debut în copilărie; senzorial și social atipic “de când se știe”. Frecvent co-prezente.</td>
+            </tr>
+            <tr>
+              <td><strong>BPD</strong></td>
+              <td>Emoții intense, rupturi relaționale</td>
+              <td>BPD: patternuri relaționale oscilante, teme de abandon, comportamente de auto-vătămare ca reglator dominant. ASD: literalitate, senzorial, interes restrâns; capacitate bună de reparare când primește structură clară.</td>
+            </tr>
+            <tr>
+              <td><strong>OCD / OCPD</strong></td>
+              <td>Rutină, rigiditate, ritualuri</td>
+              <td>OCD: intruziuni egodistonice + compulsii pentru reducerea anxietății. ASD: rutina reglează predictibilitatea; nu există intruzii tipice sau frici magice.</td>
+            </tr>
+            <tr>
+              <td><strong>Anorexie/ARFID</strong></td>
+              <td>Rutină alimentară, selectivitate</td>
+              <td>AN: supraevaluarea greutății/forme. ARFID/ASD: motoare senzoriale/interoceptive. Întreabă “cum se simte mâncarea”, nu doar “ce gândești despre mâncare”.</td>
+            </tr>
+            <tr>
+              <td><strong>Schizotipal</strong></td>
+              <td>Singurătate, stil social neobișnuit</td>
+              <td>Schizotipal: idei de referință, gândire magică, afect inadecvat. ASD: concret, literal, fără conținut bizar; interesul e sistemic, nu mistic.</td>
+            </tr>
+            <tr>
+              <td><strong>Bipolar II</strong></td>
+              <td>Variabilitate energie, proiecte începute</td>
+              <td>BP-II: episoade distincte hipomane (somn ↓, energie ↑, idei grandoare). ASD: variabilitatea e legată de sarcini, senzorial și oboseală; fără episoade discrete.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>7.1 Comorbidități frecvente</h3>
+      <ul>
+        <li>ADHD (feminin camuflat), anxietate socială/generată, OCD-like, depresie recurentă legată de burnout, tulburări de somn, durere cronică/hipermobilitate, migrenă, selectivitate alimentară/ARFID.</li>
+      </ul>
+    </section>
+
+    <!-- =========================
+         8) ASSESSMENT: HISTORY, MEASURES & PITFALLS
+    ========================== -->
+    <section id="assessment">
+      <h2>8. Assessment: History, Measures & Pitfalls</h2>
+
+      <h3>8.1 Istoricul “care contează”</h3>
+      <ul>
+        <li>Debut timpuriu: joc simbolic, preferințe senzoriale, “prietena intensivă unică”, literalitate, scenarii joc repetitiv.</li>
+        <li>Masca: când a început, cum se face, costul (timp de recuperare, shutdowns), episoade de burnout.</li>
+        <li>Interese speciale: adâncime, reguli, funcția de reglare.</li>
+        <li>Interocepție: semnale foame/sete/oboseală; dificultăți de localizare a emoțiilor (alexithymie).</li>
+        <li>Mediu: școală/muncă (zgomot, lumină, relații), acasă (spațiu de recuperare).</li>
+      </ul>
+
+      <h3>8.2 Măsuri & instrumente</h3>
+      <ul>
+        <li><strong>CAT-Q</strong> (Camouflaging Autistic Traits Questionnaire) — cuantifică masking.</li>
+        <li><strong>RAADS-R</strong>, <strong>AQ</strong> (screening) — utile ca anexe, interpretate clinic.</li>
+        <li><strong>SRS-2</strong> (adulți) — evaluare dinamică a severității trăsăturilor sociale.</li>
+        <li><strong>ADOS-2</strong> (când e disponibil) — sensibilitate redusă la femeile cu mască înaltă; adăugați observații naturalistice/collateral.</li>
+        <li><strong>SPQ/Sensory Profile</strong> — harta senzorială.</li>
+        <li><strong>Alexithymia (TAS-20)</strong> — util pentru planul terapeutic.</li>
+      </ul>
+
+      <h3>8.3 Greșeli comune</h3>
+      <ul>
+        <li>Confundarea eye contact-ului cu confortul.</li>
+        <li>Suprapunerea performanței în sesiune peste viața reală.</li>
+        <li>Ignorarea costului recuperării (“câte ore/zi îți trebuie ca să-ți revii după o întâlnire?”).</li>
+        <li>Întrebări vagi; folosiți exemple concrete, ancorate temporal.</li>
+      </ul>
+
+      <details>
+        <summary class="small"><strong>Mini-checklist imprimabil</strong> (anamneză adult – femei)</summary>
+        <ul>
+          <li>1) Debut & traseu: “Care sunt primele amintiri despre a te simți altfel în social?”</li>
+          <li>2) Masca: “Când ai învățat să ‘pari în regulă’? Ce cost ai plătit?”</li>
+          <li>3) Senzorial: top 3 declanșatori + top 3 ancore calmante.</li>
+          <li>4) Interese: cum, când, la ce cost; funcția lor (reglare/identitate).</li>
+          <li>5) Burnout: câte episoade, simptome, triggeri, durată, ce a ajutat.</li>
+          <li>6) Comorbid: anxietate, ADHD, somn, durere, alimentație, migrenă.</li>
+          <li>7) Mediu: ce adaptări ți-ar scădea costul zilnic.</li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- =========================
+         9) INTERVENTIONS THAT HELP (AND WHAT TO AVOID)
+    ========================== -->
+    <section id="interventions">
+      <h2>9. Interventions that Help (and What to Avoid)</h2>
+
+      <h3>9.1 Ce să evităm</h3>
+      <ul>
+        <li><strong>ABA tradițională (compliance-centrică)</strong>: suprimă stimming-ul, forțează eye contact, recompense/pedepse pentru “normalizare”. Crește rușinea, e asociată cu burnout și risc de traumă. <em>Nu recomandat.</em></li>
+      </ul>
+
+      <h3>9.2 Ce funcționează (evidență modernă, orientată spre autonomie)</h3>
+      <ul>
+        <li><strong>NDBI</strong> (Naturalistic Developmental Behavioral Interventions): joacă/mediu natural, interese intrinseci, co-reglare; țintează funcția (comunicare, autonomie), nu camuflajul. La adulți, principiile se traduc în coaching ocupațional/social naturalistic.</li>
+        <li><strong>CBT modificat pentru autism (CBT-a)</strong>: limbaj concret, vizual, fără metafore ambigue; module pentru toleranța incertitudinii, planuri senzoriale, rezolvare de probleme pas-cu-pas.</li>
+        <li><strong>ACT</strong> (Acceptance & Commitment Therapy): flexibilitate psihologică, clarificarea valorilor, acțiuni ghidate de scop; util la perfecționism și ruminare literală.</li>
+        <li><strong>DBT-m (adaptat)</strong>: reglare emoțională/toleranță la distres cu ancore senzoriale (temperatură/ presiune profundă/ vizual); reducerea meltdown-urilor.</li>
+        <li><strong>SST-a</strong> (Social Skills Training adaptat): joc de rol, scenarii, “repair scripts”; obiectivul este eficiența, nu mimicry.</li>
+        <li><strong>OT & intervenții senzoriale personalizate</strong>: audit senzorial (lumină caldă, zgomot, haine), “calm kit”, spații de refugiu; evidență mixtă, utilitate pragmatică frecventă.</li>
+        <li><strong>Suport ocupațional & academic</strong>: orare previzibile, pauze senzoriale, comunicație scrisă, body-doubling, job crafting.</li>
+      </ul>
+
+      <h3>9.3 Pentru familie/parteneri</h3>
+      <ul>
+        <li>Educație despre masking & burnout.</li>
+        <li>Confirmarea explicită a nevoilor senzoriale (nu sunt “mofturi”).</li>
+        <li>Ritual de recuperare după evenimente sociale; limitarea cerințelor conversaționale în fereastra de epuizare.</li>
+      </ul>
+
+      <div class="callout"><strong>Principiu de aur:</strong> țintim <em>funcția</em> (comunicare, autonomie, siguranță), nu “să pari neurotipică”. Camuflajul nu e terapie.</div>
+    </section>
+
+    <!-- =========================
+         10) ADJUVANT PHARMACOLOGY (ADULTS)
+    ========================== -->
+    <section id="pharm">
+      <h2>10. Adjuvant Pharmacology (Adults) — Pearls & Cautions</h2>
+      <p class="small"><em>Educațional. Nu există “medicație pentru autism” în sine; tratăm comorbiditățile și disconfortul care afectează funcția. Individualizați, titrați lent, monitorizați interacțiunile și somnul.</em></p>
+
+      <h3>10.1 Anxietate / depresie</h3>
+      <ul>
+        <li><strong>SSRI</strong> (sertralină, escitalopram): utile pentru GAD/SAD; atenție la activare senzorială/akatizie subiectivă; doze mici inițiale.</li>
+        <li><strong>SNRI</strong> (duloxetină, venlafaxină): când durerea cronică e prezentă; monitorizați somnul/TA.</li>
+        <li><strong>Mirtazapină</strong>: dacă insomnia/apetitul sunt problematice; profil sedativ util nocturn.</li>
+        <li><strong>Buspironă</strong>: anxietate de bază; bine tolerată ca adjuvant.</li>
+      </ul>
+
+      <h3>10.2 ADHD co-ocurent</h3>
+      <ul>
+        <li><strong>Stimulente</strong> (methylphenidate/amphetamine): pot crește inițierea/atenția; monitorizați reactivitatea senzorială; doze mici, timing devreme.</li>
+        <li><strong>Atomoxetină</strong>, <strong>Guanfacină ER</strong>, <strong>Viloxazină ER</strong>: alternative când anxietatea/somnul predomină sau stimulentele nu sunt tolerate.</li>
+      </ul>
+
+      <h3>10.3 Iritabilitate / hiper-arousal</h3>
+      <ul>
+        <li><strong>Risperidonă/Aripiprazol</strong>: dovezi mai solide pediatric; la adulți — cu prudență, doze mici, monitorizare metabolică, obiective clare/limitate.</li>
+        <li><strong>Propranolol</strong>: simptomatologie somatică (tahicardie tremor) situațională; evitați în astm.</li>
+        <li><strong>Guanfacină ER</strong> seara: reduce hiper-arousalul, poate ajuta somnul; atenție la hipotensiune.</li>
+      </ul>
+
+      <h3>10.4 Somn</h3>
+      <ul>
+        <li><strong>Melatonină</strong> 0.5–3 mg cu 3–4 h înainte de culcare (cronobiotic, nu sedativ direct).</li>
+        <li>Igienă circadiană: lumină dimineața, lumină redusă seara, ecrane filtrate, rutină previzibilă.</li>
+      </ul>
+
+      <h3>10.5 <span class="pill">Folate & căi de monoamine (noutăți)</span></h3>
+      <ul>
+        <li><strong>Folinat de calciu (Leucovorin)</strong>: la subgrupuri (mai ales pediatric) cu anticorpi anti-receptor de folat α (FRAA) / suspiciune de deficit cerebral de folat, studii arată îmbunătățiri în limbaj/adaptativ. La adulți: date limitate, dar se poate considera un trial supravegheat când tabloul e compatibil. Monitor: GI/insomnie/iritabilitate.</li>
+        <li><strong>L-metilfolat</strong>: cofactor pe sinteza monoaminelor; evidență robustă ca adjuvant în depresie rezistentă; în ASD poate ajuta când co-există depresie/anxietate sau polimorfisme de folat; baza de date în ASD adult e emergentă.</li>
+        <li><strong>BH4 (sapropterin)</strong>: investigational în subgrupuri; dovezi limitate la adulți — folosiți doar în contexte specializate.</li>
+        <li><strong>N-acetilcisteină (NAC)</strong>: unele studii sugerează reducerea iritabilității/ruminației; profil sigur; dovezile sunt mixte.</li>
+      </ul>
+
+      <div class="callout"><strong>Mesaj cheie:</strong> dacă problema de bază este senzorială sau de mediu, creșterea dozelor nu va “repara” costul. Reparați somnul, reduceți încărcarea senzorială, apoi ajustați farmacologia.</div>
+    </section>
+
+    <!-- =========================
+         11) FAQ — QUICK ANSWERS
+    ========================== -->
+    <section id="faq">
+      <h2>11. FAQ — Quick Answers</h2>
+
+      <details>
+        <summary>Dacă face eye contact, poate fi autistă?</summary>
+        <p>Da. Multe femei îl învață deliberat. Întrebați despre cost (oboseală, cefalee, nevoia de recuperare).</p>
+      </details>
+
+      <details>
+        <summary>De ce “cad” după evenimente sociale?</summary>
+        <p>Masca consumă control executiv + senzorial; fără pauze și spațiu, apare burnoutul. Planificați <em>recuperarea</em>, nu doar evenimentul.</p>
+      </details>
+
+      <details>
+        <summary>ABA este standardul?</summary>
+        <p><strong>ABA tradițională</strong> (compliance) nu. <strong>Abordări moderne</strong> (NDBI, CBT-a, ACT, OT) țintesc funcția și autonomia, reduc costul și rușinea.</p>
+      </details>
+
+      <details>
+        <summary>Există medicamente pentru autism?</summary>
+        <p>Nu pentru “autism” ca atare. Tratezi comorbidități (anxietate/ADHD/somn), reduci încărcarea senzorială, construiești suporturi. Farmacologia e adjuvantă.</p>
+      </details>
+
+      <details>
+        <summary>Contează hormonii?</summary>
+        <p>Da. Luteal târziu și perimenopauză înrăutățesc toleranța senzorială și energia. Ajustează programul și așteptările pe acele ferestre.</p>
+      </details>
+
+      <details>
+        <summary>Ce spun prietenilor/familiei?</summary>
+        <p>“Am un creier care procesează altfel semnalele. Am nevoie de predictibilitate și pauze pentru a funcționa bine. Când le am, sunt la fel de capabilă ca oricine.”</p>
+      </details>
+    </section>
+
+    <!-- =========================
+         12) REFERENCES
+    ========================== -->
+    <section id="refs">
+      <h2>12. References (Selected, 2011–2025)</h2>
+      <ol>
+        <li>Halladay AK, et al. Sex/gender differences in ASD: gaps & priorities. <em>Molecular Autism</em>. 2015.</li>
+        <li>Jacquemont S, et al. Higher mutational burden in females — the female protective model. <em>Am J Hum Genet</em>. 2014.</li>
+        <li>Gould J, Ashton-Smith J. Missed diagnosis or misdiagnosis? Girls and women on the spectrum. <em>Good Autism Practice</em>. 2011.</li>
+        <li>Lai MC, et al. Sex/gender differences and autism. <em>JAACAP</em>. 2015.</li>
+        <li>Pellicano E, Burr D. Bayesian/predictive coding accounts of autism. Reviews 2014–2020.</li>
+        <li>Arnsten AFT. Catecholamine modulation of PFC. <em>Biol Psychiatry</em>. 2009.</li>
+        <li>Lombardo MV, et al. Social brain heterogeneity in autism. 2016–2022.</li>
+        <li>Hull L, et al. Camouflaging Autistic Traits Questionnaire (CAT-Q). 2019.</li>
+        <li>Lever AG, Geurts HM. Age-related differences in ASD: adults & aging. 2016–2021 reviews.</li>
+        <li>Folinic acid/leucovorin RCTs in FRAA+ subgroups; systematic reviews (2016–2023).</li>
+        <li>Oxytocin trials in ASD — mixed findings, context dependent (2013–2022).</li>
+        <li>Sensory processing and interoception in ASD — scoping/systematic reviews (2018–2024).</li>
+      </ol>
+      <p class="small">Evidența evoluează; această pagină rezumă tendințe robuste și semnale emergente (în special la adulți). Scop educațional — nu înlocuiește consultul individualizat.</p>
+    </section>
+
+    <div class="sep" role="separator" aria-hidden="true"></div>
+
+    <section aria-label="Author">
+      <h2>About the Author</h2>
+      <p class="small">Written by <strong>Dr. Sarah Ionescu</strong>, psychiatry resident focused on neurodevelopment in women and evidence-aligned, autonomy-respecting care.  
+      Learn more or book a consultation: <a href="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/index.html" target="_blank" rel="noopener">Women &amp; Psychiatry — Second Opinion</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p class="small">© <span id="y"></span> — Evidence-informed, neurodiversity-affirming resources for women and clinicians.</p>
+  </footer>
+</div>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
