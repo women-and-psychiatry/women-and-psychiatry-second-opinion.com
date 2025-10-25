@@ -1,68 +1,358 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Why ADHD Looks Different in Women – And Why It Often Goes Undiagnosed</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Why ADHD Looks Different in Women — And Why It Often Goes Undiagnosed (Expanded 2025)</title>
+  <meta name="description" content="A clinician–patient guide to ADHD in women: phenotype, masking, life-course and hormonal effects, neuroscience, neuropharmacology, differential diagnosis, and evidence-based treatments (therapy + medications) with mechanisms and effect sizes." />
+  <link rel="icon" href="/favicon.ico" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Women & Psychiatry — Second Opinion" />
+  <meta property="og:title" content="Why ADHD Looks Different in Women — And Why It Often Goes Undiagnosed (Expanded 2025)" />
+  <meta property="og:description" content="Updated 2025: ADHD in women is quieter and masked. This deep guide covers phenotype, brain circuits, hormones, therapy and medication options, and what actually helps." />
+  <meta property="og:image" content="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/og-image.jpg" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Why ADHD Looks Different in Women — And Why It Often Goes Undiagnosed (Expanded 2025)" />
+  <meta name="twitter:description" content="A clinician–patient explainer: neuroscience, pharmacodynamics, practical protocols, and 2024–2025 updates for ADHD care in women." />
+  <meta name="twitter:image" content="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/og-image.jpg" />
   <style>
-    body { font-family: Arial, sans-serif; background-color: #fefefe; margin: 0; padding: 2rem; max-width: 900px; margin: auto; line-height: 1.7; color: #333; }
-    h1, h2 { color: #4a4a8a; }
-    footer { margin-top: 4rem; text-align: right; font-style: italic; }
+    :root{
+      --bg:#0d112b; --panel:#121735; --ink:#f3f6ff; --ink-dim:#c9d0f8; --accent:#6ea8fe; --accent-2:#c084fc; --muted:#9aa3c7; --ok:#3ddc97;
+      --shadow:0 10px 30px rgba(0,0,0,.25); --radius:16px; --radius-lg:22px; --maxw:900px;
+    }
+    html,body{height:100%}
+    body{margin:0; font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; color:var(--ink); background:var(--bg); line-height:1.7}
+    .wrap{max-width:var(--maxw); margin:clamp(20px,5vw,64px) auto; padding:0 20px}
+    header.hero{background:linear-gradient(135deg, rgba(110,168,254,.12), rgba(192,132,252,.10)); border:1px solid rgba(255,255,255,.10); box-shadow:var(--shadow); border-radius:var(--radius-lg); padding:clamp(24px,5vw,48px)}
+    .hero h1{margin:0 0 10px; font-size:clamp(28px,5vw,48px)}
+    .hero p.lead{margin:8px 0 0; color:var(--ink-dim); font-size:clamp(16px,2.4vw,20px)}
+    .badge{display:inline-flex; align-items:center; gap:.5rem; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); color:var(--ink-dim); padding:.35rem .7rem; border-radius:999px; font-size:.85rem}
+    .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px rgba(61,220,151,.18)}
+    nav.toc{margin:28px 0; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10); border-radius:var(--radius); padding:16px}
+    nav.toc h2{font-size:1rem; margin:0 0 10px; color:var(--ink-dim)}
+    nav.toc a{display:inline-block; color:var(--ink); text-decoration:none; padding:.2rem .55rem; margin:.15rem; border-radius:999px; border:1px solid rgba(255,255,255,.1)}
+    nav.toc a:hover{background:rgba(255,255,255,.09)}
+    section{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10); border-radius:var(--radius); padding:clamp(18px,2.5vw,28px); margin:16px 0; box-shadow:var(--shadow)}
+    section h2{margin-top:0; font-size:clamp(22px,3vw,32px)}
+    h3{margin-top:1.1em}
+    p{margin:.5rem 0 1rem}
+    ul{margin:.2rem 0 1rem 1.25rem}
+    li{margin:.35rem 0}
+    .quote{border-left:4px solid var(--accent); padding-left:14px; color:var(--ink-dim); font-style:italic}
+    .callout{border:1px solid rgba(110,168,254,.35); background:linear-gradient(180deg, rgba(110,168,254,.10), rgba(110,168,254,.04)); border-radius:12px; padding:14px}
+    .pill{display:inline-block; padding:.25rem .6rem; border-radius:999px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.06); font-size:.85rem; color:var(--ink-dim)}
+    .grid{display:grid; grid-template-columns:1fr; gap:14px}
+    @media (min-width: 780px){ .grid{grid-template-columns:1fr 1fr} }
+    .table{overflow:auto}
+    table{width:100%; border-collapse:collapse; font-size:.96rem}
+    th,td{border:1px solid rgba(255,255,255,.12); padding:.6rem; text-align:left}
+    th{background:rgba(255,255,255,.10)}
+    .small{font-size:.92rem;color:var(--ink-dim)}
+    .sep{height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent); margin:24px 0}
+    footer{margin:28px 0 64px; color:var(--muted)}
   </style>
 </head>
 <body>
-  <h1>Why ADHD Looks Different in Women – And Why It Often Goes Undiagnosed</h1>
+  <div class="wrap">
+    <header class="hero" role="banner">
+      <span class="badge"><span class="dot"></span> Updated 2025 · Clinically-informed & Patient-centered</span>
+      <h1>Why ADHD Looks Different in Women — And Why It Often Goes Undiagnosed</h1>
+      <p class="lead">ADHD in women is real — just quieter. This expanded guide blends neuroscience with practical care so patients and clinicians can act with clarity.</p>
+    </header>
 
-  <p>When most people think of ADHD, they imagine a hyperactive boy who can’t sit still, talks too much, or causes problems in class. This image, unfortunately, has shaped diagnostic tools and clinical expectations for decades. But for countless women and girls, ADHD manifests very differently — and precisely because of that, it often goes unnoticed, untreated, and misinterpreted.</p>
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <a href="#intro">1. Introduction</a>
+      <a href="#phenotype">2. Phenotype in Women: What You See vs What’s Felt</a>
+      <a href="#masking">3. Masking, Mimicry & Life-Course Pressures</a>
+      <a href="#hormones">4. Hormonal Windows (Menstrual Cycle, Pregnancy, Perimenopause)</a>
+      <a href="#neuro">5. Neuroscience: Circuits, Neurochemistry & Networks</a>
+      <a href="#neuropharm">6. Neuropharmacology 101</a>
+      <a href="#assessment">7. Assessment & Differential Diagnosis</a>
+      <a href="#comorbidity">8. Common Comorbidities & Overlaps</a>
+      <a href="#therapy">9. Psychotherapies & Skills (with effect sizes)</a>
+      <a href="#meds">10. Medications: Mechanisms, Response Rates & Nuance</a>
+      <a href="#digital">11. Digital Therapeutics & Cognitive Adjuncts</a>
+      <a href="#protocols">12. Practical Protocols (Clinician & Patient)</a>
+      <a href="#faq">13. Quick FAQ</a>
+      <a href="#refs">14. References</a>
+    </nav>
 
-  <h2>Hyperactivity in Women: Not Loud, but Loud Enough</h2>
-  <p>Hyperactivity in women is often not physical. It’s internal, mental — a mind that spins constantly, jumping between ideas, stimuli, and emotions. While boys with ADHD may run around the room, girls may sit quietly with their thoughts racing in ten directions at once. Their brains move rapidly from topic to topic, often making connections that seem unrelated to others, but are in fact deeply interconnected in their internal logic.</p>
+    <main id="content">
+      <section id="intro">
+        <h2>1. Introduction</h2>
+        <p>Public imagination still centers ADHD on a disruptive boy. That template under-detects women, whose symptoms skew toward internal restlessness, executive lag, and emotional flooding. Many excel academically by compensating — until life complexity outpaces scaffolds, often in the 20s–40s, producing <em>late diagnoses</em> and years of preventable strain.</p>
+        <div class="quote">“It’s not that I don’t try — it’s that my brain won’t start when I ask it to, and won’t stop when I need it to.”</div>
+      </section>
 
-  <p>To the outside observer, this appears as distraction or disorganization. Clinicians may describe it as “scatterbrained,” “overthinking,” or even “anxious.” What they’re missing is mental hyperactivity — a core component of ADHD that is simply less visible.</p>
+      <section id="phenotype">
+        <h2>2. Phenotype in Women: What You See vs What’s Felt</h2>
+        <div class="grid">
+          <div>
+            <h3>External (often missed)</h3>
+            <ul>
+              <li>Quiet in class/meetings but <strong>racing internally</strong>.</li>
+              <li>“High functioning” until deadlines → all-night sprints.</li>
+              <li>Perfectionism, people-pleasing, crisis productivity.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Internal (reported)</h3>
+            <ul>
+              <li><strong>Mental hyperactivity</strong>: thoughts in parallel streams.</li>
+              <li>Task initiation gridlock; shame → avoidance → relief cycles.</li>
+              <li>Emotional surges with slow down-regulation.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="small">Literature shows girls/women are diagnosed later, often due to inattentive-leaning presentations and masking strategies that fit stereotypes of “being good.”</p>
+      </section>
 
-  <blockquote>“Oh, you’re not a hyperactive boy, you definitely don’t have ADHD.”</blockquote>
-  <p>Many women have heard this — from doctors, teachers, or even their own parents.</p>
+      <section id="masking">
+        <h2>3. Masking, Mimicry & Life-Course Pressures</h2>
+        <p>Socialization trains many girls to dampen spontaneity and to mirror expected behavior. Over time, camouflaging becomes costly: chronic over-preparing, over-apologizing, and over-functioning to hide executive friction. Adult roles (caregiving, dual workloads) add invisible load that exposes symptoms previously hidden by structure.</p>
+        <div class="callout"><strong>Clinician tip:</strong> Ask how much effort daily functioning requires. “What would happen if you stopped masking for a week?”</div>
+      </section>
 
-  <h2>Masking, Mimicry, and the Female Survival Strategy</h2>
-  <p>Girls are often socialized to be polite, attentive, and emotionally aware. As a result, they quickly learn to mask behaviors that are seen as “too much.” They learn to suppress their impulses, to mimic socially acceptable behavior, and to hide their difficulties — not because they don’t struggle, but because they’ve learned that struggling openly brings shame.</p>
+      <section id="hormones">
+        <h2>4. Hormonal Windows (Menstrual Cycle, Pregnancy, Perimenopause)</h2>
+        <ul>
+          <li><strong>Luteal phase:</strong> lower estrogen/progesterone shifts can worsen inattention, irritability, and sleep — especially in ADHD.</li>
+          <li><strong>Pregnancy/postpartum:</strong> variable impact; sleep disruption is a key driver of executive decline.</li>
+          <li><strong>Perimenopause:</strong> fluctuating estrogen modulates dopaminergic signaling and may reduce stimulant responsiveness; consider dose timing and non-stimulants during volatile phases.</li>
+        </ul>
+        <p class="small">Hormones don’t “cause” ADHD, but modulate circuits already differing in ADHD; anticipating cyclic changes improves adherence and outcomes.</p>
+      </section>
 
-  <p>By adolescence, many girls have developed sophisticated systems of compensation. They might seem studious, organized, or emotionally mature — but under the surface, they’re overwhelmed, exhausted, and quietly falling behind.</p>
+      <section id="neuro">
+        <h2>5. Neuroscience: Circuits, Neurochemistry & Networks</h2>
+        <h3>5.1 Cortico-striatal loops</h3>
+        <ul>
+          <li><strong>DLPFC–striatum</strong>: task set, working memory, interference control; hypo-efficiency → initiation friction and distractibility.</li>
+          <li><strong>Orbitofrontal–striatal</strong>: reward valuation; low anticipatory dopamine “ramp” biases toward immediacy.</li>
+          <li><strong>ACC–salience</strong>: switching and error monitoring; noisy signals → difficulty sustaining goal state.</li>
+        </ul>
+        <h3>5.2 Networks</h3>
+        <ul>
+          <li><strong>Default Mode Network (DMN)</strong> intrusions into task mode produce mind-wandering; stimulants reduce DMN/task interference.</li>
+          <li><strong>Salience Network</strong> tagging is inconsistent, making mundane tasks “unseeable” until urgent.</li>
+        </ul>
+        <h3>5.3 Neurochemistry</h3>
+        <ul>
+          <li><strong>Dopamine</strong>: phasic/tonic signaling in striatum underlies motivation, delay discounting, reinforcement learning.</li>
+          <li><strong>Norepinephrine</strong>: PFC signal-to-noise via α2A receptors; too little or too much impairs top-down control (inverted-U).</li>
+        </ul>
+        <div class="callout small"><strong>Imaging snapshot:</strong> Structural/functional differences in right PFC and fronto-cerebellar circuits; PET/fMRI data show altered catecholamine dynamics and timing networks in ADHD. (See references)</div>
+      </section>
 
-  <p>This masking doesn’t go away with age. Adult women with ADHD often continue to hide their executive dysfunction through hypervigilance, perfectionism, and self-shaming.</p>
+      <section id="neuropharm">
+        <h2>6. Neuropharmacology 101</h2>
+        <div class="table">
+          <table aria-label="Medication mechanisms overview">
+            <thead>
+              <tr><th>Class / agent</th><th>Primary mechanism(s)</th><th>Clinical upside</th><th>Watch-outs</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Stimulants</strong> (methylphenidate, amphetamines)</td><td>Methylphenidate blocks DAT/NET; amphetamines block DAT/NET and ↑ dopamine/norepinephrine release; normalize PFC signal-to-noise.</td><td>Fast onset; robust effects on attention, initiation, task stamina.</td><td>Appetite/sleep effects; anxiety in some; misuse risk; evening rebound if timing off.</td></tr>
+              <tr><td><strong>Atomoxetine</strong></td><td>Selective NET inhibition → ↑ NE (and downstream DA) in PFC; gradual remodeling of control circuits.</td><td>Useful with anxiety/tics; all-day coverage; no abuse liability.</td><td>Slower onset (weeks→months); GI, sleep changes; rare liver warnings.</td></tr>
+              <tr><td><strong>Guanfacine ER</strong></td><td>α2A-adrenergic agonist → strengthens PFC network connectivity, dampens “noise.”</td><td>Helps emotional lability, hyperarousal, insomnia; evening utility.</td><td>Hypotension, sedation; dose-dependent fatigue early on.</td></tr>
+              <tr><td><strong>Viloxazine ER</strong></td><td>Noradrenergic reuptake inhibition + serotonergic modulation; broad catecholaminergic tuning.</td><td>Adult indication; useful when stimulants not tolerated or anxiety prominent.</td><td>Sleep, GI, interaction profile (CYP).</td></tr>
+              <tr><td><strong>Bupropion</strong> (off-label)</td><td>Norepinephrine–dopamine reuptake inhibition (weaker than stimulants).</td><td>Comorbid depression; low misuse risk; may aid smoking cessation.</td><td>Insomnia, anxiety in some; avoid in seizure risk.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-  <h2>Procrastination and “Productive Avoidance”</h2>
-  <p>One of the most misunderstood traits in women with ADHD is procrastination. It’s not laziness — it’s neurological gridlock. The pressure to start a task can feel overwhelming, and instead of tackling what matters, the brain diverts into a secondary task that feels productive but is ultimately avoidant.</p>
+      <section id="assessment">
+        <h2>7. Assessment & Differential Diagnosis</h2>
+        <div class="grid">
+          <div>
+            <h3>Core steps</h3>
+            <ul>
+              <li>Developmental history (school reports, family collateral) + adult impairment map.</li>
+              <li>Screen: ASRS v1.2 or ADHD-RS-V; add emotion-regulation scales; probe masking load.</li>
+              <li>Functional domains: work/academia, home admin, relationships, finances, driving/safety.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Differential</h3>
+            <ul>
+              <li><strong>Anxiety/depression</strong>: secondary to chronic executive failure vs primary mood/anxiety driving inattention.</li>
+              <li><strong>Personality traits</strong> (borderline, narcissistic): consider motive (fear vs instrumentality) and capacity for guilt/repair.</li>
+              <li><strong>Autism</strong>: social-communication profile, sensory patterns; frequently co-occurs.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout"><strong>Bias check:</strong> Do not equate “quiet” with “fine.” Ask: “How much effort does a normal day take?”</div>
+      </section>
 
-  <p>A woman might clean the entire apartment before opening her laptop to work on a deadline. She may spend hours organizing folders instead of replying to a critical email. She’s not wasting time — her brain is defaulting to a lower-stakes task to cope with the pressure of the real one.</p>
+      <section id="comorbidity">
+        <h2>8. Common Comorbidities & Overlaps</h2>
+        <ul>
+          <li><strong>Anxiety/depression</strong> (often secondary to years of self-blame).</li>
+          <li><strong>Disordered eating/binge patterns</strong> (shared reward circuits; ADHD treatment may reduce frequency).</li>
+          <li><strong>Sleep disorders</strong> (DSPS/insomnia) that magnify executive symptoms.</li>
+        </ul>
+      </section>
 
-  <p>Interestingly, many of these women perform very well in school and university. Their intelligence compensates for inattention. Many cram the night before. They memorize quickly. They write brilliant essays under pressure. This academic success delays diagnosis even further, because the suffering remains hidden behind grades and degrees.</p>
+      <section id="therapy">
+        <h2>9. Psychotherapies & Skills (with effect sizes)</h2>
+        <div class="grid">
+          <div>
+            <h3>CBT for Adult ADHD</h3>
+            <ul>
+              <li>Targets procrastination, time blindness, distractibility, and maladaptive beliefs.</li>
+              <li><strong>Effect sizes:</strong> contemporary syntheses show <em>moderate</em> symptom/function gains; active-control designs yield smaller but meaningful effects.</li>
+              <li>Best paired with medication and environmental design.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Coaching & Behavioral Design</h3>
+            <ul>
+              <li>Externalize executive function: body-doubling, checklists, time-boxing, “two-minute start.”</li>
+              <li>Habit scaffolds: fixed wake time, cue bundling, friction reduction (prep the night before).</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Emotion & Interpersonal Work</h3>
+            <ul>
+              <li>Modules from DBT/MBT for emotional pacing, rejection sensitivity, and repair skills.</li>
+              <li>Couples interventions: shared calendars, task mirroring, “no-shame” debriefs.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Lifestyle & Adjuncts</h3>
+            <ul>
+              <li>Sleep protection as “first medication.”</li>
+              <li>Movement: short, enjoyable bursts improve executive tone; evidence varies but supports function and mood.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-  <h2>Cognitive Speed vs Emotional Regulation</h2>
-  <p>Another overlooked aspect of ADHD in women is how fast their brain moves — and how slowly their emotional regulation sometimes catches up. They may grasp connections, patterns, or ideas far quicker than peers, but struggle to stay grounded in the moment. They can jump into projects with passion, but abandon them midway because novelty fades and consistency becomes unbearable.</p>
+      <section id="meds">
+        <h2>10. Medications: Mechanisms, Response Rates & Nuance</h2>
+        <h3>10.1 What to tell patients (plain language)</h3>
+        <ul>
+          <li>Stimulants act the same day at the right dose; non-stimulants are steadier but slower.</li>
+          <li>Hormonally sensitive phases may need micro-adjustments or timing tweaks.</li>
+          <li>Eating, sleep, and stress routines change how meds feel.</li>
+        </ul>
+        <h3>10.2 Evidence snapshots (adults)</h3>
+        <div class="table">
+          <table aria-label="Medication evidence snapshots">
+            <thead>
+              <tr><th>Agent</th><th>Response / effect (headline)</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Stimulants</strong> (class)</td>
+                <td>Short-term controlled trials: ≈<strong>60%</strong> response; longer-term ≈<strong>74%</strong> weighted mean.</td>
+                <td>Dose within licensed ranges maximizes benefit:tolerability; “more” is not better.</td>
+              </tr>
+              <tr>
+                <td><strong>Atomoxetine</strong></td>
+                <td>Small effects at 4 weeks → <strong>moderate</strong> by ~6 months (accumulating benefit).</td>
+                <td>Good with anxiety/tics; watch sleep and GI; counsel on time-course.</td>
+              </tr>
+              <tr>
+                <td><strong>Guanfacine ER</strong></td>
+                <td>Adult RCTs show significant symptom reduction vs placebo.</td>
+                <td>Useful for hyperarousal/insomnia; titrate to avoid sedation/hypotension.</td>
+              </tr>
+              <tr>
+                <td><strong>Viloxazine ER</strong></td>
+                <td>FDA-approved for adults (2022); growing long-term safety data.</td>
+                <td>Consider when stimulants poorly tolerated or anxiety prominent.</td>
+              </tr>
+              <tr>
+                <td><strong>Bupropion</strong> (off-label)</td>
+                <td>Small–moderate effects; helpful with depression or nicotine dependence.</td>
+                <td>Mind insomnia/anxiety; seizure threshold considerations.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small"><em>Caveat:</em> Individual trajectories vary; comorbidities and sleep strongly moderate outcomes.</p>
+      </section>
 
-  <p>This pattern can look like instability, irresponsibility, or even a personality disorder. In reality, it’s a brain wired for stimulation — but trapped in systems that demand structure.</p>
+      <section id="digital">
+        <h2>11. Digital Therapeutics & Cognitive Adjuncts</h2>
+        <ul>
+          <li><strong>EndeavorOTC</strong> (FDA 510(k) 2024): OTC digital therapeutic indicated to improve attention function measured by computerized testing in adults with ADHD. Use as an <em>adjunct</em> to usual care.</li>
+          <li>Ideal for: patients intolerant to meds, needing additional attention training, or during titration gaps.</li>
+        </ul>
+        <p class="small">Not a replacement for comprehensive treatment; aligns best with meds + CBT/skills.</p>
+      </section>
 
-  <h2>The Diagnostic Delay and Its Cost</h2>
-  <p>Because diagnostic criteria were modeled on male children in classroom settings, many women fall through the cracks. Their symptoms are brushed off as anxiety, depression, “being emotional,” or just a personality quirk. Some are misdiagnosed with mood disorders or BPD. Others are never diagnosed at all.</p>
+      <section id="protocols">
+        <h2>12. Practical Protocols (Clinician & Patient)</h2>
+        <div class="grid">
+          <div>
+            <h3>For clinicians</h3>
+            <ul>
+              <li>Map masking cost; ask for “effort stories” (what breaks when structure drops?).</li>
+              <li>Start with sleep and circadian anchors; synchronize med timing with daily demand peaks.</li>
+              <li>Consider perimenstrual/perimenopausal windows for dose timing or non-stimulant add-ons.</li>
+              <li>Pair Rx with a skill plan (checklists, body-doubling, time-boxing) and follow-up cadence.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>For patients</h3>
+            <ul>
+              <li>Use a <strong>two-timer start</strong>: 2 minutes to begin + 10 minutes to continue → momentum.</li>
+              <li><strong>Body-double</strong> tough tasks; reduce friction the night before (lay out tools, first 3 steps).</li>
+              <li>Protect the last two hours pre-sleep; decide <em>tomorrow’s</em> start tonight.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-  <p>The cost of this delay is enormous: chronic self-doubt, failed relationships, burnout, career instability, and internalized shame. Many women only discover their diagnosis in their late 20s, 30s, or even 40s — often after a personal crisis forces them to reexamine everything.</p>
+      <section id="faq">
+        <h2>13. Quick FAQ</h2>
+        <details><summary>Is this ADHD or just anxiety?</summary><p>Often both. If core problems are initiation, working memory, distractibility, and time blindness — and they improve with ADHD-targeted care — ADHD is likely primary; anxiety may be secondary to chronic overwhelm.</p></details>
+        <details><summary>Why did I do fine in school?</summary><p>High ability + tight structure can mask ADHD for years. Many women “pass” until complexity (work/caregiving) exposes executive load.</p></details>
+        <details><summary>Do I have to take meds?</summary><p>No — but meds can make skills actually <em>usable</em>. Many benefit from combined approaches (sleep, structure, CBT/skills, digital adjuncts), with or without medication.</p></details>
+      </section>
 
-  <h2>Conclusion: ADHD in Women Is Real, Just Quieter</h2>
-  <p>It doesn’t look like bouncing off walls. It looks like fighting your own brain every day. It looks like trying harder than everyone else to do what comes easily to others. It looks like silence, struggle, and survival.</p>
+      <section id="refs">
+        <h2>14. References (Selected, PubMed/PMC & Official Docs)</h2>
+        <ol>
+          <li>Quinn PO, Madhoo M. <em>A review of ADHD in women and girls.</em> Primary Care Companion CNS Disord. 2014. (Female masking & later diagnosis.)</li>
+          <li>Young S, et al. <em>Expert consensus on females with ADHD.</em> 2020. (Recognition biases; phenotype.)</li>
+          <li>Mowlem F, et al. <em>Sex differences in recognition of ADHD.</em> 2018. (Diagnostic bias.)</li>
+          <li>Osianlis E, et al. <em>ADHD and sex hormones in females — systematic review.</em> 2025. (Hormonal modulation.)</li>
+          <li>Arnsten AFT. <em>Emerging neurobiology of ADHD.</em> 2009. (PFC circuitry.)</li>
+          <li>Hart H, et al. <em>fMRI timing meta-analysis in ADHD.</em> 2012. (IFG, cerebellar, parietal differences.)</li>
+          <li>Firouzabadi FD, et al. <em>Neuroimaging in ADHD.</em> AJR 2022. (PET/fMRI overview.)</li>
+          <li>Wilens TE. <em>Pharmacotherapy update.</em> 2011. (Adult stimulant response ≈60% short-term; ≈74% longer-term.)</li>
+          <li>Wietecha LA, et al. 2016. (Atomoxetine effect increases over time.)</li>
+          <li>Iwanami A, et al. 2020. (Guanfacine ER adult RCT efficacy.)</li>
+          <li>Childress A, et al. 2024. (Viloxazine ER long-term extension.)</li>
+          <li>FDA 510(k) K233496 — EndeavorOTC (2024). (Indication; OTC.)</li>
+          <li>BusinessWire: FDA authorization of EndeavorOTC (2024). (Context.)</li>
+          <li>Farhat LC, et al. JAMA Psychiatry 2024. (Licensed vs unlicensed stimulant dosing outcomes.)</li>
+          <li>Solanto MV, et al. 2025. (CBT for adult ADHD — moderate effects.)</li>
+          <li>William S, et al. 2024. (CBT mixed-methods; effect sizes smaller vs active controls.)</li>
+          <li>Attoe DE, et al. 2023. (Systematic review: undiagnosed adult women — impacts.)</li>
+        </ol>
+        <p class="small">Educational content only — not individualized medical advice.</p>
+      </section>
 
-  <p>The time has come for clinicians to learn what ADHD <em>really</em> looks like — in women, girls, and anyone who doesn't fit the mold of the “hyperactive boy.” Recognizing these differences isn’t just clinically accurate. It’s humane.</p>
+      <div class="sep" role="separator" aria-hidden="true"></div>
 
-  <footer>Written by Dr. Sarah Ionescu</footer>
+      <section aria-label="Author">
+        <h2>About the Author</h2>
+        <p class="small">Written by <strong>Dr. Sarah Ionescu</strong>, physician focusing on women’s mental health, ADHD, and neurodevelopmental research translation. Learn more or book a session: <a href="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/index.html" target="_blank" rel="noopener">Women &amp; Psychiatry — Second Opinion</a>.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p class="small">© <span id="y"></span> — Designed for accessibility and evidence-based readability.</p>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
-  <h2>References</h2>
-  <ul>
-    <li>Quinn, P. O., & Madhoo, M. (2014). A review of attention-deficit/hyperactivity disorder in women and girls. <i>The Primary Care Companion for CNS Disorders</i>, 16(3).</li>
-    <li>Ramsay, J. R. (2010). <i>Cognitive Behavioral Therapy for Adult ADHD</i>. Routledge.</li>
-    <li>Hinshaw, S. P., & Ellison, K. (2016). <i>ADHD: What Everyone Needs to Know</i>. Oxford University Press.</li>
-    <li>Solden, S., & Frank, E. (2019). <i>A Radical Guide for Women with ADHD</i>. New Harbinger.</li>
-    <li>Young, S., & Bramham, J. (2007). <i>ADHD in Adults: A Psychological Guide to Practice</i>. Wiley.</li>
-  </ul>
-  <p><strong>Note:</strong> This article also integrates clinical observations and lived experiences from women in psychiatric evaluation contexts, especially where traditional diagnostic frameworks fall short in capturing female ADHD presentation.</p>
