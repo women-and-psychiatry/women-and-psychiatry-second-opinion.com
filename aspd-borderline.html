@@ -1,80 +1,254 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>ASPD — Always ‘Borderline’ When It Comes to Women – Women & Psychiatry</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fefefe;
-            max-width: 900px;
-            margin: auto;
-            padding: 2em;
-            line-height: 1.7;
-            color: #222;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 1em;
-        }
-        h2 {
-            font-weight: bold;
-            font-size: 1.2em;
-            margin-top: 2em;
-        }
-        p {
-            margin-top: 1em;
-        }
-        footer {
-            margin-top: 3em;
-            text-align: center;
-            font-size: 0.9em;
-            color: #555;
-            border-top: 1px solid #ccc;
-            padding-top: 1em;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASPD — Always ‘Borderline’ When It Comes to Women</title>
+  <meta name="description" content="Why antisocial traits in women are often mislabeled as borderline: diagnostic blind spots, gendered criteria, emotional sadism, and why accurate diagnosis matters." />
+  <link rel="icon" href="/favicon.ico" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Women & Psychiatry — Second Opinion" />
+  <meta property="og:title" content="ASPD — Always ‘Borderline’ When It Comes to Women" />
+  <meta property="og:description" content="A clinician’s-eye view on how female antisociality hides in plain sight and gets re-routed into borderline diagnoses — and why that harms care and victims." />
+  <meta property="og:image" content="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/og-image.jpg" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ASPD — Always ‘Borderline’ When It Comes to Women" />
+  <meta name="twitter:description" content="Seeing female ASPD clearly: emotional weaponization, covert norm violations, and the cost of mislabeling as BPD." />
+  <meta name="twitter:image" content="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/og-image.jpg" />
+  <style>
+    :root{
+      --bg: #0d112b; /* uniform background */
+      --panel: #121735;
+      --ink: #f3f6ff;
+      --ink-dim: #c9d0f8;
+      --accent: #6ea8fe;
+      --accent-2:#c084fc;
+      --muted:#9aa3c7;
+      --ok:#3ddc97;
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+      --radius: 16px;
+      --radius-lg: 22px;
+      --maxw: 900px;
+    }
+    html,body{height:100%}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--ink); background-color: var(--bg); line-height:1.7;
+    }
+    .wrap{max-width:var(--maxw); margin: clamp(20px, 5vw, 64px) auto; padding: 0 20px}
+    header.hero{background: linear-gradient(135deg, rgba(110,168,254,.12), rgba(192,132,252,.10)); border:1px solid rgba(255,255,255,.10); box-shadow: var(--shadow); border-radius: var(--radius-lg); padding: clamp(24px,5vw,48px)}
+    .hero h1{margin:0 0 10px; font-size: clamp(28px, 5vw, 48px)}
+    .hero p.lead{margin:8px 0 0; color:var(--ink-dim); font-size: clamp(16px, 2.4vw, 20px)}
+    .badge{display:inline-flex; align-items:center; gap:.5rem; background: rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); color:var(--ink-dim); padding:.35rem .7rem; border-radius:999px; font-size:.85rem}
+    .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px rgba(61,220,151,.18)}
+    nav.toc{margin:28px 0; background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10); border-radius: var(--radius); padding:16px}
+    nav.toc h2{font-size:1rem; margin:0 0 10px; color:var(--ink-dim)}
+    nav.toc a{display:inline-block; color:var(--ink); text-decoration:none; padding:.2rem .55rem; margin:.15rem; border-radius:999px; border:1px solid rgba(255,255,255,.1)}
+    nav.toc a:hover{background:rgba(255,255,255,.09)}
+    section{background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10); border-radius: var(--radius); padding: clamp(18px, 2.5vw, 28px); margin: 16px 0; box-shadow: var(--shadow)}
+    section h2{margin-top:0; font-size: clamp(22px, 3vw, 32px)}
+    h3{margin-top:1.1em}
+    p{margin: .5rem 0 1rem}
+    ul{margin:.2rem 0 1rem 1.25rem}
+    li{margin:.35rem 0}
+    .quote{border-left:4px solid var(--accent); padding-left:14px; color: var(--ink-dim); font-style: italic}
+    .callout{border:1px solid rgba(110,168,254,.35); background: linear-gradient(180deg, rgba(110,168,254,.10), rgba(110,168,254,.04)); border-radius:12px; padding:14px;}
+    .pill{display:inline-block; padding:.25rem .6rem; border-radius:999px; border:1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.06); font-size:.85rem; color:var(--ink-dim)}
+    details{border:1px solid rgba(255,255,255,.14); border-radius:12px; padding:12px 14px; background: rgba(255,255,255,.05); margin:.6rem 0}
+    details summary{cursor:pointer; font-weight:600}
+    .grid{display:grid; grid-template-columns: 1fr; gap:14px}
+    @media (min-width: 780px){ .grid{grid-template-columns: 1fr 1fr} }
+    .cta{display:flex; flex-wrap:wrap; align-items:center; gap:12px; background: linear-gradient(135deg, rgba(192,132,252,.18), rgba(110,168,254,.16)); border:1px solid rgba(255,255,255,.12); border-radius: var(--radius-lg); padding:18px}
+    .cta a.button{background: var(--accent); color:#081023; padding:.65rem 1rem; border-radius:999px; text-decoration:none; font-weight:700; border: none}
+    .cta a.button:hover{filter:brightness(1.1)}
+    footer{margin: 28px 0 64px; color: var(--muted)}
+    .small{font-size:.92rem;color:var(--ink-dim)}
+    .muted{color:var(--muted)}
+    .sep{height:1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent); margin: 24px 0}
+    .kbd{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace; font-size:.88em; padding:.1rem .4rem; border-radius:6px; border:1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.08)}
+    a:focus{outline: 3px solid var(--accent-2); outline-offset: 2px}
+  </style>
 </head>
 <body>
-    <h1>ASPD — Always ‘Borderline’ When It Comes to Women</h1>
+  <div class="wrap">
+    <header class="hero" role="banner">
+      <span class="badge"><span class="dot"></span> Clinically-informed & Culturally Aware</span>
+      <h1>ASPD — Always ‘Borderline’ When It Comes to Women</h1>
+      <p class="lead">A diagnostic blind spot: how female antisociality is camouflaged, misread as borderline, and too often excused — and why naming it matters.</p>
+    </header>
 
-    <h2>1. Introduction: A Diagnostic Blind Spot</h2>
-    <p>In psychiatric practice, Antisocial Personality Disorder (ASPD) is a diagnosis overwhelmingly attributed to men. When women exhibit overlapping traits — manipulation, disregard for others, emotional cruelty — they are often redirected into a different diagnostic category: Borderline Personality Disorder (BPD). This tendency is not merely clinical; it is cultural. The diagnostic systems we rely on were shaped within male-centric models of deviance, while female aggression has long been coded as em...
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <a href="#intro">1. Introduction: A Diagnostic Blind Spot</a>
+      <a href="#gendered">2. The Gendered Nature of Criteria</a>
+      <a href="#bpd-vs-aspd">3. Borderline vs. Antisocial</a>
+      <a href="#sadism">4. Emotional Sadism: The Hidden Face of Female Violence</a>
+      <a href="#contract">5. Quiet Violations of the Social Contract</a>
+      <a href="#assessment">6. Assessment: What To Look For</a>
+      <a href="#differential">7. Differential Diagnosis</a>
+      <a href="#risk">8. Risk, Safeguarding & Ethics</a>
+      <a href="#treatment">9. Treatment & Management (What Actually Helps)</a>
+      <a href="#updates">10. What’s New (2024–2025)</a>
+      <a href="#refs">11. References & Further Reading</a>
+    </nav>
 
-    <h2>2. The Gendered Nature of Psychiatric Criteria</h2>
-    <p>ASPD criteria focus heavily on overt behavioral transgressions: physical aggression, criminal acts, disregard for social norms. These are behaviors more readily visible — and more often penalized — in men. Women, however, may engage in covert violations of interpersonal ethics: chronic lying, targeted cruelty, strategic seduction, and moral disengagement, often without attracting legal consequences. The problem is not the absence of antisocial behavior — it is that the behavior is socially camouf...
+    <main id="content">
+      <section id="intro">
+        <h2>1. Introduction: A Diagnostic Blind Spot</h2>
+        <p><strong>Antisocial Personality Disorder (ASPD)</strong> is diagnosed far more often in men. When women present with overlapping traits — instrumental manipulation, callousness, moral disengagement — they are frequently rerouted into <strong>Borderline Personality Disorder (BPD)</strong>. That pattern is both clinical and cultural: our nosologies grew from male-centric models of deviance, while female aggression has been historically coded as <em>emotion</em> rather than <em>ethics</em>.</p>
+        <p>This article offers a practical lens to separate <em>affective dysregulation</em> from <em>moral disconnection</em> and to recognize covert antisociality in women without pathologizing normative anger or trauma responses.</p>
+      </section>
 
-    <h2>3. Borderline vs. Antisocial: Similar on the Surface, Divergent at the Core</h2>
-    <p>Clinically, BPD and ASPD can overlap in presentation: impulsivity, unstable relationships, reactive aggression. But the underlying drives are distinct. Borderline pathology is rooted in fear of abandonment and emotional hypersensitivity. Antisocial pathology, by contrast, stems from lack of empathy, instrumental manipulation, and moral detachment.</p>
+      <section id="gendered">
+        <h2>2. The Gendered Nature of Criteria</h2>
+        <p>DSM-5-TR’s ASPD criteria lean on overt, penalized behaviors (arrests, assaults, reckless endangerment). Such items are easier to detect in men. Women more often enact <strong>relational and reputational aggression</strong>: chronic deceit, targeted humiliation, strategic seduction, calculated withholding, and gaslighting — all with minimal legal footprint.</p>
+        <div class="callout"><strong>Why the framework matters:</strong> The <em>ICD‑11</em> moved to a dimensional model: rate <em>severity</em> (mild ↔ severe) and qualify <em>traits</em> (e.g., <strong>Dissociality</strong>, Disinhibition, Negative Affectivity, Detachment, Anankastia). This often captures female presentations better than categorical labels alone.</div>
+      </section>
 
-    <p>Women with ASPD may cry, express rage, or dramatize affect — not because they feel deeply, but because those reactions serve a function: to control, destabilize, or dominate. This is not emotional dysregulation — it is emotional weaponization.</p>
+      <section id="bpd-vs-aspd">
+        <h2>3. Borderline vs. Antisocial: Similar Outside, Different Inside</h2>
+        <ul>
+          <li><strong>BPD</strong>: behavior driven by <em>attachment threat</em> and hypersensitivity; frantic efforts to avoid abandonment; shame and relief cycles.</li>
+          <li><strong>ASPD</strong>: behavior driven by <em>instrumental gain</em>; empathic deficits; pleasure or indifference in others’ harm; rule-breaking even when not distressed.</li>
+        </ul>
+        <p>Some women with antisocial traits use tears, rage, or “therapeutic language” <em>tactically</em>. That’s <strong>emotional weaponization</strong>, not dysregulation.</p>
+      </section>
 
-    <h2>4. Emotional Sadism: The Hidden Face of Female Violence</h2>
-    <p>Unlike many men with ASPD, women are less likely to engage in physical violence or overt criminality. Instead, their aggression manifests through emotional sadism — calculated humiliation, chronic gaslighting, subtle degradation of others' self-worth. This form of violence is harder to document, but no less destructive. It often occurs in private, within intimate relationships, among family members, or in caregiving roles.</p>
+      <section id="sadism">
+        <h2>4. Emotional Sadism: The Hidden Face of Female Violence</h2>
+        <p>Female antisociality less often involves physical assault and more often involves <strong>psychological cruelty</strong> and <strong>coercive control</strong>: isolating targets, eroding self-trust, reputation damage, alternating idealization and contempt, exploiting caregiving roles. Because it leaves no bruises, it is undercounted and misread as “strong personality” or “honesty.”</p>
+        <div class="quote">Look for pattern, not episodes: does she <em>enjoy</em> the destabilization? Is remorse absent or performative? Are apologies followed by escalation?</div>
+      </section>
 
-    <p>Because emotional abuse leaves no bruises, society tends to underestimate — or dismiss — its severity. Victims are left confused, doubting their own perception. Clinicians may miss the pattern entirely, especially when the patient appears outwardly composed, articulate, or “emotionally expressive.” What goes unrecognized is the pleasure derived from others’ suffering — a hallmark of affective sadism, not BPD.</p>
+      <section id="contract">
+        <h2>5. Quiet Violations of the Social Contract</h2>
+        <p>At ASPD’s core is disregard for reciprocity, empathy, and accountability. In women this may appear as <em>simulated prosociality</em>: feigned warmth, moral mimicry, and weaponized vulnerability used to extract resources or immunity from consequences. Settings that reward emotional fluency (therapy, HR processes, social media) can inadvertently amplify these tactics.</p>
+      </section>
 
-    <h2>5. Ignoring the Social Contract — Quietly</h2>
-    <p>At the core of ASPD lies a disregard for the implicit agreements that make social life possible: reciprocity, empathy, accountability. In women, this disregard is often expressed subtly — by feigning connection, extracting resources, or mimicking morality without internalizing it.</p>
+      <section id="assessment">
+        <h2>6. Assessment: What To Look For</h2>
+        <div class="grid">
+          <div>
+            <h3>History & patterning</h3>
+            <ul>
+              <li>Longitudinal pattern of <strong>exploitativeness</strong> across contexts (family, work, friendships), not only during crises.</li>
+              <li>Enjoyment or indifference in others’ suffering; <strong>instrumental lies</strong>, <strong>smear campaigns</strong>, <strong>financial/administrative abuse</strong>.</li>
+              <li>Remorse that is absent, conditional, or theatrical.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Informants & collateral</h3>
+            <ul>
+              <li>Partner/ex-partner, sibling, or colleague reports; HR or safeguarding records; custody/care complaints.</li>
+              <li>Beware impression management; triangulate.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Measures (use judiciously)</h3>
+            <ul>
+              <li>DSM-5-TR criteria for ASPD; <span class="pill">age ≥18 + conduct features before 15</span>.</li>
+              <li>ICD‑11 severity + trait qualifiers: highlight <strong>Dissociality</strong> & <strong>Disinhibition</strong>.</li>
+              <li>Personality inventories (e.g., PID-5/AMPD, TriPM) to quantify antagonism/disinhibition; structured interviews when available.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Red flags of emotional sadism</h3>
+            <ul>
+              <li>Punitive <em>silences</em>, baiting, “tests,” covert sabotage.</li>
+              <li>Coercive control: restricting social contact/finances, monitoring, threats of false allegations.</li>
+              <li>Pattern of <strong>plausible deniability</strong> and narrative shifts when confronted.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-    <p>Importantly, many women with antisocial traits are highly performative: they simulate warmth, adopt therapeutic language, and weaponize vulnerability. In settings that reward emotional expression (like therapy), they often excel — not because they seek healing, but because they recognize its utility in maintaining control.</p>
+      <section id="differential">
+        <h2>7. Differential Diagnosis (Quick Guide)</h2>
+        <ul>
+          <li><strong>Borderline PD</strong>: emotional storms tied to attachment threat; remorse present after harm; capacity for guilt and repair.</li>
+          <li><strong>Narcissistic PD</strong>: entitlement and status-seeking; can overlap with ASPD when <em>exploitativeness</em> and <em>lack of empathy</em> are pronounced.</li>
+          <li><strong>Histrionic PD</strong>: attention-seeking and suggestibility, but without chronic exploitation or callousness.</li>
+          <li><strong>PTSD/Complex trauma</strong>: reactivity rooted in fear; behaviors reduce when safety/skills improve; moral compass intact.</li>
+          <li><strong>Autism/ADHD</strong>: social rule errors from impulsivity or alexithymia, not instrumental cruelty.</li>
+        </ul>
+      </section>
 
-    <p>When the social contract is already rigged against women, identifying when it is being intentionally violated — rather than simply reacted to — becomes even more difficult. Yet that distinction is critical, both diagnostically and ethically.</p>
+      <section id="risk">
+        <h2>8. Risk, Safeguarding & Ethics</h2>
+        <ul>
+          <li><strong>Do</strong>: assess for intimate partner violence (including psychological), child/vulnerable adult neglect, financial exploitation.</li>
+          <li><strong>Protect</strong>: document patterns; use clear boundaries and written agreements; involve safeguarding/HR when indicated.</li>
+          <li><strong>Avoid</strong>: gendered assumptions (e.g., “mothers can’t be abusers”); conflating charisma with empathy.</li>
+          <li><strong>Stigma check</strong>: not all anger or boundary-setting is antisocial; avoid pathologizing assertive women.</li>
+        </ul>
+      </section>
 
-    <h2>6. Why Accurate Diagnosis Matters</h2>
-    <p>Underdiagnosing ASPD in women is not just a matter of nosological precision — it has real-world consequences. Without the proper conceptual framework, clinicians may enable manipulation, overlook harm, or pathologize the victims instead of the perpetrator. Moreover, labeling antisocial women as borderline can misguide treatment, leading to ineffective or even damaging interventions.</p>
+      <section id="treatment">
+        <h2>9. Treatment & Management</h2>
+        <p class="small"><em>Evidence remains limited; focus on harm reduction, structure, and accountability.</em></p>
+        <div class="grid">
+          <div>
+            <h3>What helps</h3>
+            <ul>
+              <li>Structured, goal-focused work: behavioral contracts, contingency management, skills for impulse control and anger.</li>
+              <li>Therapies with emphasis on responsibility and empathy-building (e.g., schema-informed work, MBT adaptations), when engagement is genuine.</li>
+              <li>Address comorbidities (substance use, mood disorders, ADHD) that amplify risk.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>What to avoid</h3>
+            <ul>
+              <li>Unstructured, insight-only therapy that becomes a theatre for manipulation.</li>
+              <li>Colluding with narratives that invert victim/perpetrator roles.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-    <p>Recognizing female ASPD does not mean abandoning compassion — it means refusing to conflate cruelty with emotional vulnerability. It also means acknowledging that not all pain is trauma-based; some behaviors are driven by control, not suffering.</p>
+      <section id="updates">
+        <h2>10. What’s New (2024–2025)</h2>
+        <ul>
+          <li><strong>ICD‑11 in practice</strong>: wider adoption of the severity + traits model improves capture of <em>dissociality</em> expressed via relational aggression; early forensic reports discuss benefits and challenges.</li>
+          <li><strong>Relational aggression & dark traits</strong>: newer studies reinforce links between psychopathic traits and <em>relational</em> (non-physical) aggression, aligning with clinical observations in women.</li>
+          <li><strong>DSM‑5‑TR refreshers</strong>: continued emphasis on developmental history (conduct features before 15) and differential with trauma-related presentations.</li>
+        </ul>
+      </section>
 
-    <h2>7. Final Thoughts: Seeing Without Romanticizing</h2>
-    <p>In a psychiatric culture increasingly oriented toward trauma and empathy (rightly so), it remains essential to hold space for patterns that are strategic, not symptomatic. To see female ASPD clearly, we must be willing to name moral disconnection even when it wears the mask of woundedness.</p>
+      <section id="refs">
+        <h2>11. References & Further Reading</h2>
+        <ol>
+          <li>StatPearls. <em>Antisocial Personality Disorder (DSM‑5‑TR overview)</em>. 2024. <a href="https://www.ncbi.nlm.nih.gov/books/NBK546673/" target="_blank" rel="noopener">NCBI Bookshelf</a>.</li>
+          <li>Bach B, et al. <em>The ICD‑11 classification of personality disorders</em>. 2022. <a href="https://bpded.biomedcentral.com/articles/10.1186/s40479-022-00182-0" target="_blank" rel="noopener">BMC</a>.</li>
+          <li>Pan B, et al. <em>Practical implications of ICD‑11 PD model</em>. 2024. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10921591/" target="_blank" rel="noopener">PMC</a>.</li>
+          <li>Jantzi C, et al. <em>The new ICD‑11 PD diagnosis in forensic settings</em>. 2025. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12401950/" target="_blank" rel="noopener">PMC</a>.</li>
+          <li>Jiang Y, et al. <em>Dark traits and relational aggression</em>. 2024. <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1487970/full" target="_blank" rel="noopener">Frontiers in Psychology</a>.</li>
+          <li>Moroń M, et al. <em>Relational aggression & personality metatraits</em>. 2024. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0191886924002447" target="_blank" rel="noopener">Personality and Individual Differences</a>.</li>
+          <li>de Vogel V, et al. <em>Gender differences in manifestation/assessment of psychopathy</em>. 2016. <a href="https://research.rug.nl/files/257546543/Gender_Differences_in_the_Assessment_and_Manifestation_of_Psychopathy_Results_From_a_Multicenter_Study_in_Forensic_Psychiatric_Patients.pdf" target="_blank" rel="noopener">PDF</a>.</li>
+          <li>Wynn R, et al. <em>Psychopathy in women: theoretical and clinical perspectives</em>. 2012. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3379858/" target="_blank" rel="noopener">PMC</a>.</li>
+          <li>APA. <em>DSM‑5‑TR</em> (overview & updates). 2022. <a href="https://www.psychiatry.org/psychiatrists/practice/dsm" target="_blank" rel="noopener">psychiatry.org</a>.</li>
+        </ol>
+        <p class="small">These sources emphasize dimensional assessment (ICD‑11), classic DSM‑5‑TR criteria, and emerging evidence on relational aggression relevant to female presentations.</p>
+      </section>
 
-    <p>This is not about moral condemnation. It is about clinical clarity — and protecting those harmed by those who do not feel harm.</p>
+      <div class="sep" role="separator" aria-hidden="true"></div>
+
+      <section aria-label="Disclaimer">
+        <h2>Disclaimer</h2>
+        <p class="small">Educational content only — not a substitute for individualized medical advice, diagnosis, or treatment. If you’re concerned about safety or abuse (emotional or physical), seek local professional help and crisis resources.</p>
+      </section>
+
+      <section aria-label="Author">
+        <h2>About the Author</h2>
+        <p class="small">Second-opinion consultations and therapy focused on women’s mental health and personality/trauma differentials. Learn more or book a session: <a href="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/index.html" target="_blank" rel="noopener">Women &amp; Psychiatry — Second Opinion</a>.</p>
+      </section>
+    </main>
 
     <footer>
-        Written by Dr. Sarah Ionescu<br>
-        Women & Psychiatry – Second Opinions with Clinical Depth
+      <p class="small">© <span id="y"></span> — Designed for readability and accessibility. All rights reserved.</p>
     </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
