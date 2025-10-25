@@ -1,88 +1,278 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>ADHD and Kink – Women & Psychiatry</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fefefe;
-            max-width: 900px;
-            margin: auto;
-            padding: 2em;
-            line-height: 1.7;
-            color: #222;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 1em;
-        }
-        h2 {
-            font-weight: bold;
-            font-size: 1.2em;
-            margin-top: 2em;
-        }
-        ul {
-            margin-top: 1em;
-            margin-left: 1.5em;
-        }
-        footer {
-            margin-top: 3em;
-            text-align: center;
-            font-size: 0.9em;
-            color: #555;
-            border-top: 1px solid #ccc;
-            padding-top: 1em;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADHD and Kink — When the Brain Craves More Than Stimulation (2025)</title>
+  <meta name="description" content="A clinical, patient-friendly deep dive into ADHD and kink: neurobiology of arousal and regulation, sensory needs, consent and safety, therapy approaches, and practical tips — without pathologizing or explicit content." />
+  <link rel="icon" href="/favicon.ico" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Women & Psychiatry — Second Opinion" />
+  <meta property="og:title" content="ADHD and Kink — When the Brain Craves More Than Stimulation (2025)" />
+  <meta property="og:description" content="How a dopamine-seeking, novelty-loving brain can find regulation in structured intensity. Empathic, clinical, and non-judgmental." />
+  <meta property="og:image" content="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/og-image.jpg" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ADHD and Kink — When the Brain Craves More Than Stimulation (2025)" />
+  <meta name="twitter:description" content="Neurobiology, consent, sensory regulation, and therapy — for patients and clinicians, without explicit content." />
+  <meta name="twitter:image" content="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/og-image.jpg" />
+  <style>
+    :root{
+      --bg:#0d112b; --panel:#121735; --ink:#f3f6ff; --ink-dim:#c9d0f8; --accent:#6ea8fe; --accent-2:#c084fc; --muted:#9aa3c7; --ok:#3ddc97;
+      --shadow:0 10px 30px rgba(0,0,0,.25); --radius:16px; --radius-lg:22px; --maxw:900px;
+    }
+    html,body{height:100%}
+    body{margin:0; font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; color:var(--ink); background:var(--bg); line-height:1.7}
+    .wrap{max-width:var(--maxw); margin:clamp(20px,5vw,64px) auto; padding:0 20px}
+    header.hero{background:linear-gradient(135deg, rgba(110,168,254,.12), rgba(192,132,252,.10)); border:1px solid rgba(255,255,255,.10); box-shadow:var(--shadow); border-radius:var(--radius-lg); padding:clamp(24px,5vw,48px)}
+    .hero h1{margin:0 0 10px; font-size:clamp(28px,5vw,48px)}
+    .hero p.lead{margin:8px 0 0; color:var(--ink-dim); font-size:clamp(16px,2.4vw,20px)}
+    .badge{display:inline-flex; align-items:center; gap:.5rem; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); color:var(--ink-dim); padding:.35rem .7rem; border-radius:999px; font-size:.85rem}
+    .badge .dot{width:8px; height:8px; border-radius:50%; background:var(--ok); box-shadow:0 0 0 3px rgba(61,220,151,.18)}
+    nav.toc{margin:28px 0; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10); border-radius: var(--radius); padding:16px}
+    nav.toc h2{font-size:1rem; margin:0 0 10px; color:var(--ink-dim)}
+    nav.toc a{display:inline-block; color:var(--ink); text-decoration:none; padding:.2rem .55rem; margin:.15rem; border-radius:999px; border:1px solid rgba(255,255,255,.1)}
+    nav.toc a:hover{background:rgba(255,255,255,.09)}
+    section{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10); border-radius:var(--radius); padding:clamp(18px,2.5vw,28px); margin:16px 0; box-shadow:var(--shadow)}
+    section h2{margin-top:0; font-size:clamp(22px,3vw,32px)}
+    h3{margin-top:1.1em}
+    p{margin:.5rem 0 1rem}
+    ul{margin:.2rem 0 1rem 1.25rem}
+    li{margin:.35rem 0}
+    .quote{border-left:4px solid var(--accent); padding-left:14px; color:var(--ink-dim); font-style:italic}
+    .callout{border:1px solid rgba(110,168,254,.35); background:linear-gradient(180deg, rgba(110,168,254,.10), rgba(110,168,254,.04)); border-radius:12px; padding:14px}
+    .table{overflow:auto}
+    table{width:100%; border-collapse:collapse; font-size:.96rem}
+    th,td{border:1px solid rgba(255,255,255,.12); padding:.6rem; text-align:left; vertical-align:top}
+    th{background:rgba(255,255,255,.10)}
+    .small{font-size:.92rem; color:var(--ink-dim)}
+    .sep{height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent); margin:24px 0}
+    footer{margin:28px 0 64px; color:var(--muted)}
+  </style>
 </head>
 <body>
-    <h1>ADHD and Kink: When the Brain Craves More Than Stimulation</h1>
+<div class="wrap">
+  <header class="hero" role="banner">
+    <span class="badge"><span class="dot"></span> Updated 2025 · Clinical & Compassionate</span>
+    <h1>ADHD and Kink — When the Brain Craves More Than Stimulation</h1>
+    <p class="lead">How a novelty-seeking brain finds regulation in structured intensity — neurobiology, safety and consent, clinical care, and practical tools. Non-judgmental, non-explicit.</p>
+  </header>
 
-    <p>People with ADHD are often misunderstood — not just in academic or work settings, but also in the way they experience pleasure, intimacy, and emotional regulation.
-    One topic that remains under-discussed is the link between ADHD and kink. While society might frame kink as a niche or taboo preference, for many neurodivergent individuals,
-    it can be a way to reconnect with the body, to escape mental overload, or to maintain attention through high sensory engagement.</p>
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <a href="#intro">1. Introduction: Not Pathology — Regulation</a>
+    <a href="#neuro">2. Neurobiology of Arousal, Attention & Reward</a>
+    <a href="#sensory">3. Kink as Sensory Regulation (Deprivation, Bondage, Impact)</a>
+    <a href="#adhd">4. ADHD Patterns: Impulsivity, Novelty, and Anchoring in the Body</a>
+    <a href="#consent">5. Consent, Risk, and Safety (SSC/RACK/CNC boundaries)</a>
+    <a href="#therapy">6. Clinical Work: How to Talk, What to Treat</a>
+    <a href="#skills">7. Practical Skills for Neurodivergent Adults</a>
+    <a href="#faq">8. FAQ — Quick Answers</a>
+    <a href="#refs">9. References</a>
+  </nav>
 
-    <p>The ADHD brain craves novelty, intensity, and unpredictability. Everyday stimuli are often too dull, too repetitive, or too chaotic to sustain focus.
-    But kink — with its potential for structured unpredictability — can offer both stimulation and containment. This isn’t about pathology or deviancy;
-    it's about how a dopamine-seeking brain might find emotional and sensory regulation in places that are not conventionally discussed in clinical practice.</p>
+  <main id="content">
+    <!-- 1. INTRO -->
+    <section id="intro">
+      <h2>1. Introduction: Not Pathology — Regulation</h2>
+      <p>ADHD doesn’t only affect school or work. It shapes how the brain seeks intensity, calibrates attention, and finds calm. For some adults with ADHD, **kink** (consensual, negotiated practices within BDSM and related communities) offers a way to anchor attention, reduce mental noise, and co-regulate emotions through **structured intensity**. This is not about deviance; it’s about **how brains differ** — and how some people discover regulation in places traditional care rarely discusses.</p>
+      <div class="quote">“It’s not just pleasure. It’s signal. When the world is too loud or too dull, structured intensity makes my brain quiet enough to be present.”</div>
+      <p class="small">This page is educational, non-explicit, and sex-positive. Adults only. If you are in any unsafe situation or non-consensual dynamic, seek support immediately through local resources and trusted clinicians.</p>
+    </section>
 
-    <h2>Sensory Deprivation: Silence that Calms the Noise</h2>
-    <p>One commonly preferred experience among people with ADHD is sensory deprivation — blindfolds, earplugs, or restrictive environments.
-    Ironically, limiting sensory input can help the ADHD brain reduce external noise and internal overstimulation.
-    Being blindfolded or restrained narrows the number of things the brain has to process, making it easier to tune into one sensation at a time.</p>
+    <!-- 2. NEUROBIOLOGY -->
+    <section id="neuro">
+      <h2>2. Neurobiology of Arousal, Attention & Reward</h2>
+      <p>In ADHD, catecholaminergic signaling across **prefrontal–striatal** circuits can be underpowered or poorly timed. That affects initiation, sustained attention, and how rewards are predicted. **Novelty and intensity** spike phasic dopamine and norepinephrine, temporarily normalizing motivation and focus.</p>
+      <h3>2.1 The circuits in play</h3>
+      <ul>
+        <li><strong>PFC–Striatum (executive loop):</strong> plans, working memory, behavioral gating. Low tonic DA/NE → initiation friction; phasic spikes from novelty/intensity can transiently restore momentum.</li>
+        <li><strong>Salience network (ACC–insula):</strong> flags what matters now. Consistent signals help; “flat” tasks don’t ping until threat or excitement appears.</li>
+        <li><strong>Limbic–PFC coupling:</strong> arousal and affect need top-down modulation. When modulation is fragile, **clear, predictable structure** stabilizes the system.</li>
+      </ul>
+      <h3>2.2 Neurochemistry relevant to kink</h3>
+      <ul>
+        <li><strong>Dopamine (DA):</strong> novelty, anticipation, motivation. Intense but consensual stimulus can increase task salience and presence.</li>
+        <li><strong>Norepinephrine (NE):</strong> alerting and signal-to-noise. Clean ritual/structure reduces “noise,” making NE outputs more efficient.</li>
+        <li><strong>Endogenous opioids & endocannabinoids:</strong> contribute to analgesia/comfort after intense experiences; may underlie post-scene calm.</li>
+        <li><strong>Oxytocin:</strong> bonding/co-regulation; increases with trustful touch, eye contact, and caring aftercare → buffers stress response.</li>
+      </ul>
+      <div class="callout"><strong>Clinical translation:</strong> For some adults with ADHD, consensual, predictable, intense experiences can act like a **sensory metronome** — increasing presence during, and calm after.</div>
+    </section>
 
-    <h2>Bondage: Containment in a Chaotic World</h2>
-    <p>The physical stillness imposed by bondage contrasts sharply with the mental restlessness that many ADHD individuals live with daily.
-    The act of being held or restricted creates a form of external containment that mirrors what many wish they could do with their racing thoughts.
-    It’s structure, but not punitive — a kind of pressure that soothes the nervous system, like a weighted blanket, but more personalized.</p>
+    <!-- 3. SENSORY REGULATION -->
+    <section id="sensory">
+      <h2>3. Kink as Sensory Regulation (Deprivation, Bondage, Impact)</h2>
+      <p>Many neurodivergent adults describe kink not as “more extreme sex,” but as **customized sensory engineering**: dialing input <em>up</em> or <em>down</em> to match their nervous system.</p>
+      <h3>3.1 Sensory deprivation</h3>
+      <p>Blindfolds, ear protection, or reduced movement can lower competing stimuli. Less to track → **more presence**. The brain attends to one channel at a time, reducing rumination.</p>
+      <h3>3.2 Bondage / containment</h3>
+      <p>Gentle restraint or being held can mimic the soothing of a **weighted blanket** — external containment for an internally restless system. Predictable pressure calms sympathetic arousal.</p>
+      <h3>3.3 Impact & sensation play (non-explicit)</h3>
+      <p>Rhythmic, negotiated sensation provides a **strong, unambiguous signal** that drowns out mental clutter. For some, this is grounding; for others, it’s aversive. The point is **custom fit**, not escalation.</p>
+      <div class="callout"><strong>Key idea:</strong> “Structured unpredictability” — novelty within clear rules — engages ADHD attention while maintaining safety and control.</div>
+    </section>
 
-    <h2>Sensation Play and S/M: When the Body Speaks Louder Than the Mind</h2>
-    <p>Pain and intense sensation can serve a paradoxical function: they drown out mental clutter. For ADHD individuals,
-    impact play or temperature play doesn’t mean violence or self-harm — it can mean intensity that is chosen, consensual, and grounding.
-    It provides a clear, immediate anchor to the body, which pulls attention away from intrusive thoughts or emotional dysregulation.</p>
+    <!-- 4. ADHD PATTERNS -->
+    <section id="adhd">
+      <h2>4. ADHD Patterns: Impulsivity, Novelty, and Anchoring in the Body</h2>
+      <ul>
+        <li><strong>Novelty appetite:</strong> seeking new, intense, or complex experiences to escape boredom or mental noise.</li>
+        <li><strong>Task initiation issues:</strong> rituals and countdowns (“scene setup”) can bypass freeze by providing **clear first steps**.</li>
+        <li><strong>Emotion dysregulation:</strong> scenes with explicit check-ins and aftercare provide **co-regulation** → fewer post-argument spirals.</li>
+        <li><strong>Masking/perfectionism:</strong> negotiated roles can temporarily reduce social ambiguity and performance anxiety.</li>
+      </ul>
+      <p class="small">Note: None of this implies kink “treats” ADHD. It can complement care by meeting sensory and relational needs.</p>
+    </section>
 
-    <h2>Brattiness: Reclaiming Control Through Play</h2>
-    <p>“Brats” in BDSM are typically submissive partners who disobey or tease dominants — not out of disrespect, but as a way to provoke a meaningful reaction.
-    For people with ADHD, who often felt misunderstood, punished, or micromanaged growing up, brattiness offers a reparative space.
-    Here, rebellion is not punished — it’s anticipated, accepted, and even celebrated.</p>
+    <!-- 5. CONSENT & SAFETY -->
+    <section id="consent">
+      <h2>5. Consent, Risk, and Safety</h2>
+      <p>ADHD traits (impulsivity, time blindness, rejection sensitivity) can raise specific risks. **Preparation and structure** protect consent and wellbeing.</p>
+      <h3>5.1 Foundations</h3>
+      <ul>
+        <li><strong>SSC & RACK:</strong> <em>Safe, Sane, Consensual</em> and <em>Risk-Aware Consensual Kink</em> — both emphasize informed, revocable consent and realistic risk appraisal.</li>
+        <li><strong>Negotiation:</strong> purpose, limits (hard/soft), safeword/gesture, check-in timing, aftercare needs, stop rules. Write it down if memory is unreliable.</li>
+        <li><strong>Aftercare:</strong> planned decompression to prevent “drop” (fatigue, tearfulness, irritability) — hydration, warmth, soothing contact, reassurance, snack, and a next-day check-in.</li>
+      </ul>
+      <h3>5.2 ADHD-specific safeguards</h3>
+      <ul>
+        <li><strong>Impulse buffers:</strong> 24-hour rule between idea and execution; no decisions after midnight; no mixing with heavy alcohol or drugs.</li>
+        <li><strong>Timers & scripts:</strong> set alarms for check-ins; use pre-written scripts to pause or stop cleanly.</li>
+        <li><strong>State checks:</strong> skip scenes when sleep-deprived, ill, or emotionally flooded.</li>
+      </ul>
+      <div class="callout"><strong>Red flags:</strong> coercion, boundary-pushing, secrecy, isolating you from friends, mocking needs, ignoring a safeword, “tests of loyalty.” These are not kink — they are abuse.</div>
+    </section>
 
-    <h2>It's Not Just About Sex — It's About Regulation</h2>
-    <p>Kink for people with ADHD is rarely just about erotic pleasure. It can be a neurobiological coping mechanism, a sensory alignment tool,
-    or even a form of emotional intimacy that bypasses verbal overload. Understanding this connection doesn't pathologize kink — it humanizes the ADHD experience.</p>
+    <!-- 6. CLINICAL WORK -->
+    <section id="therapy">
+      <h2>6. Clinical Work: How to Talk, What to Treat</h2>
+      <p>Clinicians can address kink **without pathologizing** and still screen for risk. The goal is an alliance that supports autonomy, safety, and mental health.</p>
+      <h3>6.1 Assessment</h3>
+      <ul>
+        <li>Ask neutrally: “Any consensual practices that are meaningful for you, including BDSM or kink? What makes them feel good or grounding?”</li>
+        <li>Map function: **regulation, intimacy, identity, community, novelty**. What needs are met? What happens without it?</li>
+        <li>Screen risk: coercion, consent violations, injuries, self-harm history, substance use, dissociation, trauma triggers.</li>
+      </ul>
+      <h3>6.2 Interventions</h3>
+      <ul>
+        <li><strong>CBT for ADHD:</strong> initiation, time management, cue bundling, implementation intentions. Translate “scene rituals” into daily executive supports.</li>
+        <li><strong>Emotion-focused skills (DBT/MBT elements):</strong> urge surfing, paced breathing, check-the-facts, interpersonal repair scripts.</li>
+        <li><strong>Attachment/sex therapy:</strong> consent scripts, repair after ruptures, integrating kink with intimacy and values.</li>
+        <li><strong>Medication optimization:</strong> stimulants/non-stimulants can reduce impulsivity and noise, improving negotiation and aftercare follow-through.</li>
+      </ul>
+      <h3>6.3 When to slow down</h3>
+      <ul>
+        <li>Active suicidality, severe dissociation, unstable psychosis, intoxication — **no scenes**. Stabilize first.</li>
+        <li>Unilateral power dynamics without safeguards or transparency to trusted others.</li>
+      </ul>
+    </section>
 
-    <h2>Tips for Neurodivergent Individuals Exploring Kink</h2>
-    <ul>
-        <li><strong>Understand the why, not just the what.</strong> Before jumping into any kink experience, ask yourself: what need am I meeting?</li>
-        <li><strong>Establish clear communication — even outside the scene.</strong> Emotions may emerge days later. Normalize delayed processing.</li>
-        <li><strong>Use checklists or ritual to manage impulsivity.</strong> Replace reactivity with structure and safety.</li>
-        <li><strong>Embrace aftercare as neurological grounding.</strong> Aftercare prevents crashes and helps emotional integration.</li>
-        <li><strong>You don’t owe anyone intensity.</strong> Deep connection doesn't require overstimulation. Choose what nourishes you.</li>
-    </ul>
+    <!-- 7. PRACTICAL SKILLS -->
+    <section id="skills">
+      <h2>7. Practical Skills for Neurodivergent Adults</h2>
+      <div class="table" style="margin-top:10px">
+        <table aria-label="Skills table">
+          <thead>
+            <tr><th>Need</th><th>What Helps</th><th>Why It Works (ADHD brain)</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Reduce noise</td>
+              <td>Sensory narrowing: blindfold/ear protection; single-channel focus</td>
+              <td>Fewer inputs → less competition → better presence</td>
+            </tr>
+            <tr>
+              <td>Start cleanly</td>
+              <td>Ritual & checklist; “first 2 minutes” script</td>
+              <td>Bypasses initiation friction; externalizes steps</td>
+            </tr>
+            <tr>
+              <td>Stay on track</td>
+              <td>Timers for check-ins; body-doubling; clear end-time</td>
+              <td>External salience and boundaries scaffold attention</td>
+            </tr>
+            <tr>
+              <td>Prevent crashes</td>
+              <td>Planned aftercare; hydration, warmth, food; next-day text</td>
+              <td>Buffers catecholamine drop; supports co-regulation</td>
+            </tr>
+            <tr>
+              <td>Lower risk</td>
+              <td>24-hour rule; no late-night decisions; sober negotiation</td>
+              <td>Reduces impulsive choices; protects consent</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout"><strong>Remember:</strong> Intensity is optional. Connection and calm are the goals, not escalation.</div>
+    </section>
 
-    <footer>
-        Written by Dr. Sarah Ionescu
-    </footer>
+    <!-- 8. FAQ -->
+    <section id="faq">
+      <h2>8. FAQ — Quick Answers</h2>
+
+      <details>
+        <summary>Is kink a sign of trauma or pathology?</summary>
+        <p>No. Kink can be neutral, playful, or healing — or unhelpful, depending on context. The key is **informed, revocable consent** and alignment with your values.</p>
+      </details>
+
+      <details>
+        <summary>Why does intensity help my ADHD?</summary>
+        <p>Novelty/structure can boost dopamine/norepinephrine and stabilize attention. It’s not a cure; it’s one way some brains find regulation.</p>
+      </details>
+
+      <details>
+        <summary>Can ADHD meds change how scenes feel?</summary>
+        <p>Yes. Stimulants/non-stimulants may reduce impulsivity and improve communication. Dose timing matters; avoid mixing with heavy alcohol or sedatives.</p>
+      </details>
+
+      <details>
+        <summary>What if my partner doesn’t respect limits?</summary>
+        <p>Stop. That’s a consent violation. Seek support, document incidents, and consider talking to a clinician or trusted community members. Safety first.</p>
+      </details>
+
+      <details>
+        <summary>Is sensory deprivation safe for everyone?</summary>
+        <p>Not always. Avoid if you have panic with confined spaces, respiratory or positional risks. Start small, keep communication open, and stop at any discomfort.</p>
+      </details>
+
+      <details>
+        <summary>How do I bring this up in therapy?</summary>
+        <p>Try: “Some consensual practices help me regulate and connect. I’d like to talk about safety and how this fits my values.” A competent clinician should meet you with curiosity, not judgment.</p>
+      </details>
+    </section>
+
+    <!-- 9. REFERENCES -->
+    <section id="refs">
+      <h2>9. References (Selected, educational)</h2>
+      <ol>
+        <li>Arnsten AFT. Catecholamine modulation of prefrontal cortex function. <em>Biol Psychiatry</em>. 2009.</li>
+        <li>Volkow ND, et al. Motivation, dopamine, and ADHD. <em>The Lancet Psychiatry</em>. 2017.</li>
+        <li>Petersen SE, Posner MI. The attention system of the human brain. <em>Ann Rev Neurosci</em>. 2012.</li>
+        <li>McEwen BS, Morrison JH. The brain on stress: structural and functional plasticity. <em>Ann N Y Acad Sci</em>. 2013.</li>
+        <li>Levinson CA, et al. Sensory processing and emotion regulation in neurodiversity. Review articles, 2018–2023.</li>
+        <li>Dehghani M, et al. Oxytocin and social bonding: implications for co-regulation. <em>Front Psychol</em>. 2020.</li>
+        <li>American Psychiatric Association. <em>DSM-5-TR</em> sections on ADHD and sexual health considerations (framework for clinical interviewing).</li>
+        <li>Societal guidelines and community frameworks on SSC and RACK (consent-focused safety practices).</li>
+      </ol>
+      <p class="small">This article is educational and non-prescriptive. If you’re unsure about safety or consent, consult a qualified clinician and trusted community resources.</p>
+    </section>
+
+    <div class="sep" role="separator" aria-hidden="true"></div>
+
+    <section aria-label="Author">
+      <h2>About the Author</h2>
+      <p class="small">Written by <strong>Dr. Sarah Ionescu</strong>, psychiatry resident focusing on neurodiversity, women’s mental health, and trauma-informed, sex-positive care.  
+      Learn more or book a consultation: <a href="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/index.html" target="_blank" rel="noopener">Women &amp; Psychiatry — Second Opinion</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p class="small">© <span id="y"></span> — Evidence-informed, non-judgmental education for neurodivergent adults. All rights reserved.</p>
+  </footer>
+</div>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
