@@ -1,72 +1,318 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>When Focus Turns to Food – Women & Psychiatry</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fefefe;
-            max-width: 900px;
-            margin: auto;
-            padding: 2em;
-            line-height: 1.7;
-            color: #222;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 1em;
-        }
-        h2 {
-            font-weight: bold;
-            font-size: 1.2em;
-            margin-top: 2em;
-        }
-        p {
-            margin-top: 1em;
-        }
-        footer {
-            margin-top: 3em;
-            text-align: center;
-            font-size: 0.9em;
-            color: #555;
-            border-top: 1px solid #ccc;
-            padding-top: 1em;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>When Focus Turns to Food — ADHD and Binge Eating Patterns (Extended 2025)</title>
+  <meta name="description" content="ADHD-related binge eating explained: neurobiology, emotion dysregulation, executive dysfunction, genetics, evidence-based care, and 2024–2025 updates. PubMed-sourced, patient-friendly, and clinically useful." />
+  <link rel="icon" href="/favicon.ico" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Women & Psychiatry — Second Opinion" />
+  <meta property="og:title" content="When Focus Turns to Food — ADHD and Binge Eating Patterns (Extended 2025)" />
+  <meta property="og:description" content="Why binge eating can be ADHD-driven rather than a moral failure — and what actually helps: structured dopamine support, therapy, and updated options." />
+  <meta property="og:image" content="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/og-image.jpg" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="When Focus Turns to Food — ADHD and Binge Eating Patterns (Extended 2025)" />
+  <meta name="twitter:description" content="A deep, PubMed-sourced guide to ADHD-linked binge eating, with 2024–2025 updates and humane, practical interventions." />
+  <meta name="twitter:image" content="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/og-image.jpg" />
+  <style>
+    :root{
+      --bg: #0d112b; /* uniform background */
+      --panel: #121735;
+      --ink: #f3f6ff;
+      --ink-dim: #c9d0f8;
+      --accent: #6ea8fe;
+      --accent-2:#c084fc;
+      --muted:#9aa3c7;
+      --ok:#3ddc97;
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+      --radius: 16px;
+      --radius-lg: 22px;
+      --maxw: 900px;
+    }
+    html,body{height:100%}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--ink); background-color: var(--bg); line-height:1.7;
+    }
+    .wrap{max-width:var(--maxw); margin: clamp(20px, 5vw, 64px) auto; padding: 0 20px}
+    header.hero{background: linear-gradient(135deg, rgba(110,168,254,.12), rgba(192,132,252,.10)); border:1px solid rgba(255,255,255,.10); box-shadow: var(--shadow); border-radius: var(--radius-lg); padding: clamp(24px,5vw,48px)}
+    .hero h1{margin:0 0 10px; font-size: clamp(28px, 5vw, 48px)}
+    .hero p.lead{margin:8px 0 0; color:var(--ink-dim); font-size: clamp(16px, 2.4vw, 20px)}
+    .badge{display:inline-flex; align-items:center; gap:.5rem; background: rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); color:var(--ink-dim); padding:.35rem .7rem; border-radius:999px; font-size:.85rem}
+    .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px rgba(61,220,151,.18)}
+    nav.toc{margin:28px 0; background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10); border-radius: var(--radius); padding:16px}
+    nav.toc h2{font-size:1rem; margin:0 0 10px; color:var(--ink-dim)}
+    nav.toc a{display:inline-block; color:var(--ink); text-decoration:none; padding:.2rem .55rem; margin:.15rem; border-radius:999px; border:1px solid rgba(255,255,255,.1)}
+    nav.toc a:hover{background:rgba(255,255,255,.09)}
+    section{background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10); border-radius: var(--radius); padding: clamp(18px, 2.5vw, 28px); margin: 16px 0; box-shadow: var(--shadow)}
+    section h2{margin-top:0; font-size: clamp(22px, 3vw, 32px)}
+    h3{margin-top:1.1em}
+    p{margin: .5rem 0 1rem}
+    ul{margin:.2rem 0 1rem 1.25rem}
+    li{margin:.35rem 0}
+    .quote{border-left:4px solid var(--accent); padding-left:14px; color: var(--ink-dim); font-style: italic}
+    .callout{border:1px solid rgba(110,168,254,.35); background: linear-gradient(180deg, rgba(110,168,254,.10), rgba(110,168,254,.04)); border-radius:12px; padding:14px;}
+    .pill{display:inline-block; padding:.25rem .6rem; border-radius:999px; border:1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.06); font-size:.85rem; color:var(--ink-dim)}
+    details{border:1px solid rgba(255,255,255,.14); border-radius:12px; padding:12px 14px; background: rgba(255,255,255,.05); margin:.6rem 0}
+    details summary{cursor:pointer; font-weight:600}
+    .grid{display:grid; grid-template-columns: 1fr; gap:14px}
+    @media (min-width: 780px){ .grid{grid-template-columns: 1fr 1fr} }
+    .cta{display:flex; flex-wrap:wrap; align-items:center; gap:12px; background: linear-gradient(135deg, rgba(192,132,252,.18), rgba(110,168,254,.16)); border:1px solid rgba(255,255,255,.12); border-radius: var(--radius-lg); padding:18px}
+    .cta a.button{background: var(--accent); color:#081023; padding:.65rem 1rem; border-radius:999px; text-decoration:none; font-weight:700; border: none}
+    .cta a.button:hover{filter:brightness(1.1)}
+    footer{margin: 28px 0 64px; color: var(--muted)}
+    .small{font-size:.92rem;color:var(--ink-dim)}
+    .muted{color:var(--muted)}
+    .sep{height:1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent); margin: 24px 0}
+    .kbd{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace; font-size:.88em; padding:.1rem .4rem; border-radius:6px; border:1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.08)}
+    a:focus{outline: 3px solid var(--accent-2); outline-offset: 2px}
+  </style>
 </head>
 <body>
-    <h1>When Focus Turns to Food: ADHD and Binge Eating Patterns</h1>
+  <div class="wrap">
+    <header class="hero" role="banner">
+      <span class="badge"><span class="dot"></span> Clinically-informed & Compassionate</span>
+      <h1>When Focus Turns to Food: ADHD and Binge Eating Patterns</h1>
+      <p class="lead">For many with ADHD, binge eating isn’t a willpower failure — it’s a dopamine-driven, shame-amplified pattern. Here’s the science, the nuance, and what actually helps.</p>
+    </header>
 
-    <h2>1. Introduction: More Than Just a Willpower Problem</h2>
-    <p>Binge eating is often misunderstood as a behavioral failure, a lack of self-control, or an emotional overreaction. But for many individuals with Attention-Deficit/Hyperactivity Disorder (ADHD), binge eating is neither a character flaw nor a separate diagnosis — it’s a symptom of an overstimulated, underregulated nervous system trying to cope. Food becomes a form of self-medication: for boredom, for stress, for executive dysfunction, and most importantly, for the unmet need of dopamine.</p>
-    <p>In clinical settings, ADHD and eating disorders are rarely assessed together. Most eating disorder literature focuses on body image and trauma; most ADHD assessments focus on focus, not appetite. But patients — especially women — often live in the overlap.</p>
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <a href="#intro">1. Introduction: More Than Willpower</a>
+      <a href="#dopamine">2. The Dopaminergic Hunger</a>
+      <a href="#regulation">3. Emotional Regulation & Cognitive Anchoring</a>
+      <a href="#hyperfocus">4. Hyperfocus, Shame & The Unseen Cycle</a>
+      <a href="#bed">5. Not Quite BED: ADHD-Driven vs Primary Eating Disorders</a>
+      <a href="#neuro">6. Neurobiology: Reward & Control (Accessible)</a>
+      <a href="#genetics">7. Genetics & Shared Liability</a>
+      <a href="#assessment">8. Assessment: What to Ask & Screen</a>
+      <a href="#strategies">9. What Helps: Dopamine-Smart Strategies</a>
+      <a href="#meds">10. Medication Considerations (ADHD & BED)</a>
+      <a href="#updates">11. What’s New (2024–2025)</a>
+      <a href="#relationships">12. Culture, Relationships & Stigma</a>
+      <a href="#work">13. School/Work Supports</a>
+      <a href="#myths">14. Myths vs Facts</a>
+      <a href="#faq">15. Quick FAQ</a>
+      <a href="#supplements">16. Supplementation — Brief Note</a>
+      <a href="#refs">17. References</a>
+    </nav>
 
-    <h2>2. The Dopaminergic Hunger: When Food Becomes Stimulation</h2>
-    <p>People with ADHD live with a chronically underactive reward system. Dopamine, which fuels motivation, is often depleted or inefficiently regulated. This leaves the brain seeking any source of rapid stimulation — and food, especially highly processed food, delivers. Sugar, fat, and salt are not just pleasurable; they act as neurological accelerants, temporarily soothing the under-aroused ADHD brain.</p>
-    <p>Eating quickly, impulsively, and without awareness is not simply poor decision-making — it’s neurologically driven. Add to this the executive dysfunction that impairs planning and impulse control, and you have a perfect storm: a brain that can’t delay gratification, combined with a body that remembers the temporary calm after a binge.</p>
+    <main id="content">
+      <section id="intro">
+        <h2>1. Introduction: More Than Willpower</h2>
+        <p>Binge eating is often mislabeled as a failure of discipline. For many with ADHD, it is better understood as a <em>coping strategy</em> of an under-regulated nervous system seeking predictable stimulation and short-term relief. Food becomes self-medication for boredom, stress, executive overload, and — crucially — for a low, inconsistent reward signal.</p>
+        <p>Clinically, ADHD and eating disorders are too often assessed in silos. Yet evidence for overlap has accumulated for nearly two decades, with higher-than-expected rates of binge eating in ADHD and shared neurobehavioral circuits involving reward, inhibition, and salience processing.<sup><a href="#r1">1</a>, <a href="#r2">2</a>, <a href="#r3">3</a></sup></p>
+      </section>
 
-    <h2>3. Binge Eating as Emotional Regulation and Cognitive Anchoring</h2>
-    <p>For many with ADHD, emotional dysregulation is a core feature. Intense feelings arise quickly, peak sharply, and often overwhelm the individual. Food becomes a tool not just for pleasure, but for grounding. The physical act of eating — chewing, swallowing, feeling full — creates a predictable sensory experience in a world that feels disorganized and overstimulating.</p>
-    <p>Binge episodes are often preceded by periods of mental chaos, emotional flooding, or even sensory overload. The food becomes a way to block out that noise — a behavioral form of emotional white noise. Ironically, the intense shame that follows a binge often leads to more dysregulation, restarting the cycle.</p>
+      <section id="dopamine">
+        <h2>2. The Dopaminergic Hunger: When Food Becomes Stimulation</h2>
+        <p>ADHD commonly features a muted or inconsistent anticipatory dopamine “ramp.” When delayed rewards feel abstract, the brain favors immediacy. Highly processed foods provide rapid, reliable stimulation (sugar/fat/salt), briefly normalizing arousal and focus — then crash, shame, and renewed craving follow.</p>
+        <ul>
+          <li><strong>Fast relief loop:</strong> urge → eat → brief calm/clarity → crash → shame → urge.</li>
+          <li><strong>Executive friction:</strong> planning and impulse control gaps make delaying gratification harder.</li>
+          <li><strong>Memory of relief:</strong> the body “remembers” post-binge calm, biasing the next choice.</li>
+        </ul>
+      </section>
 
-    <h2>4. Hyperfocus, Shame, and the Unseen Cycle</h2>
-    <p>One of the paradoxes of ADHD is that the same person who “can’t concentrate” may hyperfocus on food — planning binges, delaying them, hiding them, or mentally negotiating when to stop. Hyperfocus around food often mimics obsessive behavior, but the intent is different: it is not always about fear of weight gain — sometimes, it’s about anticipating relief.</p>
-    <p>After the binge, many patients describe a “crash” — not just metabolically, but emotionally. Shame, guilt, and cognitive self-attack follow. The brain seeks clarity, and instead finds self-loathing. This shame is often internalized, leading many ADHDers to believe their eating is a moral failure, rather than a dysregulation of reward and emotion.</p>
+      <section id="regulation">
+        <h2>3. Emotional Regulation & Cognitive Anchoring</h2>
+        <p>ADHD isn’t just about attention; it often includes <strong>emotion dysregulation</strong>. Big feelings arrive fast and peak sharply. Eating becomes sensory grounding — chewing, swallowing, fullness — predictable input in an overstimulating world. A growing literature shows that negative affect and emotion dysregulation mediate the link between ADHD and addictive-like eating.<sup><a href="#r4">4</a></sup></p>
+        <div class="quote">“It’s not only pleasure; it’s quieting the noise.”</div>
+      </section>
 
-    <h2>5. Not Quite BED: ADHD-Driven vs. Primary Eating Disorders</h2>
-    <p>While binge eating in ADHD can meet the criteria for Binge Eating Disorder (BED), the underlying mechanisms are often different. BED is frequently trauma-driven, rooted in early attachment disruptions or cultural messages about food and body. ADHD-related binge eating, on the other hand, tends to arise from neurochemical dysregulation, impulsivity, and a desperate need for stimulation or routine.</p>
-    <p>This doesn’t mean the behavior is less serious — it means the intervention must be tailored. Standard treatments for BED that focus only on emotional awareness or cognitive reframing may miss the neurological drivers of the behavior in ADHD. These patients need structured dopamine regulation, executive functioning support, and shame-reduction strategies.</p>
+      <section id="hyperfocus">
+        <h2>4. Hyperfocus, Shame & The Unseen Cycle</h2>
+        <p>Paradoxically, the same person who “can’t focus” may hyperfocus on food — planning, delaying, hiding, bargaining. This can mimic obsessions, but the driver is often relief anticipation, not weight fear. After binges come metabolic and emotional crashes. Shame fuels threat systems, increasing the likelihood of the next impulsive choice.</p>
+      </section>
 
-    <h2>6. Clinical Implications and Empathic Insight</h2>
-    <p>From a psychiatric perspective, when a patient with ADHD presents with binge eating behaviors, we must resist the urge to separate the two as unrelated. They are often entangled — not by coincidence, but by causality. Treatment should integrate executive coaching, medication for ADHD if appropriate, and nutritional support that acknowledges sensory sensitivity and impulsivity.</p>
-    <p>Most importantly, these patients need validation. Not every binge comes from trauma. Sometimes, it comes from a brain that is simply tired — of planning, of masking, of being “on” all day. For many women, especially, food becomes the one space where they are not performing.</p>
-    <p>Understanding this is not an excuse — it is a clinical necessity.</p>
+      <section id="bed">
+        <h2>5. Not Quite BED: ADHD-Driven vs Primary Eating Disorders</h2>
+        <p>ADHD-related binges can meet DSM-5 criteria for <em>Binge Eating Disorder</em> (BED), yet mechanisms may differ. In BED, trauma and body image can be central; in ADHD-driven binges, reward dysregulation, impulsivity, and sensory seeking dominate. The behavior is no less serious — but treatment must match drivers: dopamine regulation, executive support, and shame-reducing care.<sup><a href="#r5">5</a>, <a href="#r6">6</a></sup></p>
+      </section>
+
+      <section id="neuro">
+        <h2>6. Neurobiology: Reward & Control (Accessible)</h2>
+        <ul>
+          <li><strong>Reward prediction error:</strong> a weaker anticipatory signal renders delayed rewards non-compelling; immediate food cues “win.”</li>
+          <li><strong>Prefrontal “brakes”:</strong> fronto-striatal signaling is less reliable under stress/sleep loss → harder initiation & impulse gating.</li>
+          <li><strong>Time blindness:</strong> future feels abstract; evening becomes a perfect storm of fatigue and salience.</li>
+        </ul>
+        <div class="callout"><strong>Clinical angle:</strong> Stimulants can strengthen prefrontal signaling; structure increases external salience; therapy reduces limbic “noise.” Neuroimaging reviews map overlapping circuits for ADHD, obesity, and binge/loss-of-control eating.<sup><a href="#r2">2</a></sup></div>
+      </section>
+
+      <section id="genetics">
+        <h2>7. Genetics & Shared Liability</h2>
+        <p>Adult twin data suggest that the association between ADHD symptoms and binge-eating behavior — particularly in females — is substantially explained by <strong>shared genetic risk</strong>, with environmental factors also contributing.<sup><a href="#r7">7</a>, <a href="#r13">13</a>, <a href="#r14">14</a></sup></p>
+      </section>
+
+      <section id="assessment">
+        <h2>8. Assessment: What to Ask & Screen</h2>
+        <ul>
+          <li><strong>Pattern map:</strong> time of day; triggers (boredom, deadlines, conflict); foods; secrecy; aftermath.</li>
+          <li><strong>Sleep & circadian:</strong> delayed sleep phase heightens evening risk — anchor wake time first.</li>
+          <li><strong>Medical basics:</strong> iron/B12, thyroid, perimenopause, meds affecting appetite/sleep.</li>
+          <li><strong>Psych comorbidity:</strong> anxiety, depression, PTSD, autism traits; substance use.</li>
+          <li><strong>Function:</strong> financial, social, academic/occupational impairment.</li>
+        </ul>
+      </section>
+
+      <section id="strategies">
+        <h2>9. What Helps: Dopamine-Smart Strategies</h2>
+        <div class="grid">
+          <div>
+            <h3>Structure the day, not the plate</h3>
+            <ul>
+              <li><strong>Anchor times:</strong> fixed wake; first meal within 60–90 min; last meal 3–4 h before bed.</li>
+              <li><strong>Predictable pattern:</strong> 3 meals + 1–2 planned snacks → less decision fatigue.</li>
+              <li><strong>Protein-first breakfast:</strong> steadier reward tone & fewer evening binges.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Reduce friction</h3>
+            <ul>
+              <li><strong>Pre-portion & pre-prep:</strong> defaults beat willpower.</li>
+              <li><strong>Single-task eating:</strong> phone away; sensory grounding (breath, temperature, texture).</li>
+              <li><strong>Body-doubling meals:</strong> eat with someone or on video; secrecy loses power.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Cope with the urge (skill loop)</h3>
+            <ul>
+              <li><strong>Delay & distract:</strong> 10-minute timer + neutral task (shower, quick tidy, short walk).</li>
+              <li><strong>Urge surfing:</strong> notice → name → normalize; cravings crest and fall like waves.</li>
+              <li><strong>Replace, don’t erase:</strong> sensory-rich, lower-risk options ready at hand.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Protect the basics</h3>
+            <ul>
+              <li><strong>Sleep:</strong> the first medication; protect the last two hours pre-bed.</li>
+              <li><strong>Stress windows:</strong> add micro-calm breaks after meetings/commute.</li>
+              <li><strong>Movement:</strong> short, enjoyable bursts improve executive function and mood.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="meds">
+        <h2>10. Medication Considerations (ADHD & BED)</h2>
+        <p class="small"><em>Information only — not medical advice.</em> Treating ADHD can reduce binge frequency by improving initiation, planning, and reward stability. For some, stimulants suppress appetite early and backfire with evening rebound hunger; for others, they create the first real sense of calm focus. Titration + meal-timing coaching is essential.</p>
+        <details>
+          <summary><strong>ADHD stimulants</strong> (methylphenidate / amphetamine classes)</summary>
+          <ul>
+            <li>Improve executive control and stabilize reward processing; may reduce impulsive eating.</li>
+            <li>Watch for appetite suppression and late-day rebound; plan protein-dense meals accordingly.</li>
+          </ul>
+        </details>
+        <details>
+          <summary><strong>ADHD non-stimulants</strong> (atomoxetine; guanfacine/clonidine; bupropion; viloxazine ER)</summary>
+          <ul>
+            <li>Useful when stimulants aren’t tolerated or anxiety/tics/sleep issues are prominent.</li>
+            <li><strong>Viloxazine ER (Qelbree):</strong> FDA-approved for pediatric ADHD in 2021; indication expanded to adults in 2022 in the US; long-term safety data continue to grow.<sup><a href="#r15">15</a>, <a href="#r16">16</a>, <a href="#r17">17</a></sup></li>
+          </ul>
+        </details>
+        <details>
+          <summary><strong>BED-specific</strong> (lisdexamfetamine dimesylate)</summary>
+          <ul>
+            <li>In 2015, the FDA approved <em>lisdexamfetamine</em> for <strong>moderate-to-severe BED</strong> in adults based on RCT evidence; not for weight loss.<sup><a href="#r8">8</a>, <a href="#r9">9</a>, <a href="#r10">10</a></sup></li>
+          </ul>
+        </details>
+        <div class="callout small"><strong>Clinical nuance:</strong> For ADHD + binge patterns, match molecule/dose to symptom clusters (initiation vs anxiety vs sleep). Combine with behavioral scaffolds and sleep protection.</div>
+      </section>
+
+      <section id="updates">
+        <h2>11. What’s New (2024–2025)</h2>
+        <h3>11.1 Digital therapeutics (adults)</h3>
+        <p>In 2024, the FDA cleared <strong>EndeavorOTC</strong> as the first <em>over-the-counter</em> video-game–based digital therapeutic for adults with ADHD, focused on attention improvement. It serves as an adjunct — not a replacement — for comprehensive care.<sup><a href="#r11">11</a>, <a href="#r12">12</a>, <a href="#r18">18</a>, <a href="#r19">19</a></sup></p>
+        <h3>11.2 New data on overlap</h3>
+        <p>Recent work continues to show elevated rates of binge-spectrum behaviors among adults with ADHD symptoms and highlights psychiatric/somatic comorbidity and healthcare utilization impacts.<sup><a href="#r3">3</a></sup></p>
+      </section>
+
+      <section id="relationships">
+        <h2>12. Culture, Relationships & Stigma</h2>
+        <p>Secrecy thrives where shame is expected. Replace moral framing (“just try harder”) with nervous-system framing in families and care teams. In cultures where food equals love, build rituals that preserve connection without fueling binges (shared walk/tea, non-food rewards).</p>
+      </section>
+
+      <section id="work">
+        <h2>13. School/Work Supports</h2>
+        <ul>
+          <li><strong>Schedule design:</strong> plan admin-heavy blocks after meals; place creative sprints earlier.</li>
+          <li><strong>Recovery buffers:</strong> 5–10 minutes post-meeting to discharge stress (prevents snack raids).</li>
+          <li><strong>Accommodations:</strong> written agendas, clear next steps, permission for short movement breaks.</li>
+        </ul>
+      </section>
+
+      <section id="myths">
+        <h2>14. Myths vs Facts</h2>
+        <ul>
+          <li><strong>Myth:</strong> “If you wanted it enough, you’d stop.” <strong>Fact:</strong> This is neurobiology + environment; willpower is a tiny lever.</li>
+          <li><strong>Myth:</strong> “Binges mean I’m broken.” <strong>Fact:</strong> They signal unmet needs (sleep, structure, soothing) — not your worth.</li>
+          <li><strong>Myth:</strong> “It’s BED or ADHD — not both.” <strong>Fact:</strong> Overlap is common; tailor care to drivers and impairment.</li>
+        </ul>
+      </section>
+
+      <section id="faq">
+        <h2>15. Quick FAQ</h2>
+        <details><summary>Is this ADHD or an eating disorder?</summary><p>Sometimes both. If eating patterns track with executive overload and improve when ADHD is treated, ADHD is likely a key driver. If distress centers on shape/weight with persistent loss of control, evaluate for BED explicitly.</p></details>
+        <details><summary>Why are evenings worse?</summary><p>Decision fatigue, circadian delay, stimulant “wear-off,” and lower structure converge. Anchor wake time, pre-plan dinner/snacks, and add decompression rituals.</p></details>
+        <details><summary>How fast should meds work?</summary><p>Stimulants act same-day at the right dose. Non-stimulants are gradual (weeks). Revisit molecule/dose if appetite rebound drives night binges.</p></details>
+      </section>
+
+      <section id="supplements">
+        <h2>16. Supplementation — A Brief Note</h2>
+        <p>Some explore nutritional or “natural” supports for craving regulation and focus. These are <strong>adjuncts</strong>, not replacements; effects vary with biology, sleep, and meds. Because personalization and safety screening matter (interactions, timing), I cover supplementation in detail only within therapy sessions.</p>
+        <div class="cta" role="complementary" aria-label="Therapy and guidance">
+          <div>
+            <strong>Want targeted, safe supplementation?</strong>
+            <p class="small">Book a session to explore options tailored to your history, goals, and current treatment plan.</p>
+          </div>
+          <a class="button" href="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/index.html" target="_blank" rel="noopener">Book a therapy session</a>
+        </div>
+      </section>
+
+      <section id="refs">
+        <h2>17. References (selected, PubMed/PMC)</h2>
+        <ol>
+          <li id="r1">Cortese S. <em>Attention-deficit/hyperactivity disorder (ADHD) and binge eating.</em> 2007. PubMed: <a href="https://pubmed.ncbi.nlm.nih.gov/17958207/" target="_blank" rel="noopener">17958207</a>.</li>
+          <li id="r2">Seymour KE, et al. <em>Overlapping neurobehavioral circuits in ADHD, obesity, and binge eating: evidence from neuroimaging research.</em> CNS Spectr. 2015. PubMed/PMC: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4560968/" target="_blank" rel="noopener">PMC4560968</a> / <a href="https://pubmed.ncbi.nlm.nih.gov/26098969/" target="_blank" rel="noopener">26098969</a>.</li>
+          <li id="r3">Appolinario JC, et al. <em>Associations of adult ADHD symptoms with binge eating spectrum conditions…</em> Braz J Psychiatry. 2024. PMC: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11744264/" target="_blank" rel="noopener">PMC11744264</a>.</li>
+          <li id="r4">El Archi S, et al. <em>Negative Affectivity and Emotion Dysregulation as Mediators…</em> 2020. PMC: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7693832/" target="_blank" rel="noopener">PMC7693832</a>.</li>
+          <li id="r5">Reinblatt SP, et al. <em>Association between binge eating and ADHD in youth with obesity.</em> 2014. PMC: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4333129/" target="_blank" rel="noopener">PMC4333129</a>.</li>
+          <li id="r6">Reinblatt SP. <em>Are Eating Disorders Related to ADHD?</em> 2015. PMC: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4777329/" target="_blank" rel="noopener">PMC4777329</a>.</li>
+          <li id="r7">Capusan AJ, et al. <em>Genetic and environmental aspects… a twin study.</em> Psychol Med. 2017. PubMed: <a href="https://pubmed.ncbi.nlm.nih.gov/28578734/" target="_blank" rel="noopener">28578734</a> / Cambridge: <a href="https://www.cambridge.org/core/journals/psychological-medicine/article/genetic-and-environmental-aspects-in-the-association-between-attentiondeficit-hyperactivity-disorder-symptoms-and-bingeeating-behavior-in-adults-a-twin-study/5A26859E2461A546001F49A9700A51FC" target="_blank" rel="noopener">Article</a>.</li>
+          <li id="r8">FDA/Press (Shire/Takeda). <em>Vyvanse becomes first treatment approved by FDA for BED in adults.</em> Jan 30, 2015: <a href="https://www.takeda.com/newsroom/shire-news-releases/2015/vyvanse-lisdexamfetamine-dimesylate-capsules-cii-becomes-first-and-only-treatment-approved-by/" target="_blank" rel="noopener">Press</a>.</li>
+          <li id="r9">Watts V. <em>FDA Approves First Drug for BED.</em> Psych News. 2015: <a href="https://psychiatryonline.org/doi/10.1176/appi.pn.2015.3a14" target="_blank" rel="noopener">Article</a>.</li>
+          <li id="r10">FDA. <em>Vyvanse & BED — NDA review memo.</em> 2015: <a href="https://www.fda.gov/media/142074/download" target="_blank" rel="noopener">FDA PDF</a>.</li>
+          <li id="r11">Akili. <em>EndeavorOTC — FDA-authorized OTC digital therapeutic for adult ADHD.</em> 2024: <a href="https://www.endeavorotc.com/" target="_blank" rel="noopener">Site</a> / <a href="https://www.endeavorotc.com/faq/" target="_blank" rel="noopener">FAQ</a>.</li>
+          <li id="r12">FDA 510(k). <em>EndeavorOTC clearance K233496.</em> Jun 14, 2024: <a href="https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233496.pdf" target="_blank" rel="noopener">FDA PDF</a>.</li>
+          <li id="r13">Yao S, et al. <em>Associations between ADHD and disordered eating in twins.</em> 2019. PMC: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6776821/" target="_blank" rel="noopener">PMC6776821</a>.</li>
+          <li id="r14">Yilmaz Z, et al. <em>Shared genetic/environmental influences on ADHD & disordered eating.</em> 2022. PMC: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10167484/" target="_blank" rel="noopener">PMC10167484</a>.</li>
+          <li id="r15">StatPearls (NIH Bookshelf). <em>Viloxazine.</em> 2023: <a href="https://www.ncbi.nlm.nih.gov/books/NBK576423/" target="_blank" rel="noopener">NBK576423</a>.</li>
+          <li id="r16">Childress A, et al. <em>Open-label extension — viloxazine ER long-term safety.</em> 2024. PMC: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11486793/" target="_blank" rel="noopener">PMC11486793</a>.</li>
+          <li id="r17">NEI. <em>FDA Approves Nonstimulant Option for Adults with ADHD (viloxazine ER).</em> 2022: <a href="https://www.neiglobal.com/default.aspx?tabname=MonthInPsychopharmPost&topic=20605" target="_blank" rel="noopener">Update</a> / Review 2024: <a href="https://www.tandfonline.com/doi/full/10.1080/14737175.2024.2327533" target="_blank" rel="noopener">Expert Opin.</a></li>
+          <li id="r18">BusinessWire. <em>FDA authorization of EndeavorOTC.</em> Jun 18, 2024: <a href="https://www.businesswire.com/news/home/20240618578815/en/Akili-Announces-FDA-Authorization-of-EndeavorOTC-the-First-FDA-Clearance-of-a-Digital-Treatment-for-Adults-with-ADHD-Through-a-Video-Game" target="_blank" rel="noopener">Press</a>.</li>
+          <li id="r19">MarketWatch/SEC 8-K. <em>Akili files 8-K re: FDA authorization.</em> Jun 18, 2024: <a href="https://www.marketwatch.com/story/akili-files-8k-other-events-akli-87adb3cc" target="_blank" rel="noopener">Report</a>.</li>
+          <li id="r20">Brancati GE, et al. <em>ADHD symptoms & disordered eating in bariatric candidates.</em> 2024. PMC: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11349801/" target="_blank" rel="noopener">PMC11349801</a>.</li>
+          <li id="r21">Makin L, et al. <em>Autism & ADHD traits in adults with BN/BED — scoping review.</em> 2025. PMC: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12171673/" target="_blank" rel="noopener">PMC12171673</a>.</li>
+        </ol>
+        <p class="small">Disclaimer: Educational content only — not a substitute for individualized medical advice, diagnosis, or treatment.</p>
+      </section>
+
+      <div class="sep" role="separator" aria-hidden="true"></div>
+
+      <section aria-label="Author">
+        <h2>About the Author</h2>
+        <p class="small">I provide second-opinion consultations and therapy focused on women’s mental health, ADHD, and eating patterns. Learn more or book a session: <a href="https://women-and-psychiatry.github.io/women-and-psychiatry-second-opinion.com/index.html" target="_blank" rel="noopener">Women & Psychiatry — Second Opinion</a>.</p>
+      </section>
+    </main>
 
     <footer>
-        Written by Dr. Sarah Ionescu<br>
-        Women & Psychiatry – Second Opinions with Clinical Depth
+      <p class="small">© <span id="y"></span> — Designed for readability and accessibility. All rights reserved.</p>
     </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
