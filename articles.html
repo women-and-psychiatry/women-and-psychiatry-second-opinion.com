@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Articles – Women & Psychiatry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Font (optional, pentru un look curat) -->
+  <!-- Optional clean font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,17 +13,17 @@
     *,*::before,*::after{box-sizing:border-box}
     html,body{margin:0;padding:0}
     :root{
-      --bg:#0e1016;           /* dark background */
-      --panel:#141827;        /* card background */
-      --text:#ecf0ff;         /* primary text */
-      --muted:#a8b0d6;        /* secondary text */
+      --bg:#0e1016;
+      --panel:#141827;
+      --text:#ecf0ff;
+      --muted:#a8b0d6;
       --line:rgba(122,162,255,.18);
-      --accent:#7aa2ff;       /* periwinkle */
-      --accent2:#a17cf4;      /* iris */
+      --accent:#7aa2ff;   /* periwinkle */
+      --accent2:#a17cf4;  /* iris */
       --shadow:0 12px 30px rgba(6,10,25,.35);
       --radius:16px;
       --gap:clamp(1rem, 2.6vw, 1.4rem);
-      --container: min(1100px, 92%);
+      --container:min(1100px,92%);
     }
     @media (prefers-color-scheme: light){
       :root{
@@ -49,14 +49,14 @@
       backdrop-filter: saturate(130%) blur(10px);
       border-bottom: 1px solid var(--line);
     }
+    header .wrap{
+      display:flex; align-items:center; justify-content:space-between;
+      width:var(--container); margin-inline:auto;
+    }
     header h1{
       margin:0; padding:.95rem 0;
       font-size: clamp(1.25rem, 2.4vw, 1.6rem);
       letter-spacing:.2px;
-    }
-    header .wrap{
-      display:flex; align-items:center; justify-content:space-between;
-      width:var(--container); margin-inline:auto;
     }
     nav{display:flex; gap:.25rem}
     nav a{
@@ -72,87 +72,70 @@
     }
     nav a:hover::after{transform:scaleX(1)}
 
-    /* ===== Main ===== */
+    /* ===== Page Intro ===== */
     main{width:var(--container); margin:0 auto; padding:1.25rem 0 2.5rem;}
-    main h1{margin:1rem 0 .25rem}
-    .page-sub{color:var(--muted); margin:0 0 1rem}
+    .page-sub{color:var(--muted); margin:.25rem 0 1.25rem}
 
-    /* ===== Article list (cards) ===== */
+    /* ===== Columns layout ===== */
+    .columns{
+      display:grid;
+      gap:var(--gap);
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 880px){
+      .columns{ grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .col{
+      background: linear-gradient(180deg, var(--panel), color-mix(in oklab, var(--panel), black 6%));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1rem;
+      position: relative; overflow: hidden;
+    }
+    .col::before{
+      content:""; position:absolute; inset:-1px; pointer-events:none;
+      background:
+        radial-gradient(600px 120px at 0% 0%, rgba(122,162,255,.12), transparent 60%),
+        radial-gradient(400px 120px at 100% 0%, rgba(161,124,244,.10), transparent 60%);
+    }
+    .col h2{
+      margin:.2rem 0 .5rem; font-size:1.15rem; letter-spacing:.2px;
+    }
+    .col p.section-note{margin:0 0 .6rem; color:var(--muted); font-size:.95rem}
+
+    /* ===== Article lists inside each column ===== */
     .article-list{
-      list-style:none; margin:1rem 0 0; padding:0;
-      display:grid; gap:var(--gap);
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      list-style:none; margin:0; padding:0;
+      display:grid; gap:.75rem;
     }
     .article-list li{margin:0; padding:0}
     .article-list a{
       display:block; text-decoration:none; color:var(--text);
-      background: linear-gradient(180deg, var(--panel), color-mix(in oklab, var(--panel), black 6%));
-      border:1px solid var(--line); border-radius:var(--radius);
-      padding:1rem; box-shadow:var(--shadow);
-      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
-      position:relative; overflow:hidden; min-height:112px;
-      font-size:1.05rem; line-height:1.35;
-    }
-    .article-list a::before{
-      content:""; position:absolute; inset:-1px; pointer-events:none;
-      background:
-        radial-gradient(600px 120px at 0% 0%, rgba(122,162,255,.14), transparent 60%),
-        radial-gradient(400px 120px at 100% 0%, rgba(161,124,244,.12), transparent 60%);
+      background: color-mix(in oklab, var(--panel), black 4%);
+      border:1px solid var(--line);
+      border-radius: 12px;
+      padding:.85rem .9rem;
+      transition: transform .16s ease, border-color .16s ease, background .16s ease;
+      line-height:1.35;
     }
     .article-list a:hover{
-      transform:translateY(-4px);
+      transform: translateY(-3px);
       border-color: color-mix(in oklab, var(--line), white 35%);
+      background: color-mix(in oklab, var(--panel), white 3%);
     }
     .article-list a:focus-visible{
-      outline:3px solid var(--accent); outline-offset:3px; border-radius:calc(var(--radius) + 2px);
+      outline:3px solid var(--accent);
+      outline-offset:3px;
+      border-radius:14px;
     }
 
     /* ===== Footer ===== */
     footer{
       border-top:1px solid var(--line); color:var(--muted); font-size:.9rem;
-      padding:1.25rem 0; margin-top:1.25rem;
+      padding:1.25rem 0; margin-top:1.5rem;
     }
     footer .container{display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap}
 
-    /* ===== Mobile tweaks ===== */
-    @media (max-width:520px){
-      nav a{padding:.7rem .9rem}
-      .article-list a{padding:1.05rem; font-size:1.02rem}
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="wrap">
-      <h1>Articles</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- (opțional) subtitlu pentru context vizual, poți șterge linia de mai jos -->
-    <p class="page-sub">Research-based, stigma-free writing on ADHD, autism and women’s mental health.</p>
-
-    <ul class="article-list">
-      <li><a href="adhd-in-women.html">Why ADHD Looks Different in Women – And Why It Often Goes Undiagnosed</a></li>
-      <li><a href="asd-in-women.html">Autism Isn’t Always What You Think – When Social Skills Look Intact</a></li>
-      <li><a href="thesis-asd.html">Thesis: Correlations Between Genotype and Phenotype in Autism Spectrum Disorder</a></li>
-      <li><a href="kink-adhd.html">ADHD and Kink: When the Brain Craves More Than Stimulation</a></li>
-      <li><a href="trauma-bonding-full-corrected.html">Not Love — But Trauma: Understanding the Emotional Hook of Abuse</a></li>
-      <li><a href="aspd-borderline.html">ASPD — Always ‘Borderline’ When It Comes to Women</a></li>
-      <li><a href="adhd-binge-eating.html">When Focus Turns to Food: ADHD and Binge Eating Patterns</a></li>
-      <li><a href="adhd-procrastination-depression.html">It’s Not Laziness — It’s Grief: ADHD, Procrastination, and the Depression of ‘Never Enough’</a></li>
-    </ul>
-
-    <footer>
-      <div class="container">
-        <span>© Women & Psychiatry — Evidence-based articles. No stigma. No shame.</span>
-      </div>
-    </footer>
-  </main>
-</body>
-</html>
+    /* =====*
