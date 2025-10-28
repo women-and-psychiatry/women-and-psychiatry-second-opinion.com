@@ -24,7 +24,6 @@
       --btn:#2f6df6;
       --btn-hover:#2558c9;
       --radius:16px;
-      --radius-sm:12px;
       --container:min(1080px,92%);
       --shadow-sm:0 6px 16px rgba(21, 32, 55, .08);
       --shadow:0 14px 32px rgba(21, 32, 55, .12);
@@ -64,7 +63,6 @@
       padding:.55rem .9rem; border-radius:12px;
     }
     nav a:hover{background:#eaf0ff}
-    nav a i{margin-right:.45rem; opacity:.9}
     .menu-toggle{
       display:none; border:1px solid var(--line); background:var(--panel); color:var(--ink);
       padding:.5rem .7rem; border-radius:12px; font-size:1rem;
@@ -78,37 +76,37 @@
       nav a{display:block}
     }
 
-    /* HERO CENTRAT */
-    .hero-center {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 80vh;
-      text-align: center;
-      background: linear-gradient(135deg, rgba(47,109,246,.14), rgba(111,92,245,.14));
-      border-bottom: 1px solid var(--line);
+    /* HERO FULL CENTERED */
+    .hero-full {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      min-height:90vh;
+      background:linear-gradient(135deg, rgba(47,109,246,.14), rgba(111,92,245,.14));
+      border-bottom:1px solid var(--line);
+      padding:0 1rem;
     }
-    .hero-center .title {
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 800;
-      color: #13203a;
-      margin-bottom: 1rem;
+    .hero-full .title {
+      font-size:clamp(2rem,5vw,3.2rem);
+      font-weight:800;
+      line-height:1.3;
+      color:#13203a;
+      margin-bottom:1rem;
     }
-    .hero-center .subtitle {
-      color: #5b647a;
-      font-size: 1.1rem;
-      max-width: 600px;
+    .hero-full .subtitle {
+      color:#5b647a;
+      font-size:1.1rem;
+      max-width:600px;
     }
 
-    section{padding:clamp(1.4rem, 5vw, 2.2rem) 0}
+    section{padding:clamp(1.4rem,5vw,2.2rem) 0}
     h2{
       margin:0 0 .8rem;
-      font-size:clamp(1.25rem, 3vw, 1.6rem);
-      font-weight:700; letter-spacing:.2px;
+      font-size:clamp(1.25rem,3vw,1.6rem);
+      font-weight:700;
       color:#13203a;
-      display:flex; align-items:center; gap:.6rem;
-      justify-content:center;
       text-align:center;
     }
     p{margin:.65rem 0}
@@ -125,10 +123,10 @@
       border-radius:var(--radius);
       padding:1rem;
       box-shadow:var(--shadow-sm);
-      transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+      transition:transform .15s ease, box-shadow .15s ease;
     }
     .card:hover{transform:translateY(-3px); box-shadow:var(--shadow)}
-    .card h3{margin:.65rem 0 .4rem; font-size:1.06rem; font-weight:700; color:var(--ink); text-align:center;}
+    .card h3{margin:.65rem 0 .4rem; font-size:1.06rem; font-weight:700; text-align:center; color:var(--ink);}
     .card p{margin:0; color:var(--muted); text-align:center;}
     .card i{color:#26469e; display:block; text-align:center; margin-bottom:.5rem;}
 
@@ -136,8 +134,9 @@
       background:#eaf0ff;
       border-top:1px solid var(--line); border-bottom:1px solid var(--line);
       text-align:center;
+      padding:3rem 1rem;
     }
-    .highlight h2{margin:.2rem 0; color:#13203a}
+    .highlight h2{margin:0; font-size:clamp(1.5rem,3.5vw,2rem); color:#13203a;}
 
     .center{text-align:center}
     .button{
@@ -157,7 +156,7 @@
       text-align:center;
     }
     footer a{color:var(--brand); text-decoration:underline; text-underline-offset:2px}
-    footer .cta{margin-top:1rem}
+    footer .cta{margin-top:1.5rem}
   </style>
 </head>
 <body>
@@ -165,8 +164,8 @@
   <header>
     <div class="bar">
       <h1 class="site"><i class="fas fa-brain"></i> Women & Psychiatry</h1>
-      <button class="menu-toggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
-      <nav aria-label="Primary">
+      <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+      <nav>
         <a href="articles.html"><i class="fas fa-book-open"></i> Blog</a>
         <a href="pricing.html"><i class="fas fa-euro-sign"></i> Pricing</a>
         <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
@@ -174,11 +173,13 @@
     </div>
   </header>
 
-  <section class="hero hero-center">
-    <div class="wrap">
-      <h2 class="title">Professional Assessments and Insights for Neurodivergence</h2>
-      <p class="subtitle">Your mental health deserves a nuanced approach.</p>
-    </div>
+  <!-- HERO FULL CENTER -->
+  <section class="hero-full">
+    <h2 class="title">
+      Professional Assessments and Insights<br>
+      for Neurodivergence
+    </h2>
+    <p class="subtitle">Your mental health deserves a nuanced approach.</p>
   </section>
 
   <section class="about">
@@ -247,5 +248,17 @@
 
       <section class="cta center">
         <h2>Interested in a structured conversation?</h2>
-        <a href="pricing.html#counseling" class="but
+        <a href="pricing.html#counseling" class="button">I want to try counseling</a>
+      </section>
+    </div>
+  </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('nav');
+      toggle.addEventListener('click', () => nav.classList.toggle('active'));
+    });
+  </script>
+</body>
+</html>
