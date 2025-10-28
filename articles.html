@@ -14,17 +14,22 @@
     *,*::before,*::after{box-sizing:border-box}
     html,body{margin:0;padding:0}
     :root{
-      --bg:#f6f8fc;         /* fundal general deschis */
-      --panel:#ffffff;      /* panouri, header */
-      --ink:#1b2333;        /* text principal */
-      --muted:#5b647a;      /* text secundar */
-      --line:#e1e6f2;       /* borduri fine */
-      --card-bg:#2e3852;    /* fundal închis pentru carduri */
-      --card-hover:#3b4765; /* hover puțin mai deschis */
+      /* fundal general deschis */
+      --bg:#f7f9ff;
+      --panel:#ffffff;
+      --ink:#1b2333;
+      --muted:#5b647a;
+      --line:#dfe4ef;
+
+      /* carduri albastre cu text alb */
+      --card-bg:#5c7ddc;      /* albastru calm deschis, dar suficient contrast pt alb */
+      --card-hover:#4b6fd4;   /* puțin mai saturat la hover */
+      --card-text:#ffffff;
+
       --brand:#2f6df6;
-      --radius:16px;
       --container:min(1080px,92%);
-      --shadow:0 12px 28px rgba(17,23,45,.1);
+      --radius:14px;
+      --shadow:0 6px 16px rgba(30,50,80,.1);
     }
 
     body{
@@ -39,18 +44,16 @@
     header{
       position:sticky; top:0; z-index:50;
       backdrop-filter:saturate(130%) blur(8px);
-      background:rgba(255,255,255,.8);
+      background:rgba(255,255,255,.85);
       border-bottom:1px solid var(--line);
     }
     .bar{
       display:flex; align-items:center; justify-content:space-between;
-      width:var(--container); margin-inline:auto;
-      padding:1rem 0;
+      width:var(--container); margin-inline:auto; padding:1rem 0;
     }
     .site{
       margin:0; font-weight:700; font-size:clamp(1.15rem,2.4vw,1.45rem);
-      display:flex; align-items:center; gap:.5rem;
-      color:var(--ink);
+      display:flex; align-items:center; gap:.5rem; color:var(--ink);
     }
     .site i{color:var(--brand)}
     nav{display:flex; gap:.4rem}
@@ -63,36 +66,48 @@
     /* ===== HERO ===== */
     .hero{
       text-align:center;
-      padding:4rem 1rem 3rem;
+      padding:3.5rem 1rem 2.5rem;
     }
     .hero h1{
       font-size:clamp(1.8rem,4vw,2.5rem);
-      font-weight:800;
-      margin:0 0 .6rem;
-      color:#13203a;
+      font-weight:800; margin:0 0 .5rem; color:#13203a;
     }
     .hero p{
-      max-width:600px;
-      margin-inline:auto;
-      color:var(--muted);
-      font-size:1.05rem;
+      max-width:680px; margin:.2rem auto 0; color:var(--muted); font-size:1.05rem;
     }
 
-    /* ===== ARTICLES GRID ===== */
+    /* ===== GRID ===== */
+    .columns{
+      width:var(--container); margin:0 auto 3rem;
+      display:grid; gap:1.5rem;
+      grid-template-columns:1fr;
+    }
+    @media (min-width:900px){ .columns{ grid-template-columns:repeat(3, 1fr); } }
+
+    .col{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:1rem;
+      box-shadow:var(--shadow);
+    }
+    .col h2{
+      margin:.2rem 0 .8rem;
+      font-size:1.15rem; font-weight:700; color:#13203a;
+      display:flex; align-items:center; gap:.5rem;
+    }
+    .col h2 i{color:var(--brand)}
+
+    /* ===== CARDURI ===== */
     .article-list{
-      list-style:none;
-      padding:0;
-      margin:2rem auto 4rem;
-      display:grid;
-      gap:1.2rem;
-      grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
-      width:var(--container);
+      list-style:none; margin:0; padding:0;
+      display:grid; gap:1rem;
     }
     .article-list li{
       background:var(--card-bg);
       border-radius:var(--radius);
-      box-shadow:var(--shadow);
       transition:background .2s ease, transform .15s ease;
+      box-shadow:var(--shadow);
     }
     .article-list li:hover{
       background:var(--card-hover);
@@ -100,10 +115,10 @@
     }
     .article-list a{
       display:block;
-      color:#ffffff;
+      color:var(--card-text);
       text-decoration:none;
       font-weight:600;
-      padding:1.4rem 1.2rem;
+      padding:1.2rem 1rem;
       line-height:1.5;
     }
 
@@ -113,7 +128,7 @@
       background:#ffffff;
       color:var(--muted);
       text-align:center;
-      padding:1.5rem 1rem;
+      padding:1.4rem 1rem;
       font-size:.95rem;
     }
     footer a{color:var(--brand); text-decoration:underline; text-underline-offset:2px}
@@ -134,20 +149,38 @@
 
   <section class="hero">
     <h1>Articles</h1>
-    <p>Explore clinical insights, personal essays, and research-based reflections on ADHD, Autism, and the nuances of psychiatry in women.</p>
+    <p>Explore research-based writing and clinical insights on ADHD, Autism, and women’s mental health.</p>
   </section>
 
-  <main>
-    <ul class="article-list">
-      <li><a href="adhd-in-women.html">Why ADHD Looks Different in Women – And Why It Often Goes Undiagnosed</a></li>
-      <li><a href="asd-in-women.html">Autism Isn’t Always What You Think – When Social Skills Look Intact</a></li>
-      <li><a href="thesis-asd.html">Thesis: Correlations Between Genotype and Phenotype in Autism Spectrum Disorder</a></li>
-      <li><a href="kink-adhd.html">ADHD and Kink: When the Brain Craves More Than Stimulation</a></li>
-      <li><a href="trauma-bonding-full-corrected.html">Not Love — But Trauma: Understanding the Emotional Hook of Abuse</a></li>
-      <li><a href="aspd-borderline.html">ASPD — Always ‘Borderline’ When It Comes to Women</a></li>
-      <li><a href="adhd-binge-eating.html">When Focus Turns to Food: ADHD and Binge Eating Patterns</a></li>
-      <li><a href="adhd-procrastination-depression.html">It’s Not Laziness — It’s Grief: ADHD, Procrastination, and the Depression of ‘Never Enough’</a></li>
-    </ul>
+  <main class="columns">
+    <!-- ADHD -->
+    <section class="col">
+      <h2><i class="fa-solid fa-bolt"></i> ADHD</h2>
+      <ul class="article-list">
+        <li><a href="adhd-in-women.html">Why ADHD Looks Different in Women – And Why It Often Goes Undiagnosed</a></li>
+        <li><a href="kink-adhd.html">ADHD and Kink: When the Brain Craves More Than Stimulation</a></li>
+        <li><a href="adhd-binge-eating.html">When Focus Turns to Food: ADHD and Binge Eating Patterns</a></li>
+        <li><a href="adhd-procrastination-depression.html">It’s Not Laziness — It’s Grief: ADHD, Procrastination, and the Depression of ‘Never Enough’</a></li>
+      </ul>
+    </section>
+
+    <!-- ASD -->
+    <section class="col">
+      <h2><i class="fa-solid fa-puzzle-piece"></i> ASD</h2>
+      <ul class="article-list">
+        <li><a href="asd-in-women.html">Autism Isn’t Always What You Think – When Social Skills Look Intact</a></li>
+        <li><a href="thesis-asd.html">Thesis: Correlations Between Genotype and Phenotype in Autism Spectrum Disorder</a></li>
+      </ul>
+    </section>
+
+    <!-- Other psychiatric -->
+    <section class="col">
+      <h2><i class="fa-solid fa-brain"></i> Other psychiatric</h2>
+      <ul class="article-list">
+        <li><a href="trauma-bonding-full-corrected.html">Not Love — But Trauma: Understanding the Emotional Hook of Abuse</a></li>
+        <li><a href="aspd-borderline.html">ASPD — Always ‘Borderline’ When It Comes to Women</a></li>
+      </ul>
+    </section>
   </main>
 
   <footer>
