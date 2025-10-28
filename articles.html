@@ -2,85 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Articles – Women & Psychiatry</title>
-  <!-- Optional: move CSS to style.css in production -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Font (optional, pentru un look curat) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    /* ===== Base & Theme ===== */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{margin:0;padding:0}
     :root{
-      --bg:#0e1016;           /* deep slate */
-      --panel:#141827;        /* card */
-      --text:#ecf0ff;         /* main text */
-      --muted:#a8b0d6;        /* secondary */
+      --bg:#0e1016;           /* dark background */
+      --panel:#141827;        /* card background */
+      --text:#ecf0ff;         /* primary text */
+      --muted:#a8b0d6;        /* secondary text */
       --line:rgba(122,162,255,.18);
       --accent:#7aa2ff;       /* periwinkle */
-      --accent-2:#a17cf4;     /* iris */
+      --accent2:#a17cf4;      /* iris */
       --shadow:0 12px 30px rgba(6,10,25,.35);
-      --radius:16px; --radius-sm:12px; --gap:clamp(1rem, 2.6vw, 1.4rem);
+      --radius:16px;
+      --gap:clamp(1rem, 2.6vw, 1.4rem);
+      --container: min(1100px, 92%);
     }
     @media (prefers-color-scheme: light){
-      :root{ --bg:#f7f8fc; --panel:#ffffff; --text:#1a2031; --muted:#4a5578; --line:rgba(60,102,255,.18); --shadow:0 10px 28px rgba(18,23,60,.08); }
+      :root{
+        --bg:#f7f8fc; --panel:#ffffff; --text:#1a2031; --muted:#4a5578;
+        --line:rgba(60,102,255,.18); --shadow:0 10px 28px rgba(18,23,60,.08);
+      }
     }
-    *,*::before,*::after{box-sizing:border-box}
-    html,body{margin:0}
     body{
-      font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
       background:
-        radial-gradient(900px 600px at -10% -10%, rgba(122,162,255,.25), transparent 60%),
-        radial-gradient(900px 600px at 110% -20%, rgba(161,124,244,.2), transparent 60%),
+        radial-gradient(900px 600px at -10% -10%, rgba(122,162,255,.22), transparent 60%),
+        radial-gradient(900px 600px at 110% -20%, rgba(161,124,244,.18), transparent 60%),
         var(--bg);
       color:var(--text);
       line-height:1.6;
     }
-    .container{width:min(1100px,92%);margin-inline:auto}
-    
-    /* Header */
-    header{position:sticky;top:0;z-index:20;background:rgba(10,12,20,.55);backdrop-filter:saturate(130%) blur(10px);border-bottom:1px solid var(--line)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
-    .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--text)}
-    .brand-mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 6px 16px rgba(122,162,255,.35)}
-    .brand h1{margin:0;font-size:clamp(1.05rem,2.2vw,1.25rem)}
-    nav a{color:var(--text);text-decoration:none;padding:.55rem .8rem;border-radius:10px;opacity:.9;position:relative}
+    .container{width:var(--container);margin-inline:auto}
+
+    /* ===== Header ===== */
+    header{
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(10,12,20,.55);
+      backdrop-filter: saturate(130%) blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    header h1{
+      margin:0; padding:.95rem 0;
+      font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+      letter-spacing:.2px;
+    }
+    header .wrap{
+      display:flex; align-items:center; justify-content:space-between;
+      width:var(--container); margin-inline:auto;
+    }
+    nav{display:flex; gap:.25rem}
+    nav a{
+      color:var(--text); text-decoration:none;
+      padding:.55rem .8rem; border-radius:10px; position:relative; opacity:.9;
+    }
     nav a:hover{opacity:1}
-    nav a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:12px}
-    nav a::after{content:"";position:absolute;left:.8rem;right:.8rem;bottom:.25rem;height:2px;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,var(--accent),var(--accent-2));transition:transform .25s ease;border-radius:2px}
+    nav a:focus-visible{outline:3px solid var(--accent); outline-offset:3px; border-radius:12px}
+    nav a::after{
+      content:""; position:absolute; left:.8rem; right:.8rem; bottom:.25rem; height:2px;
+      border-radius:2px; background:linear-gradient(90deg, var(--accent), var(--accent2));
+      transform:scaleX(0); transform-origin:left; transition:transform .25s ease;
+    }
     nav a:hover::after{transform:scaleX(1)}
 
-    /* Hero */
-    .hero{padding:clamp(1.2rem,3vw,2rem) 0 1rem}
-    .hero h2{margin:0 0 .4rem 0;font-size:clamp(1.6rem,4vw,2.3rem);letter-spacing:.2px}
-    .hero p{margin:0;max-width:65ch;color:var(--muted)}
+    /* ===== Main ===== */
+    main{width:var(--container); margin:0 auto; padding:1.25rem 0 2.5rem;}
+    main h1{margin:1rem 0 .25rem}
+    .page-sub{color:var(--muted); margin:0 0 1rem}
 
-    /* Articles grid */
-    .articles{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--gap);padding:1rem 0 3rem}
-    .card{background:linear-gradient(180deg,var(--panel), color-mix(in oklab, var(--panel), black 6%));border:1px solid var(--line);border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow);transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;position:relative;overflow:hidden}
-    .card::before{content:"";position:absolute;inset:-1px;background:radial-gradient(600px 120px at 0% 0%, rgba(122,162,255,.14), transparent 60%), radial-gradient(400px 120px at 100% 0%, rgba(161,124,244,.12), transparent 60%)}
-    .card:hover{transform:translateY(-4px);border-color:color-mix(in oklab, var(--line), white 35%)}
-    .card a{display:block;text-decoration:none;color:var(--text)}
-    .card h3{margin:0 0 .4rem 0;font-size:1.05rem;line-height:1.35}
-    .card p{margin:.2rem 0 0 0;color:var(--muted);font-size:.95rem}
+    /* ===== Article list (cards) ===== */
+    .article-list{
+      list-style:none; margin:1rem 0 0; padding:0;
+      display:grid; gap:var(--gap);
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .article-list li{margin:0; padding:0}
+    .article-list a{
+      display:block; text-decoration:none; color:var(--text);
+      background: linear-gradient(180deg, var(--panel), color-mix(in oklab, var(--panel), black 6%));
+      border:1px solid var(--line); border-radius:var(--radius);
+      padding:1rem; box-shadow:var(--shadow);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+      position:relative; overflow:hidden; min-height:112px;
+      font-size:1.05rem; line-height:1.35;
+    }
+    .article-list a::before{
+      content:""; position:absolute; inset:-1px; pointer-events:none;
+      background:
+        radial-gradient(600px 120px at 0% 0%, rgba(122,162,255,.14), transparent 60%),
+        radial-gradient(400px 120px at 100% 0%, rgba(161,124,244,.12), transparent 60%);
+    }
+    .article-list a:hover{
+      transform:translateY(-4px);
+      border-color: color-mix(in oklab, var(--line), white 35%);
+    }
+    .article-list a:focus-visible{
+      outline:3px solid var(--accent); outline-offset:3px; border-radius:calc(var(--radius) + 2px);
+    }
 
-    /* Footer */
-    .foot{padding:1.5rem 0;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+    /* ===== Footer ===== */
+    footer{
+      border-top:1px solid var(--line); color:var(--muted); font-size:.9rem;
+      padding:1.25rem 0; margin-top:1.25rem;
+    }
+    footer .container{display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap}
 
-    /* Mobile tweaks */
+    /* ===== Mobile tweaks ===== */
     @media (max-width:520px){
       nav a{padding:.7rem .9rem}
-      .card{padding:1.05rem}
-      .card h3{font-size:1.02rem}
+      .article-list a{padding:1.05rem; font-size:1.02rem}
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="container nav">
-      <a class="brand" href="index.html" aria-label="Women & Psychiatry home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <h1>Women & Psychiatry</h1>
-      </a>
-      <nav aria-label="Primary">
+    <div class="wrap">
+      <h1>Articles</h1>
+      <nav>
         <a href="index.html">Home</a>
         <a href="pricing.html">Pricing</a>
         <a href="contact.html">Contact</a>
@@ -88,66 +133,24 @@
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <h2>Articles</h2>
-      <p>Research-based, stigma-free writing on ADHD, autism and women’s mental health.</p>
-    </section>
+  <main>
+    <!-- (opțional) subtitlu pentru context vizual, poți șterge linia de mai jos -->
+    <p class="page-sub">Research-based, stigma-free writing on ADHD, autism and women’s mental health.</p>
 
-    <section class="articles" aria-label="Article list">
-      <article class="card">
-        <a href="adhd-in-women.html">
-          <h3>Why ADHD Looks Different in Women – And Why It Often Goes Undiagnosed</h3>
-          <p>Masking, internalised symptoms and late diagnosis in adult women.</p>
-        </a>
-      </article>
-      <article class="card">
-        <a href="asd-in-women.html">
-          <h3>Autism Isn’t Always What You Think – When Social Skills Look Intact</h3>
-          <p>How camouflaging can hide autistic traits in girls and women.</p>
-        </a>
-      </article>
-      <article class="card">
-        <a href="thesis-asd.html">
-          <h3>Thesis: Correlations Between Genotype and Phenotype in Autism Spectrum Disorder</h3>
-          <p>Key findings and implications for clinical practice.</p>
-        </a>
-      </article>
-      <article class="card">
-        <a href="kink-adhd.html">
-          <h3>ADHD and Kink: When the Brain Craves More Than Stimulation</h3>
-          <p>Dopamine seeking, novelty and adult relationships.</p>
-        </a>
-      </article>
-      <article class="card">
-        <a href="trauma-bonding-full-corrected.html">
-          <h3>Not Love — But Trauma: Understanding the Emotional Hook of Abuse</h3>
-          <p>Attachment, intermittent reinforcement and recovery.</p>
-        </a>
-      </article>
-      <article class="card">
-        <a href="aspd-borderline.html">
-          <h3>ASPD — Always ‘Borderline’ When It Comes to Women</h3>
-          <p>Gender bias in personality disorder diagnosis.</p>
-        </a>
-      </article>
-      <article class="card">
-        <a href="adhd-binge-eating.html">
-          <h3>When Focus Turns to Food: ADHD and Binge Eating Patterns</h3>
-          <p>Impulsivity, executive function and self-compassion strategies.</p>
-        </a>
-      </article>
-      <article class="card">
-        <a href="adhd-procrastination-depression.html">
-          <h3>It’s Not Laziness — It’s Grief: ADHD, Procrastination, and the Depression of ‘Never Enough’</h3>
-          <p>Reframing procrastination and dealing with shame.</p>
-        </a>
-      </article>
-    </section>
+    <ul class="article-list">
+      <li><a href="adhd-in-women.html">Why ADHD Looks Different in Women – And Why It Often Goes Undiagnosed</a></li>
+      <li><a href="asd-in-women.html">Autism Isn’t Always What You Think – When Social Skills Look Intact</a></li>
+      <li><a href="thesis-asd.html">Thesis: Correlations Between Genotype and Phenotype in Autism Spectrum Disorder</a></li>
+      <li><a href="kink-adhd.html">ADHD and Kink: When the Brain Craves More Than Stimulation</a></li>
+      <li><a href="trauma-bonding-full-corrected.html">Not Love — But Trauma: Understanding the Emotional Hook of Abuse</a></li>
+      <li><a href="aspd-borderline.html">ASPD — Always ‘Borderline’ When It Comes to Women</a></li>
+      <li><a href="adhd-binge-eating.html">When Focus Turns to Food: ADHD and Binge Eating Patterns</a></li>
+      <li><a href="adhd-procrastination-depression.html">It’s Not Laziness — It’s Grief: ADHD, Procrastination, and the Depression of ‘Never Enough’</a></li>
+    </ul>
 
-    <footer class="foot">
+    <footer>
       <div class="container">
-        <p>© Women & Psychiatry — Evidence-based articles. No stigma. No shame.</p>
+        <span>© Women & Psychiatry — Evidence-based articles. No stigma. No shame.</span>
       </div>
     </footer>
   </main>
