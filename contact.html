@@ -1,26 +1,249 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact – Women & Psychiatry</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Contact – Women & Psychiatry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Icons (opțional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Font (opțional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    :root{
+      --bg:#f7f9ff;           /* fundal general deschis */
+      --panel:#ffffff;        /* carduri */
+      --ink:#1b2333;          /* text principal */
+      --muted:#5b647a;        /* text secundar */
+      --line:#dfe4ef;         /* borduri subtile */
+
+      --brand:#2f6df6;        /* albastru medical */
+      --brand-2:#6f5cf5;      /* lavandă discretă */
+      --btn:#2f6df6;
+      --btn-hover:#2558c9;
+
+      --container:min(1080px,92%);
+      --radius:16px;
+      --radius-sm:12px;
+      --shadow-sm:0 6px 16px rgba(21, 32, 55, .08);
+      --shadow:0 14px 32px rgba(21, 32, 55, .12);
+    }
+    body{
+      font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color:var(--ink);
+      background:
+        radial-gradient(900px 600px at -10% -10%, rgba(47,109,246,.08), transparent 60%),
+        radial-gradient(900px 600px at 110% -20%, rgba(111,92,245,.08), transparent 60%),
+        var(--bg);
+      line-height:1.75;
+    }
+    .container{width:var(--container); margin-inline:auto}
+
+    /* ===== Header ===== */
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:saturate(130%) blur(8px);
+      background:rgba(255,255,255,.85);
+      border-bottom:1px solid var(--line);
+    }
+    .bar{
+      width:var(--container); margin-inline:auto;
+      display:flex; align-items:center; justify-content:space-between; gap:1rem;
+      padding:1rem 0;
+    }
+    .site{
+      margin:0; display:flex; align-items:center; gap:.6rem;
+      font-weight:700; letter-spacing:.2px;
+      font-size:clamp(1.15rem,2.4vw,1.45rem);
+      color:var(--ink);
+    }
+    .site i{color:var(--brand)}
+    nav{display:flex; gap:.35rem; align-items:center}
+    nav a{
+      color:var(--ink); text-decoration:none; font-weight:600;
+      padding:.55rem .9rem; border-radius:12px;
+    }
+    nav a:hover{background:#eaf0ff}
+
+    /* ===== Hero (centrat) ===== */
+    .hero{
+      text-align:center;
+      padding: clamp(2rem, 6vw, 3.2rem) 1rem clamp(1.4rem, 4vw, 2.2rem);
+      border-bottom:1px solid var(--line);
+      background:
+        linear-gradient(135deg, rgba(47,109,246,.10), rgba(111,92,245,.10)),
+        transparent;
+    }
+    .hero h1{
+      margin:0 0 .5rem;
+      font-size:clamp(1.8rem, 4.2vw, 2.5rem);
+      font-weight:800;
+      color:#13203a;
+    }
+    .hero p{
+      margin:.2rem auto 0;
+      color:var(--muted);
+      max-width:760px;
+      font-size:1.05rem;
+    }
+
+    /* ===== Grid ===== */
+    main{padding: clamp(1.4rem, 5vw, 2.4rem) 0}
+    .grid{
+      display:grid; gap:1.2rem; width:var(--container); margin-inline:auto;
+      grid-template-columns:1fr;
+    }
+    @media (min-width:980px){ .grid{grid-template-columns: 1.2fr .8fr} }
+
+    /* ===== Cards ===== */
+    .card{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow-sm);
+      padding:1.2rem;
+    }
+    .card h2{
+      margin:.2rem 0 .8rem;
+      font-size:1.2rem; font-weight:700; color:#13203a;
+      display:flex; align-items:center; gap:.55rem;
+    }
+    .card h2 i{color:var(--brand)}
+    .card p{margin:.6rem 0; color:var(--ink)}
+
+    .pill{
+      display:inline-flex; align-items:center; gap:.5rem;
+      background:#eaf0ff; color:#13203a; border:1px solid #d8e2ff;
+      padding:.45rem .7rem; border-radius:999px; font-weight:600; text-decoration:none;
+    }
+
+    /* ===== Button ===== */
+    .button{
+      display:inline-block; text-decoration:none; font-weight:700;
+      background:linear-gradient(90deg, var(--brand), var(--brand-2));
+      color:#fff; padding:.85rem 1.2rem; border-radius:12px; border:0;
+      box-shadow:0 12px 26px rgba(47,109,246,.22);
+      transition:transform .12s ease, filter .12s ease;
+    }
+    .button:hover{transform:translateY(-2px); filter:saturate(110%)}
+
+    /* ===== Lists ===== */
+    .list{margin:.3rem 0 .2rem; padding:0 0 0 1.1rem}
+    .list li{margin:.35rem 0}
+    .muted{color:var(--muted)}
+
+    /* ===== Footer (simplu) ===== */
+    footer{
+      border-top:1px solid var(--line);
+      background:#ffffff; color:var(--muted);
+      text-align:center; padding:1.4rem 1rem; font-size:.95rem;
+    }
+    footer a{color:var(--brand); text-decoration:underline; text-underline-offset:2px}
+
+    /* Utils */
+    .space{height:.6rem}
+    .center{text-align:center}
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Contact</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="articles.html">Blog</a>
-            <a href="pricing.html">Pricing</a>
-        </nav>
-    </header>
-    <main>
-        <section class="contact-info fade-in">
-            <h2>Get in touch</h2>
-            <p>Email: <a href="mailto:sarahionescu.med@gmail.com">sarahionescu.med@gmail.com</a></p>
-            <p>You are welcome to contact me with any questions, clarifications, or concerns related to your case or the second opinion service. I will do my best to reply in a timely and thoughtful manner.</p>
-        </section>
-    </main>
+
+  <!-- HEADER -->
+  <header>
+    <div class="bar">
+      <h1 class="site"><i class="fas fa-brain" aria-hidden="true"></i> Women & Psychiatry</h1>
+      <nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="articles.html">Blog</a>
+        <a href="pricing.html">Pricing</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Contact</h1>
+    <p>If you have questions about your case or about the second-opinion service, send me an email. I aim to reply in a timely and thoughtful manner.</p>
+  </section>
+
+  <!-- MAIN -->
+  <main>
+    <div class="grid">
+      <!-- Contact card -->
+      <section class="card">
+        <h2><i class="fa-solid fa-envelope"></i> Get in touch</h2>
+
+        <p>
+          <a class="pill" href="mailto:sarahionescu.med@gmail.com">
+            <i class="fa-solid fa-paper-plane"></i>
+            sarahionescu.med@gmail.com
+          </a>
+        </p>
+
+        <div class="space"></div>
+
+        <p class="muted"><strong>Tip:</strong> Include a short summary of your situation so I can get context fast.</p>
+        <ul class="list">
+          <li>your main questions / concerns</li>
+          <li>relevant diagnoses, medications, therapies so far</li>
+          <li>what would be most helpful to you right now</li>
+        </ul>
+
+        <div class="space"></div>
+
+        <p><strong>Average reply window:</strong> typically within 24–72 hours (business days).</p>
+
+        <div class="space"></div>
+
+        <p>
+          Prefer a structured intake? You can submit your case securely here:
+        </p>
+        <p>
+          <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSdggbxrf2F5xvZ6WnWlWuhe0z4sWXktZgT7PZSR42O7LcO4GA/viewform?usp=dialog" target="_blank" rel="noopener">
+            Submit Your Case
+          </a>
+        </p>
+      </section>
+
+      <!-- Helpful info / boundaries -->
+      <aside class="card">
+        <h2><i class="fa-solid fa-circle-info"></i> Before you write</h2>
+        <p class="muted">
+          The second opinion is a written, educational, clinically reasoned perspective. It does not replace an in-person psychiatric assessment, ongoing care, or emergency services.
+        </p>
+
+        <p><strong>Good to know:</strong></p>
+        <ul class="list">
+          <li>No AI is used in the assessment — it’s a medical review.</li>
+          <li>I read each message carefully and respond with clear reasoning.</li>
+          <li>If your case fits better with counseling, I’ll say so transparently.</li>
+        </ul>
+
+        <div class="space"></div>
+
+        <p><strong>Emergencies:</strong> If you are in immediate danger or considering self-harm, contact your local emergency number or go to the nearest emergency department.</p>
+
+        <div class="space"></div>
+
+        <p class="center">
+          <a class="button" href="pricing.html#counseling">I want to try counseling</a>
+        </p>
+      </aside>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© Women & Psychiatry — Professional second opinions. Evidence-based, stigma-free.</p>
+  </footer>
+
+  <script>
+    // (opțional) nimic special aici; dacă vrei un buton de "copy email", îl pot adăuga rapid
+  </script>
 </body>
 </html>
