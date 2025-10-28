@@ -4,79 +4,286 @@
   <meta charset="UTF-8">
   <title>Women & Psychiatry – Get your second opinion here</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Icons (opțional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Font (clar, profesionist) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
+    /* ================= Base & Theme (fără CSS exotic) ================= */
     *,*::before,*::after{box-sizing:border-box}
     html,body{margin:0;padding:0}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;line-height:1.6;color:#121629;background:#f7f8fc}
-    .container{width:min(1100px,92%);margin:0 auto}
-    header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e4e8fb}
-    header .bar{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
-    nav{display:flex;gap:.25rem}
-    nav a{color:#121629;text-decoration:none;font-weight:600;padding:.55rem .8rem;border-radius:10px}
+    :root{
+      --bg:#f6f7fb;         /* fundal cald, luminos */
+      --ink:#111528;        /* text principal */
+      --muted:#596089;      /* text secundar */
+      --panel:#ffffff;      /* panouri / carduri */
+      --line:#e5e8f5;       /* linii discrete */
+      --brand:#3d66ff;      /* accent albastru profesional */
+      --brand2:#9b7bff;     /* accent mov subtil */
+      --accent:#16b39a;     /* accent mint, rar folosit */
+      --radius:18px;
+      --shadow-sm:0 6px 14px rgba(17,21,40,.06);
+      --shadow:0 14px 28px rgba(17,21,40,.08);
+      --container:min(1080px,92%);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0e1220; --ink:#ecf0ff; --muted:#aab2da;
+        --panel:#14192e; --line:#232a4a;
+        --shadow-sm:0 10px 24px rgba(6,10,25,.35);
+        --shadow:0 18px 36px rgba(6,10,25,.42);
+      }
+    }
+    body{
+      font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color:var(--ink);
+      background:
+        linear-gradient(180deg, #f1f3ff 0%, #f6f7fb 40%, #f6f7fb 100%);
+      line-height:1.7;
+    }
+    .container{width:var(--container); margin-inline:auto}
+
+    /* ================= Header – boxed & clar ================= */
+    header{
+      position:sticky; top:0; z-index:50;
+      background:transparent;
+    }
+    .topbar{
+      width:var(--container); margin:1rem auto 0;
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:14px;
+      box-shadow:var(--shadow-sm);
+      padding:.6rem .9rem;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .brand{
+      display:flex; align-items:center; gap:.6rem; font-weight:700;
+      font-size:clamp(1.05rem,2.2vw,1.35rem);
+    }
+    .brand i{color:var(--brand)}
+    nav{display:flex; gap:.35rem; align-items:center}
+    nav a{
+      color:inherit; text-decoration:none; font-weight:600;
+      padding:.55rem .9rem; border-radius:10px;
+    }
     nav a:hover{background:#eef2ff}
-    .hero{background:#fff;border-bottom:1px solid #e4e8fb}
-    .hero .wrap{width:min(1100px,92%);margin:0 auto;padding:2rem 0 1.5rem}
-    .badges{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.8rem}
-    .badge{background:#f0f3ff;color:#121629;border:1px solid #dfe6ff;padding:.35rem .6rem;border-radius:999px;font-size:.85rem}
-    section{padding:1.6rem 0}
-    .panel{background:#fff;border:1px solid #e4e8fb;border-radius:16px;padding:1.1rem;box-shadow:0 10px 24px rgba(18,23,60,.06)}
-    .cards{display:grid;gap:1rem}
-    @media(min-width:900px){.cards{grid-template-columns:repeat(3,1fr)}}
-    .card{background:#fff;border:1px solid #e4e8fb;border-radius:16px;padding:1rem;box-shadow:0 10px 24px rgba(18,23,60,.06)}
-    .highlight{background:#f0f3ff;border-top:1px solid #e4e8fb;border-bottom:1px solid #e4e8fb;text-align:center}
-    .cta{text-align:center}
-    .button{display:inline-block;text-decoration:none;font-weight:700;background:#6f8cff;color:#fff;padding:.8rem 1.1rem;border-radius:12px;box-shadow:0 10px 22px rgba(111,140,255,.25)}
-    footer{border-top:1px solid #e4e8fb;background:#fff;padding:1.2rem 0;color:#5a6387}
+    .menu-toggle{display:none; border:0; background:transparent; font-size:1.1rem; padding:.55rem .75rem; border-radius:10px}
+    .menu-toggle:hover{background:#eef2ff}
+
+    @media (max-width:860px){
+      .menu-toggle{display:inline-flex; align-items:center; justify-content:center}
+      nav{display:none; position:absolute; left:0; right:0; top:calc(64px + 1rem);}
+      nav.active{
+        display:block;
+        width:var(--container); margin: .6rem auto 0;
+        background:var(--panel); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow-sm);
+        padding:.6rem;
+      }
+      nav a{display:block}
+    }
+
+    /* ================= Hero – card modern cu gradient subtil ================= */
+    .hero-wrap{padding:1rem 0 0}
+    .hero{
+      background:linear-gradient(120deg, rgba(61,102,255,.12), rgba(155,123,255,.10));
+      border:1px solid var(--line);
+      border-radius:20px;
+      box-shadow:var(--shadow);
+      padding: clamp(1.6rem, 5vw, 2.6rem);
+    }
+    .title{
+      margin:0; font-weight:700; letter-spacing:.2px;
+      font-size: clamp(1.6rem, 4.6vw, 2.4rem);
+    }
+    .subtitle{margin:.4rem 0 0; color:var(--muted)}
+    .badges{display:flex; gap:.6rem; flex-wrap:wrap; margin-top:1rem}
+    .badge{
+      background:#fff; border:1px solid #dfe5ff; color:inherit;
+      padding:.45rem .7rem; border-radius:999px; font-size:.9rem;
+      box-shadow:0 6px 12px rgba(61,102,255,.08);
+    }
+
+    /* ================= Secțiuni – layout aerisit ================= */
+    section{padding:clamp(1.4rem, 5vw, 2.2rem) 0}
+    .sec-title{
+      margin:0 0 .9rem; font-size:clamp(1.25rem,3vw,1.6rem); font-weight:700;
+      display:flex; align-items:center; gap:.6rem;
+    }
+
+    /* ================= About – panou elegant ================= */
+    .about .panel{
+      background:var(--panel); border:1px solid var(--line);
+      border-radius:18px; padding:1.2rem; box-shadow:var(--shadow-sm);
+    }
+    .about p{margin:.7rem 0}
+
+    /* ================= Why me – carduri coerente ================= */
+    .cards{display:grid; gap:1rem; grid-template-columns:1fr}
+    @media (min-width:900px){ .cards{grid-template-columns:repeat(3,1fr)} }
+    .card{
+      background:var(--panel); border:1px solid var(--line);
+      border-radius:16px; padding:1rem; box-shadow:var(--shadow-sm);
+      transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    }
+    .card:hover{transform:translateY(-4px); box-shadow:var(--shadow); border-color:#d7dfff}
+    .card h3{margin:.65rem 0 .4rem; font-size:1.06rem}
+    .card p{margin:0; color:var(--muted)}
+    .pastel-blue  { background:linear-gradient(180deg,#ffffff,#f3f6ff) }
+    .pastel-green { background:linear-gradient(180deg,#ffffff,#f1fbf7) }
+    .pastel-purple{ background:linear-gradient(180deg,#ffffff,#f6f2ff) }
+
+    /* ================= Highlight ================= */
+    .highlight{
+      background:linear-gradient(90deg, rgba(61,102,255,.10), rgba(155,123,255,.10));
+      border:1px solid var(--line);
+      border-radius:16px;
+      text-align:center;
+      padding:1.1rem;
+      box-shadow:var(--shadow-sm);
+    }
+    .highlight h2{margin:.2rem 0}
+
+    /* ================= CTA ================= */
+    .center{text-align:center}
+    .button{
+      display:inline-block; text-decoration:none; font-weight:700;
+      background:linear-gradient(90deg, var(--brand), var(--brand2));
+      color:#fff; padding:.9rem 1.25rem; border-radius:14px; border:0;
+      box-shadow:0 12px 26px rgba(61,102,255,.25);
+      transition:transform .12s ease, filter .12s ease, box-shadow .12s ease;
+    }
+    .button:hover{transform:translateY(-2px); filter:saturate(110%)}
+
+    /* ================= Footer – boxed ================= */
+    footer{
+      margin: 1rem 0 2rem;
+      background:var(--panel); border:1px solid var(--line);
+      border-radius:14px; box-shadow:var(--shadow-sm);
+      color:var(--muted); padding:1.2rem;
+    }
     footer a{color:inherit}
+    footer .cta{margin-top:1rem}
   </style>
 </head>
 <body>
+  <!-- ================= HEADER ================= -->
   <header>
-    <div class="container bar">
-      <h1>Women & Psychiatry</h1>
-      <nav>
-        <a href="articles.html">Blog</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="contact.html">Contact</a>
+    <div class="topbar">
+      <div class="brand"><i class="fas fa-brain" aria-hidden="true"></i> Women & Psychiatry</div>
+      <button class="menu-toggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+      <nav aria-label="Primary">
+        <a href="articles.html"><i class="fas fa-book-open" aria-hidden="true"></i> Blog</a>
+        <a href="pricing.html"><i class="fas fa-euro-sign" aria-hidden="true"></i> Pricing</a>
+        <a href="contact.html"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="wrap">
-      <h2>Professional Second Opinions for Psychiatry Patients</h2>
-      <p>Your mental health deserves a nuanced approach.</p>
+  <!-- ================= HERO ================= -->
+  <div class="container hero-wrap">
+    <section class="hero">
+      <h2 class="title">Professional Second Opinions for Psychiatry Patients</h2>
+      <p class="subtitle">Your mental health deserves a nuanced approach.</p>
       <div class="badges">
-        <span class="badge">MD – Psychiatry (DE training)</span>
-        <span class="badge">Thesis in ASD (genotype–phenotype)</span>
-        <span class="badge">Stigma-free, trauma-informed</span>
+        <span class="badge"><i class="fa-solid fa-user-doctor"></i> MD – Psychiatry (DE training)</span>
+        <span class="badge"><i class="fa-solid fa-flask"></i> Thesis in ASD (genotype–phenotype)</span>
+        <span class="badge"><i class="fa-solid fa-shield-heart"></i> Stigma-free, trauma-informed</span>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
+  <!-- ================= ABOUT ================= -->
   <section class="about">
     <div class="container">
-      <h2>About Me</h2>
+      <h2 class="sec-title"><i class="fas fa-user-md" aria-hidden="true"></i> About Me</h2>
       <div class="panel">
-        <p>I am a medical doctor currently training in Psychiatry in Germany, with a degree from the University of Bucharest...</p>
-        <p>My thesis focused on the genetic and phenotypic dimensions of Autism Spectrum Disorder...</p>
-        <p>I do not offer cookie-cutter answers. Instead, I read each submitted case carefully...</p>
+        <p>
+            I am a medical doctor currently training in Psychiatry in Germany, with a degree from the University of Bucharest.
+            My clinical work — both in Romania and abroad — has shaped a deep interest in complex, often misdiagnosed psychiatric conditions, especially in women.
+            I believe that diagnostic clarity is not just a technical goal, but a human right.
+        </p>
+        <p>
+            My thesis focused on the genetic and phenotypic dimensions of Autism Spectrum Disorder, and I continue to explore the intersections between neurobiology, trauma, and identity.
+            Over time, I have observed a recurring pattern: many patients, especially women, don’t feel seen by standard psychiatric frameworks.
+            That is why I created this platform — to offer thoughtful, medically-informed second opinions for those navigating uncertainty.
+        </p>
+        <p>
+            I do not offer cookie-cutter answers. Instead, I read each submitted case carefully and respond with clinical reasoning, diagnostic hypotheses, and tailored psychological insights.
+            My goal is not just to label — but to understand.
+        </p>
       </div>
     </div>
   </section>
 
+  <!-- ================= WHY ME ================= -->
   <section class="why-me">
     <div class="container">
-      <h2>Why me?</h2>
+      <h2 class="sec-title">Why me?</h2>
       <div class="cards">
-        <div class="card">
+        <div class="card pastel-blue">
+          <i class="fas fa-user-md fa-2x" style="color:#3d66ff"></i>
           <h3>Psychiatric second opinion</h3>
           <p>Feeling misunderstood or maybe think your psychiatrist made a wrong diagnosis?</p>
         </div>
-        <div class="card">
+        <div class="card pastel-green">
+          <i class="fas fa-diagnoses fa-2x" style="color:#16b39a"></i>
           <h3>Diagnosis Assistance</h3>
           <p>No AI involved here, just a doctor interested in Psychiatry.</p>
         </div>
-        <div class="card">
-          <h3>Medical o
+        <div class="card pastel-purple">
+          <i class="fas fa-heartbeat fa-2x" style="color:#9b7bff"></i>
+          <h3>Medical opinion and health tips</h3>
+          <p>Autism, ADHD or other personality disorders? I can provide health tips, coping mechanisms and an insight in why you're feeling alone, inadequate, burnt out.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ================= HIGHLIGHT ================= -->
+  <section class="highlight">
+    <div class="container">
+      <h2>Every Neurodivergent Person Is Welcomed Here</h2>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta">
+    <div class="container center">
+      <h2>Ready to get a personalized opinion?</h2>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdggbxrf2F5xvZ6WnWlWuhe0z4sWXktZgT7PZSR42O7LcO4GA/viewform?usp=dialog" class="button" target="_blank" rel="noopener">Submit Your Case</a>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <div class="container">
+    <footer>
+      <p>Contact: <a href="mailto:sarahionescu.med@gmail.com">sarahionescu.med@gmail.com</a></p>
+      <p class="disclaimer">This platform provides educational and professional written second opinions. It does not replace a full in-person psychiatric evaluation and diagnosis.</p>
+
+      <section class="cta center">
+        <h2>Interested in a structured conversation?</h2>
+        <a href="pricing.html#counseling" class="button">I want to try counseling</a>
+      </section>
+    </footer>
+  </div>
+
+  <script>
+    // Mobile menu
+    document.addEventListener('DOMContentLoaded', function(){
+      var toggle = document.querySelector('.menu-toggle');
+      var nav = document.querySelector('nav');
+      if(toggle && nav){
+        toggle.addEventListener('click', function(){
+          nav.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
