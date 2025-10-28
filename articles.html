@@ -4,138 +4,148 @@
   <meta charset="UTF-8" />
   <title>Articles – Women & Psychiatry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Optional clean font -->
+  <!-- Optional font; dacă vrei, o poți scoate -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ===== Base & Theme ===== */
+    /* ===== Base (no fancy features) ===== */
     *,*::before,*::after{box-sizing:border-box}
     html,body{margin:0;padding:0}
-    :root{
-      --bg:#0e1016;
-      --panel:#141827;
-      --text:#ecf0ff;
-      --muted:#a8b0d6;
-      --line:rgba(122,162,255,.18);
-      --accent:#7aa2ff;   /* periwinkle */
-      --accent2:#a17cf4;  /* iris */
-      --shadow:0 12px 30px rgba(6,10,25,.35);
-      --radius:16px;
-      --gap:clamp(1rem, 2.6vw, 1.4rem);
-      --container:min(1100px,92%);
-    }
-    @media (prefers-color-scheme: light){
-      :root{
-        --bg:#f7f8fc; --panel:#ffffff; --text:#1a2031; --muted:#4a5578;
-        --line:rgba(60,102,255,.18); --shadow:0 10px 28px rgba(18,23,60,.08);
-      }
-    }
     body{
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
-      background:
-        radial-gradient(900px 600px at -10% -10%, rgba(122,162,255,.22), transparent 60%),
-        radial-gradient(900px 600px at 110% -20%, rgba(161,124,244,.18), transparent 60%),
-        var(--bg);
-      color:var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
       line-height:1.6;
+      color:#121629;                 /* text închis, vizibil pe fundal deschis */
+      background:#f7f8fc;           /* fundal deschis (sigur) */
     }
-    .container{width:var(--container);margin-inline:auto}
+    .container{width:min(1100px,92%);margin:auto}
 
-    /* ===== Header ===== */
+    /* ===== Header simplu ===== */
     header{
-      position: sticky; top: 0; z-index: 10;
-      background: rgba(10,12,20,.55);
-      backdrop-filter: saturate(130%) blur(10px);
-      border-bottom: 1px solid var(--line);
+      position:sticky; top:0; z-index:10;
+      background:#ffffff;
+      border-bottom:1px solid #e4e8fb;
     }
-    header .wrap{
-      display:flex; align-items:center; justify-content:space-between;
-      width:var(--container); margin-inline:auto;
-    }
-    header h1{
-      margin:0; padding:.95rem 0;
-      font-size: clamp(1.25rem, 2.4vw, 1.6rem);
-      letter-spacing:.2px;
-    }
-    nav{display:flex; gap:.25rem}
+    header .wrap{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+    header h1{margin:0;font-size:1.5rem}
+    nav{display:flex;gap:.25rem}
     nav a{
-      color:var(--text); text-decoration:none;
-      padding:.55rem .8rem; border-radius:10px; position:relative; opacity:.9;
+      color:#121629; text-decoration:none;
+      padding:.5rem .8rem; border-radius:10px;
     }
-    nav a:hover{opacity:1}
-    nav a:focus-visible{outline:3px solid var(--accent); outline-offset:3px; border-radius:12px}
-    nav a::after{
-      content:""; position:absolute; left:.8rem; right:.8rem; bottom:.25rem; height:2px;
-      border-radius:2px; background:linear-gradient(90deg, var(--accent), var(--accent2));
-      transform:scaleX(0); transform-origin:left; transition:transform .25s ease;
-    }
-    nav a:hover::after{transform:scaleX(1)}
+    nav a:hover{background:#eef2ff}
 
-    /* ===== Page Intro ===== */
-    main{width:var(--container); margin:0 auto; padding:1.25rem 0 2.5rem;}
-    .page-sub{color:var(--muted); margin:.25rem 0 1.25rem}
+    /* ===== Intro ===== */
+    main{padding:1.25rem 0 2rem}
+    .page-sub{margin:.25rem 0 1.25rem;color:#5a6387}
 
-    /* ===== Columns layout ===== */
-    .columns{
-      display:grid;
-      gap:var(--gap);
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 880px){
-      .columns{ grid-template-columns: repeat(3, 1fr); }
-    }
+    /* ===== 3 coloane ===== */
+    .columns{display:grid;gap:1rem;grid-template-columns:1fr}
+    @media (min-width:880px){ .columns{grid-template-columns:repeat(3,1fr)} }
 
     .col{
-      background: linear-gradient(180deg, var(--panel), color-mix(in oklab, var(--panel), black 6%));
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 1rem;
-      position: relative; overflow: hidden;
+      background:#ffffff;
+      border:1px solid #e4e8fb;
+      border-radius:16px;
+      padding:1rem;
+      box-shadow:0 10px 24px rgba(18,23,60,.06);
     }
-    .col::before{
-      content:""; position:absolute; inset:-1px; pointer-events:none;
-      background:
-        radial-gradient(600px 120px at 0% 0%, rgba(122,162,255,.12), transparent 60%),
-        radial-gradient(400px 120px at 100% 0%, rgba(161,124,244,.10), transparent 60%);
-    }
-    .col h2{
-      margin:.2rem 0 .5rem; font-size:1.15rem; letter-spacing:.2px;
-    }
-    .col p.section-note{margin:0 0 .6rem; color:var(--muted); font-size:.95rem}
+    .col h2{margin:.2rem 0 .5rem;font-size:1.1rem}
+    .col .section-note{margin:0 0 .6rem;color:#5a6387}
 
-    /* ===== Article lists inside each column ===== */
-    .article-list{
-      list-style:none; margin:0; padding:0;
-      display:grid; gap:.75rem;
-    }
-    .article-list li{margin:0; padding:0}
+    /* ===== Liste articole ===== */
+    .article-list{list-style:none;margin:0;padding:0;display:grid;gap:.75rem}
     .article-list a{
-      display:block; text-decoration:none; color:var(--text);
-      background: color-mix(in oklab, var(--panel), black 4%);
-      border:1px solid var(--line);
-      border-radius: 12px;
+      display:block; text-decoration:none; color:#121629;
+      background:#f9faff;
+      border:1px solid #e6ebff;
+      border-radius:12px;
       padding:.85rem .9rem;
-      transition: transform .16s ease, border-color .16s ease, background .16s ease;
-      line-height:1.35;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
     }
     .article-list a:hover{
-      transform: translateY(-3px);
-      border-color: color-mix(in oklab, var(--line), white 35%);
-      background: color-mix(in oklab, var(--panel), white 3%);
+      transform:translateY(-2px);
+      background:#eef2ff;
+      border-color:#d7dfff;
     }
     .article-list a:focus-visible{
-      outline:3px solid var(--accent);
-      outline-offset:3px;
-      border-radius:14px;
+      outline:3px solid #7aa2ff; outline-offset:3px; border-radius:14px;
+      background:#eef2ff;
     }
 
     /* ===== Footer ===== */
     footer{
-      border-top:1px solid var(--line); color:var(--muted); font-size:.9rem;
+      border-top:1px solid #e4e8fb; color:#5a6387; font-size:.95rem;
       padding:1.25rem 0; margin-top:1.5rem;
     }
-    footer .container{display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap}
 
-    /* =====*
+    /* ===== Dark mode (basic, fără color-mix) ===== */
+    @media (prefers-color-scheme: dark){
+      body{background:#0e1016;color:#ecf0ff}
+      header{background:#141827;border-bottom-color:#232a4a}
+      nav a{color:#ecf0ff}
+      nav a:hover{background:#1b213a}
+      .page-sub{color:#a8b0d6}
+      .col{background:#141827;border-color:#232a4a;box-shadow:0 12px 30px rgba(6,10,25,.35)}
+      .article-list a{
+        background:#151a2c;border-color:#232a4a;color:#ecf0ff;
+      }
+      .article-list a:hover{background:#1b213a;border-color:#3a4a86}
+      footer{border-top-color:#232a4a;color:#a8b0d6}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container wrap">
+      <h1>Articles</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <p class="page-sub">Research-based, stigma-free writing on ADHD, autism and women’s mental health.</p>
+
+    <section class="columns" aria-label="Article categories">
+      <!-- ADHD -->
+      <div class="col" aria-labelledby="cat-adhd">
+        <h2 id="cat-adhd">ADHD</h2>
+        <ul class="article-list">
+          <li><a href="adhd-in-women.html">Why ADHD Looks Different in Women – And Why It Often Goes Undiagnosed</a></li>
+          <li><a href="kink-adhd.html">ADHD and Kink: When the Brain Craves More Than Stimulation</a></li>
+          <li><a href="adhd-binge-eating.html">When Focus Turns to Food: ADHD and Binge Eating Patterns</a></li>
+          <li><a href="adhd-procrastination-depression.html">It’s Not Laziness — It’s Grief: ADHD, Procrastination, and the Depression of ‘Never Enough’</a></li>
+        </ul>
+      </div>
+
+      <!-- ASD -->
+      <div class="col" aria-labelledby="cat-asd">
+        <h2 id="cat-asd">ASD</h2>
+        <ul class="article-list">
+          <li><a href="asd-in-women.html">Autism Isn’t Always What You Think – When Social Skills Look Intact</a></li>
+          <li><a href="thesis-asd.html">Thesis: Correlations Between Genotype and Phenotype in Autism Spectrum Disorder</a></li>
+        </ul>
+      </div>
+
+      <!-- Other psychiatric -->
+      <div class="col" aria-labelledby="cat-other">
+        <h2 id="cat-other">Other psychiatric</h2>
+        <ul class="article-list">
+          <li><a href="trauma-bonding-full-corrected.html">Not Love — But Trauma: Understanding the Emotional Hook of Abuse</a></li>
+          <li><a href="aspd-borderline.html">ASPD — Always ‘Borderline’ When It Comes to Women</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <span>© Women & Psychiatry — Evidence-based articles. No stigma. No shame.</span>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
